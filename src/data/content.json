@@ -1,0 +1,2482 @@
+{
+  "Education": {
+    "brand": {
+      "name": "AduCrest University",
+      "tagline": "Education for a Brighter Tomorrow",
+      "description": "Quality education, inspiring faculty and a supportive community for every learner.",
+      "logo": {
+        "src": "/images/logo.png",
+        "alt": "AduCrest University — Education for a Brighter Tomorrow"
+      },
+      "email": "info@aducrest.edu.in",
+      "phone": "+91 98765 43210",
+      "address": "123 Education Street, New Delhi, India - 110001",
+      "admissionsEmail": "admissions@aducrest.edu.in"
+    },
+    "ui": {
+      "previous": "Previous",
+      "next": "Next",
+      "goToPage": "Go to page",
+      "goToSlide": "Go to slide",
+      "openMenu": "Open navigation menu",
+      "closeMenu": "Close navigation menu",
+      "scrollToTop": "Scroll to top",
+      "viewDetails": "View Details",
+      "readMore": "Read more",
+      "duration": "Duration",
+      "eligibility": "Eligibility",
+      "by": "By",
+      "lastUpdated": "Last Updated",
+      "home": "Home",
+      "videoPreview": "Preview course",
+      "videoUnavailable": "A video preview is not available for this programme. Explore the course overview below or contact admissions for more information.",
+      "closeVideo": "Close preview",
+      "coursesNavigation": "Popular courses",
+      "facultyNavigation": "Faculty profiles",
+      "blogsNavigation": "Latest articles",
+      "testimonialNavigation": "Student testimonials",
+      "paginationLabel": "Pagination",
+      "noResults": "No entries are available yet.",
+      "notFoundTitle": "Page Not Found",
+      "notFoundDescription": "The page you are looking for could not be found. Explore our courses or return to the homepage.",
+      "backHome": "Back to Home",
+      "coursesBack": "Explore Courses",
+      "blogBack": "Back to Blog",
+      "metaLabels": {
+        "cost": "Cost",
+        "instructor": "Instructor",
+        "duration": "Duration",
+        "students": "Students",
+        "views": "Views",
+        "lessons": "Lessons",
+        "language": "Language",
+        "certificate": "Certificate"
+      },
+      "forms": {
+        "fields": {
+          "fullName": {
+            "label": "Full Name",
+            "placeholder": "Enter your full name",
+            "type": "text",
+            "required": true
+          },
+          "email": {
+            "label": "Email Address",
+            "placeholder": "Enter your email address",
+            "type": "email",
+            "required": true
+          },
+          "phone": {
+            "label": "Mobile Number",
+            "placeholder": "Enter your mobile number",
+            "type": "tel",
+            "required": true
+          },
+          "birthDate": {
+            "label": "Date of Birth",
+            "placeholder": "dd / mm / yyyy",
+            "type": "date",
+            "required": true
+          },
+          "course": {
+            "label": "Select Course",
+            "placeholder": "Select Course",
+            "type": "select",
+            "required": true
+          },
+          "department": {
+            "label": "Select Department",
+            "placeholder": "Select Department",
+            "type": "select",
+            "required": true
+          },
+          "message": {
+            "label": "Message",
+            "placeholder": "Write your message here...",
+            "type": "textarea",
+            "required": true
+          }
+        },
+        "validation": {
+          "required": "This field is required.",
+          "name": "Enter your full name using 2 to 100 characters.",
+          "email": "Enter a valid email address.",
+          "phone": "Enter a valid phone number with 7 to 15 digits.",
+          "birthDate": "Enter a valid date of birth.",
+          "birthDateFuture": "Date of birth cannot be in the future.",
+          "course": "Select a course from the list.",
+          "department": "Select a department from the list.",
+          "message": "Your message must be 3,000 characters or fewer.",
+          "invalidOption": "Choose one of the available options.",
+          "maxLength": "This field is too long. Please shorten your entry.",
+          "invalidPayload": "The form contains invalid values. Review your details and try again.",
+          "tooLarge": "This submission is too large. Please shorten your message."
+        },
+        "status": {
+          "submitting": "Submitting...",
+          "contactValidated": "Your enquiry passed validation. This demonstration does not send or store messages. Please use the listed email address to contact admissions.",
+          "applicationValidated": "Your application details passed validation. This demonstration does not send or store applications. Please contact admissions to complete your application.",
+          "contactDelivered": "Your enquiry has been accepted by the configured delivery service.",
+          "applicationDelivered": "Your application has been accepted by the configured delivery service.",
+          "error": "We could not process your submission. Please try again.",
+          "invalid": "Please review the highlighted fields.",
+          "invalidJson": "The submission could not be read. Please reload the page and try again.",
+          "unavailable": "The submission service is unavailable. Please contact admissions using the email address listed on this page.",
+          "network": "Unable to connect. Check your connection and try again.",
+          "tooLarge": "This submission is too large. Please shorten your message.",
+          "validationOnlyNotice": "This demonstration validates your details only. It does not send or store submissions.",
+          "deliveryFailed": "The configured delivery service could not accept your submission. Please try again or contact admissions directly.",
+          "invalidOrigin": "This submission could not be verified. Reload the page and try again.",
+          "invalidContentType": "The submission format is not supported. Reload the form and try again."
+        },
+        "notice": "This demonstration validates your details only. It does not send or store submissions.",
+        "optionalLabel": "Optional",
+        "requiredLabel": "Required",
+        "timeZone": "Asia/Kolkata"
+      },
+      "skipToContent": "Skip to main content",
+      "demoNotice": "Demonstration website: programme details, contact information, additional faculty profiles and student feedback are illustrative and require verification before publication.",
+      "contentNotice": "The supplied screenshots guide this demonstration. Supporting images are local reference crops; additional programme information, faculty profiles and student quotes are illustrative, and social links lead to platform homepages."
+    },
+    "templateComponents": {
+      "template-1": {
+        "shared": {
+          "Topbar": "EducationTopbar1",
+          "Header": "EducationHeader1",
+          "Footer": "EducationFooter1"
+        },
+        "pages": {
+          "home": {
+            "title": "AduCrest University | Learn Today, Build a Brighter Tomorrow",
+            "description": "Explore programmes, meet our faculty and begin your academic journey at AduCrest University.",
+            "components": [
+              {
+                "key": "hero",
+                "component": "EducationHero1"
+              },
+              {
+                "key": "about",
+                "component": "EducationAbout1"
+              },
+              {
+                "key": "popular-courses",
+                "component": "EducationPopularCourses1"
+              },
+              {
+                "key": "admission-cta",
+                "component": "EducationAdmissionCTA1"
+              },
+              {
+                "key": "faculty-preview",
+                "component": "EducationFaculty1"
+              },
+              {
+                "key": "testimonials",
+                "component": "EducationTestimonials1"
+              },
+              {
+                "key": "latest-blogs",
+                "component": "EducationBlog1"
+              }
+            ]
+          },
+          "about": {
+            "title": "About Us | AduCrest University",
+            "description": "Discover our approach to quality education, supportive learning and a brighter future.",
+            "components": [
+              {
+                "key": "banner-about",
+                "component": "EducationInnerBanner1"
+              },
+              {
+                "key": "about",
+                "component": "EducationAbout1"
+              },
+              {
+                "key": "popular-courses",
+                "component": "EducationPopularCourses1"
+              },
+              {
+                "key": "admission-cta",
+                "component": "EducationAdmissionCTA1"
+              },
+              {
+                "key": "faculty-preview",
+                "component": "EducationFaculty1"
+              }
+            ]
+          },
+          "courses": {
+            "title": "Courses | AduCrest University",
+            "description": "Discover undergraduate and postgraduate programmes at AduCrest University.",
+            "components": [
+              {
+                "key": "banner-courses",
+                "component": "EducationInnerBanner1"
+              },
+              {
+                "key": "courses",
+                "component": "EducationCourseListing1"
+              }
+            ]
+          },
+          "course-detail": {
+            "title": "Course Detail | AduCrest University",
+            "description": "Explore programme information, learning outcomes and admission details.",
+            "components": [
+              {
+                "key": "banner-course-detail",
+                "component": "EducationInnerBanner1"
+              },
+              {
+                "key": "course-detail",
+                "component": "EducationCourseDetail1"
+              }
+            ]
+          },
+          "faculty": {
+            "title": "Faculty | AduCrest University",
+            "description": "Meet the experienced and dedicated faculty at AduCrest University.",
+            "components": [
+              {
+                "key": "banner-faculty",
+                "component": "EducationInnerBanner1"
+              },
+              {
+                "key": "faculty-list",
+                "component": "EducationFacultyListing1"
+              }
+            ]
+          },
+          "blog": {
+            "title": "News & Insights | AduCrest University",
+            "description": "Read academic insights, student stories and practical learning guides.",
+            "components": [
+              {
+                "key": "banner-blog",
+                "component": "EducationInnerBanner1"
+              },
+              {
+                "key": "blog-list",
+                "component": "EducationBlogListing1"
+              }
+            ]
+          },
+          "blog-detail": {
+            "title": "Blog Detail | AduCrest University",
+            "description": "Discover stories and insights from the AduCrest learning community.",
+            "components": [
+              {
+                "key": "banner-blog-detail",
+                "component": "EducationInnerBanner1"
+              },
+              {
+                "key": "blog-detail",
+                "component": "EducationBlogDetail1"
+              }
+            ]
+          },
+          "faq": {
+            "title": "Frequently Asked Questions | AduCrest University",
+            "description": "Find answers about admissions, courses, online learning and student support.",
+            "components": [
+              {
+                "key": "banner-faq",
+                "component": "EducationInnerBanner1"
+              },
+              {
+                "key": "faq",
+                "component": "EducationFAQ1"
+              }
+            ]
+          },
+          "contact": {
+            "title": "Contact Us | AduCrest University",
+            "description": "Get in touch with AduCrest University for course and admissions enquiries.",
+            "components": [
+              {
+                "key": "banner-contact",
+                "component": "EducationInnerBanner1"
+              },
+              {
+                "key": "contact",
+                "component": "EducationContact1"
+              }
+            ]
+          },
+          "apply-now": {
+            "title": "Apply Now | AduCrest University",
+            "description": "Begin your academic journey with the AduCrest University application form.",
+            "components": [
+              {
+                "key": "banner-apply-now",
+                "component": "EducationInnerBanner1"
+              },
+              {
+                "key": "application",
+                "component": "EducationApplicationForm1"
+              },
+              {
+                "key": "application-process",
+                "component": "EducationApplicationProcess1"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "sections": {
+      "topbar": {
+        "variants": {
+          "EducationTopbar1": {
+            "contacts": [
+              {
+                "icon": "mapPin",
+                "label": "123 University Road, New Delhi, India - 110001",
+                "href": "/contact"
+              },
+              {
+                "icon": "phone",
+                "label": "+91 98765 43210",
+                "href": "tel:+919876543210"
+              },
+              {
+                "icon": "mail",
+                "label": "info@aducrest.edu.in",
+                "href": "mailto:info@aducrest.edu.in"
+              }
+            ],
+            "socials": [
+              {
+                "label": "Facebook",
+                "href": "https://www.facebook.com/",
+                "icon": "facebook"
+              },
+              {
+                "label": "Instagram",
+                "href": "https://www.instagram.com/",
+                "icon": "instagram"
+              },
+              {
+                "label": "LinkedIn",
+                "href": "https://www.linkedin.com/",
+                "icon": "linkedin"
+              },
+              {
+                "label": "YouTube",
+                "href": "https://www.youtube.com/",
+                "icon": "youtube"
+              }
+            ]
+          }
+        }
+      },
+      "header": {
+        "variants": {
+          "EducationHeader1": {
+            "logo": {
+              "src": "/images/logo-light.png",
+              "alt": "AduCrest University — Education for a Brighter Tomorrow"
+            },
+            "navigation": [
+              {
+                "label": "Home",
+                "href": "/"
+              },
+              {
+                "label": "About Us",
+                "href": "/about"
+              },
+              {
+                "label": "Course",
+                "href": "/courses"
+              },
+              {
+                "label": "Faculty",
+                "href": "/faculty"
+              },
+              {
+                "label": "Blog",
+                "href": "/blog"
+              },
+              {
+                "label": "Contact",
+                "href": "/contact"
+              }
+            ],
+            "apply": {
+              "label": "Apply Now",
+              "href": "/apply-now"
+            }
+          }
+        }
+      },
+      "footer": {
+        "variants": {
+          "EducationFooter1": {
+            "logo": {
+              "src": "/images/logo-light.png",
+              "alt": "AduCrest University — Education for a Brighter Tomorrow"
+            },
+            "description": "Empowering learners with quality education, skilled faculty and a supportive environment to build a brighter future.",
+            "socials": [
+              {
+                "label": "Facebook",
+                "href": "https://www.facebook.com/",
+                "icon": "facebook"
+              },
+              {
+                "label": "Instagram",
+                "href": "https://www.instagram.com/",
+                "icon": "instagram"
+              },
+              {
+                "label": "LinkedIn",
+                "href": "https://www.linkedin.com/",
+                "icon": "linkedin"
+              },
+              {
+                "label": "YouTube",
+                "href": "https://www.youtube.com/",
+                "icon": "youtube"
+              }
+            ],
+            "linksTitle": "Useful Links",
+            "links": [
+              {
+                "label": "Home",
+                "href": "/"
+              },
+              {
+                "label": "About Us",
+                "href": "/about"
+              },
+              {
+                "label": "Our Courses",
+                "href": "/courses"
+              },
+              {
+                "label": "Our Faculty",
+                "href": "/faculty"
+              },
+              {
+                "label": "Latest News",
+                "href": "/blog"
+              },
+              {
+                "label": "Contact Us",
+                "href": "/contact"
+              },
+              {
+                "label": "FAQs",
+                "href": "/faq"
+              }
+            ],
+            "coursesTitle": "Our Courses",
+            "courseLinks": [
+              {
+                "label": "Arts & Humanities",
+                "href": "/courses/bachelor-of-arts"
+              },
+              {
+                "label": "Science",
+                "href": "/courses/bachelor-of-science"
+              },
+              {
+                "label": "Commerce",
+                "href": "/courses/bachelor-of-commerce"
+              },
+              {
+                "label": "Engineering",
+                "href": "/courses/bachelor-of-technology"
+              },
+              {
+                "label": "Management",
+                "href": "/courses/master-of-business-administration"
+              },
+              {
+                "label": "Computer Applications",
+                "href": "/courses/master-of-computer-applications"
+              },
+              {
+                "label": "Medical & Health Sciences",
+                "href": "/courses/bachelor-of-pharmacy"
+              }
+            ],
+            "addressTitle": "Our Address",
+            "contacts": [
+              {
+                "icon": "mail",
+                "label": "Email Us",
+                "href": "mailto:info@aducrest.edu.in",
+                "value": "info@aducrest.edu.in"
+              },
+              {
+                "icon": "phone",
+                "label": "Call Us",
+                "href": "tel:+919876543210",
+                "value": "+91 98765 43210"
+              },
+              {
+                "icon": "mapPin",
+                "label": "Our Location",
+                "href": "/contact",
+                "value": "123 Education Street, New Delhi, India - 110001"
+              }
+            ],
+            "copyright": "© 2025 AduCrest University. All Rights Reserved."
+          }
+        }
+      },
+      "hero": {
+        "variants": {
+          "EducationHero1": {
+            "eyebrow": "WELCOME TO ADUCREST UNIVERSITY",
+            "titleLines": [
+              {
+                "text": "Learn Today",
+                "accent": false
+              },
+              {
+                "text": "Build a Brighter",
+                "accent": true
+              },
+              {
+                "text": "Tomorrow",
+                "accent": false
+              }
+            ],
+            "description": "Discover world-class education, modern facilities and endless opportunities to grow your future at AduCrest University.",
+            "button": {
+              "label": "Explore Courses",
+              "href": "/courses"
+            },
+            "image": {
+              "src": "/images/hero/student.jpg",
+              "alt": "A university student holding books on a sunlit campus"
+            }
+          }
+        }
+      },
+      "about": {
+        "variants": {
+          "EducationAbout1": {
+            "heading": {
+              "eyebrow": "ABOUT US",
+              "title": "Empowering Learners for a",
+              "highlight": "Brighter Future"
+            },
+            "paragraphs": [
+              "At AduCrest University, we are dedicated to providing high-quality education, modern learning resources and a supportive environment that helps students achieve their goals and make a positive impact in society.",
+              "Our experienced faculty, practical learning opportunities and welcoming community give every learner the space to discover their strengths and prepare for a meaningful future."
+            ],
+            "images": [
+              {
+                "src": "/images/about/student.jpg",
+                "alt": "A smiling AduCrest student holding her notebooks"
+              },
+              {
+                "src": "/images/about/campus.jpg",
+                "alt": "The university's historic academic building and landscaped grounds"
+              }
+            ],
+            "benefits": [
+              {
+                "icon": "graduationCap",
+                "title": "Quality Education",
+                "description": "Industry-relevant programs designed for real-world success."
+              },
+              {
+                "icon": "users",
+                "title": "Supportive Learning Environment",
+                "description": "Experienced faculty and modern facilities for overall growth."
+              }
+            ],
+            "button": {
+              "label": "About Us",
+              "href": "/about"
+            },
+            "phone": {
+              "label": "Call Us Anytime",
+              "value": "+91 98765 43210",
+              "href": "tel:+919876543210"
+            }
+          }
+        }
+      },
+      "popular-courses": {
+        "variants": {
+          "EducationPopularCourses1": {
+            "heading": {
+              "eyebrow": "OUR POPULAR COURSES",
+              "title": "Explore Our",
+              "highlight": "Popular Courses",
+              "description": "Choose from a wide range of undergraduate and postgraduate courses designed to help you build skills, gain knowledge and achieve your career goals."
+            },
+            "courseSlugs": [
+              "bachelor-of-arts",
+              "bachelor-of-science",
+              "bachelor-of-commerce",
+              "bachelor-of-technology",
+              "master-of-business-administration",
+              "master-of-computer-applications",
+              "bachelor-of-pharmacy",
+              "bachelor-of-design",
+              "bachelor-of-business-administration",
+              "master-of-arts",
+              "master-of-science",
+              "bachelor-of-computer-applications"
+            ],
+            "pageSize": 4
+          }
+        }
+      },
+      "admission-cta": {
+        "variants": {
+          "EducationAdmissionCTA1": {
+            "heading": {
+              "eyebrow": "ADMISSION OPEN",
+              "title": "Start Your Learning",
+              "highlight": "Journey Today",
+              "description": "Gain in-demand skills from expert faculty and build a brighter future with our flexible and career-focused courses."
+            },
+            "features": [
+              {
+                "icon": "graduationCap",
+                "label": "Expert Instructors"
+              },
+              {
+                "icon": "bookOpen",
+                "label": "Flexible Learning"
+              },
+              {
+                "icon": "users",
+                "label": "Career Support"
+              }
+            ],
+            "button": {
+              "label": "Apply Now",
+              "href": "/apply-now"
+            },
+            "image": {
+              "src": "/images/hero/admission.jpg",
+              "alt": "A student ready to begin her academic journey"
+            }
+          }
+        }
+      },
+      "faculty-preview": {
+        "variants": {
+          "EducationFaculty1": {
+            "heading": {
+              "eyebrow": "OUR FACULTY",
+              "title": "Meet Our Experienced",
+              "highlight": "Faculties",
+              "description": "Our dedicated faculty members bring knowledge, experience and passion to create a supportive learning environment for every student."
+            },
+            "facultyIds": [
+              "neha-sharma",
+              "arjun-mehta",
+              "pooja-verma",
+              "rohan-gupta",
+              "ananya-singh",
+              "vikram-joshi",
+              "kunal-sharma",
+              "kavya-nair",
+              "aditya-rao",
+              "sneha-kapoor",
+              "manish-pandey",
+              "riya-malhotra",
+              "meera-iyer",
+              "rahul-bhatia",
+              "isha-khanna",
+              "sanjay-menon"
+            ],
+            "pageSize": 4
+          }
+        }
+      },
+      "testimonials": {
+        "variants": {
+          "EducationTestimonials1": {
+            "testimonialIds": [
+              "priya",
+              "aarav",
+              "anika"
+            ]
+          }
+        }
+      },
+      "latest-blogs": {
+        "variants": {
+          "EducationBlog1": {
+            "heading": {
+              "eyebrow": "OUR LATEST BLOG",
+              "title": "Explore Our Latest",
+              "highlight": "News & Insights",
+              "description": "Stay updated with the latest news, academic insights and inspiring stories from our university."
+            },
+            "blogSlugs": [
+              "creating-inclusive-classrooms",
+              "learning-together-growing-together",
+              "where-curiosity-becomes-confidence",
+              "successful-college-admission",
+              "importance-of-group-learning",
+              "stay-focused-while-studying",
+              "benefits-of-online-education-2026",
+              "complete-guide-to-campus-life",
+              "skills-for-a-bright-career"
+            ],
+            "pageSize": 3
+          }
+        }
+      },
+      "banner-about": {
+        "variants": {
+          "EducationInnerBanner1": {
+            "title": "About Us",
+            "image": {
+              "src": "/images/banners/inner-clean.png",
+              "alt": "A smiling student speaking with an adviser"
+            },
+            "breadcrumbs": [
+              {
+                "label": "Home",
+                "href": "/"
+              },
+              {
+                "label": "About Us"
+              }
+            ]
+          }
+        }
+      },
+      "banner-courses": {
+        "variants": {
+          "EducationInnerBanner1": {
+            "title": "Our Courses",
+            "image": {
+              "src": "/images/banners/inner-clean.png",
+              "alt": "A smiling student speaking with an adviser"
+            },
+            "breadcrumbs": [
+              {
+                "label": "Home",
+                "href": "/"
+              },
+              {
+                "label": "Our Courses"
+              }
+            ]
+          }
+        }
+      },
+      "banner-course-detail": {
+        "variants": {
+          "EducationInnerBanner1": {
+            "title": "Course Detail",
+            "image": {
+              "src": "/images/banners/inner-clean.png",
+              "alt": "A smiling student speaking with an adviser"
+            },
+            "breadcrumbs": [
+              {
+                "label": "Home",
+                "href": "/"
+              },
+              {
+                "label": "Course Detail"
+              }
+            ]
+          }
+        }
+      },
+      "banner-faculty": {
+        "variants": {
+          "EducationInnerBanner1": {
+            "title": "Faculty",
+            "image": {
+              "src": "/images/banners/inner-clean.png",
+              "alt": "A smiling student speaking with an adviser"
+            },
+            "breadcrumbs": [
+              {
+                "label": "Home",
+                "href": "/"
+              },
+              {
+                "label": "Faculty"
+              }
+            ]
+          }
+        }
+      },
+      "banner-blog": {
+        "variants": {
+          "EducationInnerBanner1": {
+            "title": "Blog",
+            "image": {
+              "src": "/images/banners/inner-clean.png",
+              "alt": "A smiling student speaking with an adviser"
+            },
+            "breadcrumbs": [
+              {
+                "label": "Home",
+                "href": "/"
+              },
+              {
+                "label": "Blog"
+              }
+            ]
+          }
+        }
+      },
+      "banner-blog-detail": {
+        "variants": {
+          "EducationInnerBanner1": {
+            "title": "Blog Detail",
+            "image": {
+              "src": "/images/banners/inner-clean.png",
+              "alt": "A smiling student speaking with an adviser"
+            },
+            "breadcrumbs": [
+              {
+                "label": "Home",
+                "href": "/"
+              },
+              {
+                "label": "Blog Detail"
+              }
+            ]
+          }
+        }
+      },
+      "banner-faq": {
+        "variants": {
+          "EducationInnerBanner1": {
+            "title": "Faq",
+            "image": {
+              "src": "/images/banners/inner-clean.png",
+              "alt": "A smiling student speaking with an adviser"
+            },
+            "breadcrumbs": [
+              {
+                "label": "Home",
+                "href": "/"
+              },
+              {
+                "label": "Faq"
+              }
+            ]
+          }
+        }
+      },
+      "banner-contact": {
+        "variants": {
+          "EducationInnerBanner1": {
+            "title": "Contact Us",
+            "image": {
+              "src": "/images/banners/inner-clean.png",
+              "alt": "A smiling student speaking with an adviser"
+            },
+            "breadcrumbs": [
+              {
+                "label": "Home",
+                "href": "/"
+              },
+              {
+                "label": "Contact Us"
+              }
+            ]
+          }
+        }
+      },
+      "banner-apply-now": {
+        "variants": {
+          "EducationInnerBanner1": {
+            "title": "Apply Now",
+            "image": {
+              "src": "/images/banners/inner-clean.png",
+              "alt": "A smiling student speaking with an adviser"
+            },
+            "breadcrumbs": [
+              {
+                "label": "Home",
+                "href": "/"
+              },
+              {
+                "label": "Apply Now"
+              }
+            ]
+          }
+        }
+      },
+      "courses": {
+        "variants": {
+          "EducationCourseListing1": {
+            "heading": {
+              "eyebrow": "OUR POPULAR COURSES",
+              "title": "Explore Our",
+              "highlight": "Popular Courses",
+              "description": "Choose from a wide range of undergraduate and postgraduate courses designed to help you build skills, gain knowledge and achieve your career goals."
+            },
+            "pageSize": 8
+          }
+        }
+      },
+      "course-detail": {
+        "variants": {
+          "EducationCourseDetail1": {
+            "overviewHeading": {
+              "title": "Course",
+              "highlight": "Overview"
+            },
+            "outcomesHeading": {
+              "title": "What You Will",
+              "highlight": "Learn"
+            },
+            "detailsHeading": {
+              "title": "Course",
+              "highlight": "Details"
+            },
+            "applyLabel": "Apply Now"
+          }
+        }
+      },
+      "faculty-list": {
+        "variants": {
+          "EducationFacultyListing1": {
+            "heading": {
+              "eyebrow": "OUR FACULTY",
+              "title": "Meet Our Experienced",
+              "highlight": "Faculties",
+              "description": "Our dedicated faculty members bring knowledge, experience and passion to create a supportive learning environment for every student."
+            },
+            "pageSize": 12
+          }
+        }
+      },
+      "blog-list": {
+        "variants": {
+          "EducationBlogListing1": {
+            "heading": {
+              "eyebrow": "OUR LATEST BLOG",
+              "title": "Explore Our Latest",
+              "highlight": "News & Insights",
+              "description": "Stay updated with the latest news, academic insights and inspiring stories from our university."
+            },
+            "pageSize": 6
+          }
+        }
+      },
+      "blog-detail": {
+        "variants": {
+          "EducationBlogDetail1": {
+            "recentTitle": "Recent Posts",
+            "recentSlugs": [
+              "successful-college-admission",
+              "importance-of-group-learning",
+              "stay-focused-while-studying",
+              "complete-guide-to-campus-life"
+            ]
+          }
+        }
+      },
+      "faq": {
+        "variants": {
+          "EducationFAQ1": {
+            "heading": {
+              "eyebrow": "OUR FAQ",
+              "title": "Explore our Academic",
+              "highlight": "Facilities & Departments",
+              "description": "Find answers to common questions about our courses, admission process, facilities and student support."
+            },
+            "image": {
+              "src": "/images/faq/student.jpg",
+              "alt": "A university student carrying a yellow folder and a backpack"
+            },
+            "support": {
+              "title": "Still Have Questions?",
+              "description": "We're here to help you with all your queries.",
+              "button": {
+                "label": "Contact Us",
+                "href": "/contact"
+              }
+            },
+            "items": [
+              {
+                "id": "university",
+                "question": "What is AduCrest University?",
+                "answer": "AduCrest University is an educational institution dedicated to providing quality learning, skilled faculty and a supportive environment to help students achieve their academic and career goals."
+              },
+              {
+                "id": "online",
+                "question": "Is online learning available?",
+                "answer": "Selected programmes include online learning resources and flexible study activities. Contact our admissions team to confirm the delivery format and availability for your chosen course."
+              },
+              {
+                "id": "access",
+                "question": "Can I access classes anytime?",
+                "answer": "Recorded resources can be accessed at your own pace when they are included in your programme. Live classes and on-campus sessions follow a published timetable."
+              },
+              {
+                "id": "materials",
+                "question": "Do you provide study materials?",
+                "answer": "Course learning materials, recommended reading and assignments are shared by your faculty. The exact resources depend on your programme and are explained at the start of each module."
+              },
+              {
+                "id": "support",
+                "question": "Do you offer student support?",
+                "answer": "Yes. Students can seek academic guidance, course advice and help with university services from faculty and the student support team. Use our contact page to reach the appropriate team."
+              },
+              {
+                "id": "password",
+                "question": "Can I reset my password?",
+                "answer": "For an existing student account, contact the university's support team for help with account recovery. This public website does not include a student login or password-reset service."
+              }
+            ]
+          }
+        }
+      },
+      "contact": {
+        "variants": {
+          "EducationContact1": {
+            "heading": {
+              "eyebrow": "GET IN TOUCH",
+              "title": "Contact",
+              "highlight": "Us",
+              "description": "We'd love to hear from you! Whether you have a question about admissions, courses, facilities or any other enquiry, our team is here to help."
+            },
+            "form": {
+              "title": "Send Us a",
+              "highlight": "Message",
+              "description": "Fill out the form below with your enquiry.",
+              "submitLabel": "Send Message",
+              "fields": [
+                "fullName",
+                "email",
+                "phone",
+                "course",
+                "message"
+              ]
+            },
+            "information": [
+              {
+                "icon": "mapPin",
+                "title": "Our Address",
+                "lines": [
+                  "123 Education Street,",
+                  "New Delhi, India - 110001"
+                ],
+                "href": "https://maps.google.com/?q=New+Delhi+India"
+              },
+              {
+                "icon": "phone",
+                "title": "Call Us",
+                "lines": [
+                  "+91 98765 43210",
+                  "+91 87654 32109"
+                ],
+                "href": "tel:+919876543210"
+              },
+              {
+                "icon": "mail",
+                "title": "Email Us",
+                "lines": [
+                  "info@aducrest.edu.in",
+                  "admissions@aducrest.edu.in"
+                ],
+                "href": "mailto:info@aducrest.edu.in"
+              },
+              {
+                "icon": "clock",
+                "title": "Working Hours",
+                "lines": [
+                  "Monday - Friday",
+                  "9:00 AM - 6:00 PM"
+                ]
+              }
+            ],
+            "image": {
+              "src": "/images/contact/campus.jpg",
+              "alt": "Students approaching a modern campus building"
+            },
+            "socialTitle": "Follow Us",
+            "socials": [
+              {
+                "label": "Facebook",
+                "href": "https://www.facebook.com/",
+                "icon": "facebook"
+              },
+              {
+                "label": "Instagram",
+                "href": "https://www.instagram.com/",
+                "icon": "instagram"
+              },
+              {
+                "label": "LinkedIn",
+                "href": "https://www.linkedin.com/",
+                "icon": "linkedin"
+              },
+              {
+                "label": "YouTube",
+                "href": "https://www.youtube.com/",
+                "icon": "youtube"
+              }
+            ],
+            "map": {
+              "embedUrl": "https://maps.google.com/maps?q=New%20Delhi%20India&t=&z=12&ie=UTF8&iwloc=&output=embed",
+              "title": "Illustrative map of New Delhi",
+              "notice": "The supplied university address is illustrative. Confirm campus location with admissions before planning a visit."
+            }
+          }
+        }
+      },
+      "application": {
+        "variants": {
+          "EducationApplicationForm1": {
+            "heading": {
+              "title": "Application",
+              "highlight": "Form"
+            },
+            "form": {
+              "title": "Application",
+              "highlight": "Form",
+              "description": "Fill in your details below to apply for your desired course.",
+              "submitLabel": "Submit Application",
+              "fields": [
+                "fullName",
+                "email",
+                "phone",
+                "birthDate",
+                "course",
+                "department",
+                "message"
+              ]
+            },
+            "promo": {
+              "heading": {
+                "eyebrow": "ADMISSION OPEN",
+                "title": "Begin Your",
+                "highlight": "Academic Journey With Us"
+              },
+              "image": {
+                "src": "/images/hero/admission.jpg",
+                "alt": "A prospective student carrying books and a backpack"
+              },
+              "description": "Join a vibrant learning community and build the skills, knowledge and confidence to shape a successful future.",
+              "benefits": [
+                "Industry-relevant curriculum",
+                "Experienced faculty members",
+                "Modern infrastructure",
+                "Career guidance & placement support"
+              ]
+            },
+            "help": [
+              {
+                "icon": "phone",
+                "title": "Need Help?",
+                "description": "Call us anytime",
+                "value": "+91 98765 43210",
+                "href": "tel:+919876543210"
+              },
+              {
+                "icon": "mail",
+                "title": "Email Us",
+                "description": "For any query",
+                "value": "admissions@aducrest.edu.in",
+                "href": "mailto:admissions@aducrest.edu.in"
+              },
+              {
+                "icon": "mapPin",
+                "title": "Visit Campus",
+                "description": "123 Education Street,",
+                "value": "New Delhi, India - 110001",
+                "href": "/contact"
+              }
+            ]
+          }
+        }
+      },
+      "application-process": {
+        "variants": {
+          "EducationApplicationProcess1": {
+            "heading": {
+              "eyebrow": "SIMPLE STEPS",
+              "title": "Our",
+              "highlight": "Application Process"
+            },
+            "steps": [
+              {
+                "title": "Fill Application Form",
+                "description": "Provide your basic details and select your desired course.",
+                "icon": "fileText"
+              },
+              {
+                "title": "Submit Documents",
+                "description": "Admissions will explain secure document submission after initial review.",
+                "icon": "file-pen-line"
+              },
+              {
+                "title": "Application Review",
+                "description": "Our team will review your application.",
+                "icon": "clipboard-check"
+              },
+              {
+                "title": "Admission Confirmation",
+                "description": "Receive an admission decision and guidance on your next steps.",
+                "icon": "mail-open"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "collections": {
+      "courses": [
+        {
+          "id": "ba",
+          "slug": "bachelor-of-arts",
+          "title": "Bachelor of Arts (B.A.)",
+          "category": "Arts & Humanities",
+          "duration": "3 Years",
+          "eligibility": "12th Pass (Any Stream)",
+          "image": {
+            "src": "/images/courses/course-1.jpg",
+            "alt": "Arts & Humanities student at AduCrest University"
+          },
+          "mainImage": {
+            "src": "/images/blogs/classroom.jpg",
+            "alt": "A university classroom for the Bachelor of Arts (B.A.) programme"
+          },
+          "previewImage": {
+            "src": "/images/courses/course-1.jpg",
+            "alt": "Bachelor of Arts (B.A.) course preview"
+          },
+          "updated": "September 12, 2026",
+          "overview": [
+            "Explore literature, history, culture and the ideas that shape our world. Our Bachelor of Arts combines a broad academic foundation with opportunities to develop your interests through elective study.",
+            "Seminars, research projects and community activities connect your learning with the world beyond the classroom. Learn to evaluate evidence, communicate clearly and understand society from different perspectives."
+          ],
+          "outcomes": [
+            "Analyze literary and historical sources",
+            "Write clear, persuasive academic arguments",
+            "Understand cultural and social perspectives",
+            "Develop independent research skills",
+            "Present ideas with confidence",
+            "Connect the humanities with contemporary issues"
+          ],
+          "meta": {
+            "cost": "₹45,000 / year",
+            "instructor": "Dr. Pooja Verma",
+            "duration": "3 Years",
+            "students": "1200+",
+            "views": "4100",
+            "lessons": "36",
+            "language": "English",
+            "certificate": "Included"
+          },
+          "videoUrl": null
+        },
+        {
+          "id": "bsc",
+          "slug": "bachelor-of-science",
+          "title": "Bachelor of Science (B.Sc.)",
+          "category": "Science",
+          "duration": "3 Years",
+          "eligibility": "12th Pass (Science Stream)",
+          "image": {
+            "src": "/images/courses/course-2.jpg",
+            "alt": "Science student at AduCrest University"
+          },
+          "mainImage": {
+            "src": "/images/blogs/classroom.jpg",
+            "alt": "A university classroom for the Bachelor of Science (B.Sc.) programme"
+          },
+          "previewImage": {
+            "src": "/images/courses/course-2.jpg",
+            "alt": "Bachelor of Science (B.Sc.) course preview"
+          },
+          "updated": "September 12, 2026",
+          "overview": [
+            "Build a rigorous understanding of scientific principles through our Bachelor of Science. Study the natural world with a balanced programme of theory, laboratory practice and analytical investigation.",
+            "Choose specialist modules across physics, chemistry and biology, then apply your knowledge to guided experiments and a final research project. Academic mentors support your next steps."
+          ],
+          "outcomes": [
+            "Apply the scientific method to real questions",
+            "Plan and conduct laboratory experiments",
+            "Interpret data and evaluate uncertainty",
+            "Understand core scientific concepts",
+            "Work safely in laboratories",
+            "Communicate scientific findings clearly"
+          ],
+          "meta": {
+            "cost": "₹55,000 / year",
+            "instructor": "Mr. Aditya Rao",
+            "duration": "3 Years",
+            "students": "950+",
+            "views": "3700",
+            "lessons": "42",
+            "language": "English",
+            "certificate": "Included"
+          },
+          "videoUrl": null
+        },
+        {
+          "id": "bcom",
+          "slug": "bachelor-of-commerce",
+          "title": "Bachelor of Commerce (B.Com.)",
+          "category": "Commerce",
+          "duration": "3 Years",
+          "eligibility": "12th Pass (Any Stream)",
+          "image": {
+            "src": "/images/courses/course-3.jpg",
+            "alt": "Commerce student at AduCrest University"
+          },
+          "mainImage": {
+            "src": "/images/blogs/classroom.jpg",
+            "alt": "A university classroom for the Bachelor of Commerce (B.Com.) programme"
+          },
+          "previewImage": {
+            "src": "/images/courses/course-3.jpg",
+            "alt": "Bachelor of Commerce (B.Com.) course preview"
+          },
+          "updated": "September 12, 2026",
+          "overview": [
+            "Develop a strong foundation in accounting, economics and business through our Bachelor of Commerce. The programme connects commercial theory with the practical decisions made by modern organisations.",
+            "Case studies, financial analysis and collaborative assignments build your understanding of how enterprises work. Learn to read financial information and communicate professional recommendations."
+          ],
+          "outcomes": [
+            "Prepare and interpret financial statements",
+            "Understand economics and commercial markets",
+            "Apply the principles of business law",
+            "Analyze financial data",
+            "Evaluate taxation and accounting concepts",
+            "Build professional communication skills"
+          ],
+          "meta": {
+            "cost": "₹48,000 / year",
+            "instructor": "Dr. Kavya Nair",
+            "duration": "3 Years",
+            "students": "1100+",
+            "views": "3900",
+            "lessons": "38",
+            "language": "English",
+            "certificate": "Included"
+          },
+          "videoUrl": null
+        },
+        {
+          "id": "btech",
+          "slug": "bachelor-of-technology",
+          "title": "Bachelor of Technology (B.Tech.)",
+          "category": "Engineering",
+          "duration": "4 Years",
+          "eligibility": "12th Pass (PCM)",
+          "image": {
+            "src": "/images/courses/course-4.jpg",
+            "alt": "Engineering student at AduCrest University"
+          },
+          "mainImage": {
+            "src": "/images/blogs/classroom.jpg",
+            "alt": "A university classroom for the Bachelor of Technology (B.Tech.) programme"
+          },
+          "previewImage": {
+            "src": "/images/courses/course-4.jpg",
+            "alt": "Bachelor of Technology (B.Tech.) course preview"
+          },
+          "updated": "September 12, 2026",
+          "overview": [
+            "Turn curiosity into practical solutions with our Bachelor of Technology. This programme combines engineering fundamentals, mathematics and hands-on design to prepare you for a changing technical world.",
+            "Work in project teams, develop prototypes and explore contemporary engineering tools. Design challenges encourage thoughtful problem solving, responsible innovation and clear technical communication."
+          ],
+          "outcomes": [
+            "Apply mathematics to engineering problems",
+            "Design and test practical prototypes",
+            "Use modern engineering tools responsibly",
+            "Understand systems and technical tradeoffs",
+            "Collaborate in project teams",
+            "Present engineering solutions"
+          ],
+          "meta": {
+            "cost": "₹95,000 / year",
+            "instructor": "Prof. Rohan Gupta",
+            "duration": "4 Years",
+            "students": "1800+",
+            "views": "6500",
+            "lessons": "56",
+            "language": "English",
+            "certificate": "Included"
+          },
+          "videoUrl": null
+        },
+        {
+          "id": "mba",
+          "slug": "master-of-business-administration",
+          "title": "Master of Business Administration (MBA)",
+          "category": "Management",
+          "duration": "2 Years",
+          "eligibility": "Bachelor's Degree (Any Discipline)",
+          "image": {
+            "src": "/images/courses/course-5.jpg",
+            "alt": "Management student at AduCrest University"
+          },
+          "mainImage": {
+            "src": "/images/blogs/classroom.jpg",
+            "alt": "A university classroom for the Master of Business Administration (MBA) programme"
+          },
+          "previewImage": {
+            "src": "/images/courses/course-5.jpg",
+            "alt": "Master of Business Administration (MBA) course preview"
+          },
+          "updated": "September 12, 2026",
+          "overview": [
+            "This comprehensive Business Management programme provides essential knowledge and practical skills for today's dynamic business world. Learn how strategic planning, leadership and operations contribute to organisational success.",
+            "Develop your management skills through real-world examples, case studies and guided projects. The programme offers a structured learning path in finance, marketing, people management and strategy."
+          ],
+          "outcomes": [
+            "Understand core business management principles",
+            "Learn strategic planning and decision making",
+            "Explore leadership and team management",
+            "Build financial management foundations",
+            "Develop effective communication skills",
+            "Analyze real-world business case studies",
+            "Improve problem solving and critical thinking",
+            "Prepare for career growth in business"
+          ],
+          "meta": {
+            "cost": "₹1,20,000 / year",
+            "instructor": "Prof. Arjun Mehta",
+            "duration": "2 Years",
+            "students": "850+",
+            "views": "4800",
+            "lessons": "28",
+            "language": "English",
+            "certificate": "Included"
+          },
+          "videoUrl": null
+        },
+        {
+          "id": "mca",
+          "slug": "master-of-computer-applications",
+          "title": "Master of Computer Applications (MCA)",
+          "category": "Computer Applications",
+          "duration": "2 Years",
+          "eligibility": "Bachelor's Degree with Mathematics",
+          "image": {
+            "src": "/images/courses/course-6.jpg",
+            "alt": "Computer Applications student at AduCrest University"
+          },
+          "mainImage": {
+            "src": "/images/blogs/classroom.jpg",
+            "alt": "A university classroom for the Master of Computer Applications (MCA) programme"
+          },
+          "previewImage": {
+            "src": "/images/courses/course-6.jpg",
+            "alt": "Master of Computer Applications (MCA) course preview"
+          },
+          "updated": "September 12, 2026",
+          "overview": [
+            "Build reliable software and deepen your understanding of modern computing with our Master of Computer Applications. Study software engineering, databases, networks and application development through a practical curriculum.",
+            "From requirements to deployment, work through the full software development process. Team projects and a final application connect computer science principles with the needs of real users."
+          ],
+          "outcomes": [
+            "Design maintainable software applications",
+            "Model and query relational databases",
+            "Understand computer networks and security",
+            "Apply algorithms and data structures",
+            "Collaborate using modern development tools",
+            "Build and document a complete application"
+          ],
+          "meta": {
+            "cost": "₹85,000 / year",
+            "instructor": "Dr. Neha Sharma",
+            "duration": "2 Years",
+            "students": "720+",
+            "views": "4300",
+            "lessons": "32",
+            "language": "English",
+            "certificate": "Included"
+          },
+          "videoUrl": null
+        },
+        {
+          "id": "bpharm",
+          "slug": "bachelor-of-pharmacy",
+          "title": "Bachelor of Pharmacy (B.Pharm)",
+          "category": "Medical & Health Sciences",
+          "duration": "4 Years",
+          "eligibility": "12th Pass (PCB / PCM)",
+          "image": {
+            "src": "/images/courses/course-7.jpg",
+            "alt": "Medical & Health Sciences student at AduCrest University"
+          },
+          "mainImage": {
+            "src": "/images/blogs/classroom.jpg",
+            "alt": "A university classroom for the Bachelor of Pharmacy (B.Pharm) programme"
+          },
+          "previewImage": {
+            "src": "/images/courses/course-7.jpg",
+            "alt": "Bachelor of Pharmacy (B.Pharm) course preview"
+          },
+          "updated": "September 12, 2026",
+          "overview": [
+            "Explore the science behind medicines and their responsible use with our Bachelor of Pharmacy. The programme introduces pharmaceutical chemistry, pharmacology and safe, ethical professional practice.",
+            "Laboratory learning and case-based discussion connect theory with pharmacy practice. Develop careful analytical habits and an understanding of quality standards."
+          ],
+          "outcomes": [
+            "Understand the foundations of pharmacology",
+            "Study pharmaceutical chemistry and formulation",
+            "Follow laboratory safety and quality procedures",
+            "Evaluate pharmaceutical information",
+            "Understand responsible medicine management",
+            "Communicate clearly in healthcare settings"
+          ],
+          "meta": {
+            "cost": "₹90,000 / year",
+            "instructor": "Dr. Manish Pandey",
+            "duration": "4 Years",
+            "students": "640+",
+            "views": "2900",
+            "lessons": "54",
+            "language": "English",
+            "certificate": "Included"
+          },
+          "videoUrl": null
+        },
+        {
+          "id": "bdes",
+          "slug": "bachelor-of-design",
+          "title": "Bachelor of Design (B.Des)",
+          "category": "Design",
+          "duration": "4 Years",
+          "eligibility": "12th Pass (Any Stream)",
+          "image": {
+            "src": "/images/courses/course-8.jpg",
+            "alt": "Design student at AduCrest University"
+          },
+          "mainImage": {
+            "src": "/images/blogs/classroom.jpg",
+            "alt": "A university classroom for the Bachelor of Design (B.Des) programme"
+          },
+          "previewImage": {
+            "src": "/images/courses/course-8.jpg",
+            "alt": "Bachelor of Design (B.Des) course preview"
+          },
+          "updated": "September 12, 2026",
+          "overview": [
+            "Bring ideas to life through our Bachelor of Design. Explore visual communication, design thinking and creative practice while learning how design responds to people's needs.",
+            "Studio projects encourage experimentation, critique and collaboration. Build a portfolio that demonstrates your process, from research and concept sketches to refined design outcomes."
+          ],
+          "outcomes": [
+            "Research people's needs",
+            "Develop concepts through sketching",
+            "Apply visual design principles",
+            "Give constructive design feedback",
+            "Create a professional portfolio",
+            "Present design decisions clearly"
+          ],
+          "meta": {
+            "cost": "₹80,000 / year",
+            "instructor": "Ms. Riya Malhotra",
+            "duration": "4 Years",
+            "students": "510+",
+            "views": "2600",
+            "lessons": "48",
+            "language": "English",
+            "certificate": "Included"
+          },
+          "videoUrl": null
+        },
+        {
+          "id": "bba",
+          "slug": "bachelor-of-business-administration",
+          "title": "Bachelor of Business Administration (BBA)",
+          "category": "Management",
+          "duration": "3 Years",
+          "eligibility": "12th Pass (Any Stream)",
+          "image": {
+            "src": "/images/courses/course-1.jpg",
+            "alt": "Management student at AduCrest University"
+          },
+          "mainImage": {
+            "src": "/images/blogs/classroom.jpg",
+            "alt": "A university classroom for the Bachelor of Business Administration (BBA) programme"
+          },
+          "previewImage": {
+            "src": "/images/courses/course-1.jpg",
+            "alt": "Bachelor of Business Administration (BBA) course preview"
+          },
+          "updated": "September 12, 2026",
+          "overview": [
+            "Discover how businesses plan, organise and grow with our Bachelor of Business Administration. Build a broad foundation in management, marketing, finance and entrepreneurship.",
+            "Practical assignments help you connect concepts with everyday business challenges. Develop the confidence to contribute to teams and evaluate opportunities."
+          ],
+          "outcomes": [
+            "Understand business functions",
+            "Create practical marketing plans",
+            "Interpret business financial information",
+            "Develop presentation skills",
+            "Evaluate entrepreneurial opportunities",
+            "Make evidence-informed decisions"
+          ],
+          "meta": {
+            "cost": "₹60,000 / year",
+            "instructor": "Prof. Arjun Mehta",
+            "duration": "3 Years",
+            "students": "760+",
+            "views": "3300",
+            "lessons": "36",
+            "language": "English",
+            "certificate": "Included"
+          },
+          "videoUrl": null
+        },
+        {
+          "id": "ma",
+          "slug": "master-of-arts",
+          "title": "Master of Arts (M.A.)",
+          "category": "Arts & Humanities",
+          "duration": "2 Years",
+          "eligibility": "Bachelor's Degree (Relevant Discipline)",
+          "image": {
+            "src": "/images/courses/course-2.jpg",
+            "alt": "Arts & Humanities student at AduCrest University"
+          },
+          "mainImage": {
+            "src": "/images/blogs/classroom.jpg",
+            "alt": "A university classroom for the Master of Arts (M.A.) programme"
+          },
+          "previewImage": {
+            "src": "/images/courses/course-2.jpg",
+            "alt": "Master of Arts (M.A.) course preview"
+          },
+          "updated": "September 12, 2026",
+          "overview": [
+            "Deepen your understanding of literature, culture and critical thought through our Master of Arts. Advanced seminars give you space to investigate ideas and develop your own academic perspective.",
+            "Work closely with faculty on independent research, thoughtful discussion and sustained writing. A dissertation lets you explore a focused question using appropriate research methods."
+          ],
+          "outcomes": [
+            "Engage with critical theories",
+            "Develop a focused research question",
+            "Evaluate scholarly sources",
+            "Write an academic dissertation",
+            "Lead seminar discussions",
+            "Connect study to wider debates"
+          ],
+          "meta": {
+            "cost": "₹50,000 / year",
+            "instructor": "Dr. Pooja Verma",
+            "duration": "2 Years",
+            "students": "420+",
+            "views": "2100",
+            "lessons": "24",
+            "language": "English",
+            "certificate": "Included"
+          },
+          "videoUrl": null
+        },
+        {
+          "id": "msc",
+          "slug": "master-of-science",
+          "title": "Master of Science (M.Sc.)",
+          "category": "Science",
+          "duration": "2 Years",
+          "eligibility": "Bachelor's Degree in Science",
+          "image": {
+            "src": "/images/courses/course-3.jpg",
+            "alt": "Science student at AduCrest University"
+          },
+          "mainImage": {
+            "src": "/images/blogs/classroom.jpg",
+            "alt": "A university classroom for the Master of Science (M.Sc.) programme"
+          },
+          "previewImage": {
+            "src": "/images/courses/course-3.jpg",
+            "alt": "Master of Science (M.Sc.) course preview"
+          },
+          "updated": "September 12, 2026",
+          "overview": [
+            "Strengthen your scientific expertise through advanced study and research in our Master of Science. Develop specialist knowledge alongside rigorous experimental and analytical skills.",
+            "Advanced laboratory work, seminars and a supervised project support your growth as an independent investigator. Learn to evaluate findings and explain their significance responsibly."
+          ],
+          "outcomes": [
+            "Design research investigations",
+            "Use analytical techniques",
+            "Review scientific literature",
+            "Analyze research data",
+            "Practice ethical research",
+            "Present a scientific project"
+          ],
+          "meta": {
+            "cost": "₹65,000 / year",
+            "instructor": "Ms. Sneha Kapoor",
+            "duration": "2 Years",
+            "students": "380+",
+            "views": "1900",
+            "lessons": "28",
+            "language": "English",
+            "certificate": "Included"
+          },
+          "videoUrl": null
+        },
+        {
+          "id": "bca",
+          "slug": "bachelor-of-computer-applications",
+          "title": "Bachelor of Computer Applications (BCA)",
+          "category": "Computer Applications",
+          "duration": "3 Years",
+          "eligibility": "12th Pass with Mathematics",
+          "image": {
+            "src": "/images/courses/course-4.jpg",
+            "alt": "Computer Applications student at AduCrest University"
+          },
+          "mainImage": {
+            "src": "/images/blogs/classroom.jpg",
+            "alt": "A university classroom for the Bachelor of Computer Applications (BCA) programme"
+          },
+          "previewImage": {
+            "src": "/images/courses/course-4.jpg",
+            "alt": "Bachelor of Computer Applications (BCA) course preview"
+          },
+          "updated": "September 12, 2026",
+          "overview": [
+            "Begin your journey in computing with our Bachelor of Computer Applications. Learn programming, databases and web technologies while developing a foundation in computer systems.",
+            "Guided practical work helps you turn concepts into useful applications. Build confidence through individual assignments, collaborative projects and explaining your technical decisions."
+          ],
+          "outcomes": [
+            "Write structured programs",
+            "Build accessible web interfaces",
+            "Query databases",
+            "Understand computer systems",
+            "Test applications systematically",
+            "Collaborate on software projects"
+          ],
+          "meta": {
+            "cost": "₹58,000 / year",
+            "instructor": "Mr. Kunal Sharma",
+            "duration": "3 Years",
+            "students": "890+",
+            "views": "3800",
+            "lessons": "38",
+            "language": "English",
+            "certificate": "Included"
+          },
+          "videoUrl": null
+        }
+      ],
+      "faculty": [
+        {
+          "id": "neha-sharma",
+          "name": "Dr. Neha Sharma",
+          "role": "Professor of Computer Science",
+          "department": "Computer Applications",
+          "image": {
+            "src": "/images/faculty/faculty-1.jpg",
+            "alt": "Dr. Neha Sharma, Professor of Computer Science at AduCrest University"
+          }
+        },
+        {
+          "id": "arjun-mehta",
+          "name": "Prof. Arjun Mehta",
+          "role": "Head of Business Management",
+          "department": "Management",
+          "image": {
+            "src": "/images/faculty/faculty-2.jpg",
+            "alt": "Prof. Arjun Mehta, Head of Business Management at AduCrest University"
+          }
+        },
+        {
+          "id": "pooja-verma",
+          "name": "Dr. Pooja Verma",
+          "role": "Faculty of English Literature",
+          "department": "Arts & Humanities",
+          "image": {
+            "src": "/images/faculty/faculty-3.jpg",
+            "alt": "Dr. Pooja Verma, Faculty of English Literature at AduCrest University"
+          }
+        },
+        {
+          "id": "rohan-gupta",
+          "name": "Prof. Rohan Gupta",
+          "role": "Faculty of Mathematics",
+          "department": "Science",
+          "image": {
+            "src": "/images/faculty/faculty-4.jpg",
+            "alt": "Prof. Rohan Gupta, Faculty of Mathematics at AduCrest University"
+          }
+        },
+        {
+          "id": "ananya-singh",
+          "name": "Ms. Ananya Singh",
+          "role": "Faculty of Psychology",
+          "department": "Arts & Humanities",
+          "image": {
+            "src": "/images/faculty/faculty-5.jpg",
+            "alt": "Ms. Ananya Singh, Faculty of Psychology at AduCrest University"
+          }
+        },
+        {
+          "id": "vikram-joshi",
+          "name": "Dr. Vikram Joshi",
+          "role": "Faculty of History",
+          "department": "Arts & Humanities",
+          "image": {
+            "src": "/images/faculty/faculty-6.jpg",
+            "alt": "Dr. Vikram Joshi, Faculty of History at AduCrest University"
+          }
+        },
+        {
+          "id": "kunal-sharma",
+          "name": "Mr. Kunal Sharma",
+          "role": "Assistant Professor",
+          "department": "Computer Applications",
+          "image": {
+            "src": "/images/faculty/faculty-7.jpg",
+            "alt": "Mr. Kunal Sharma, Assistant Professor at AduCrest University"
+          }
+        },
+        {
+          "id": "kavya-nair",
+          "name": "Dr. Kavya Nair",
+          "role": "Faculty of Economics",
+          "department": "Commerce",
+          "image": {
+            "src": "/images/faculty/faculty-8.jpg",
+            "alt": "Dr. Kavya Nair, Faculty of Economics at AduCrest University"
+          }
+        },
+        {
+          "id": "aditya-rao",
+          "name": "Mr. Aditya Rao",
+          "role": "Faculty of Physics",
+          "department": "Science",
+          "image": {
+            "src": "/images/faculty/faculty-9.jpg",
+            "alt": "Mr. Aditya Rao, Faculty of Physics at AduCrest University"
+          }
+        },
+        {
+          "id": "sneha-kapoor",
+          "name": "Ms. Sneha Kapoor",
+          "role": "Faculty of Biology",
+          "department": "Science",
+          "image": {
+            "src": "/images/faculty/faculty-10.jpg",
+            "alt": "Ms. Sneha Kapoor, Faculty of Biology at AduCrest University"
+          }
+        },
+        {
+          "id": "manish-pandey",
+          "name": "Dr. Manish Pandey",
+          "role": "Faculty of Chemistry",
+          "department": "Science",
+          "image": {
+            "src": "/images/faculty/faculty-11.jpg",
+            "alt": "Dr. Manish Pandey, Faculty of Chemistry at AduCrest University"
+          }
+        },
+        {
+          "id": "riya-malhotra",
+          "name": "Ms. Riya Malhotra",
+          "role": "Faculty of Arts",
+          "department": "Design",
+          "image": {
+            "src": "/images/faculty/faculty-12.jpg",
+            "alt": "Ms. Riya Malhotra, Faculty of Arts at AduCrest University"
+          }
+        },
+        {
+          "id": "meera-iyer",
+          "name": "Dr. Meera Iyer",
+          "role": "Faculty of Environmental Studies",
+          "department": "Science",
+          "image": {
+            "src": "/images/faculty/faculty-1.jpg",
+            "alt": "Dr. Meera Iyer, Faculty of Environmental Studies at AduCrest University"
+          }
+        },
+        {
+          "id": "rahul-bhatia",
+          "name": "Prof. Rahul Bhatia",
+          "role": "Faculty of Accounting",
+          "department": "Commerce",
+          "image": {
+            "src": "/images/faculty/faculty-2.jpg",
+            "alt": "Prof. Rahul Bhatia, Faculty of Accounting at AduCrest University"
+          }
+        },
+        {
+          "id": "isha-khanna",
+          "name": "Ms. Isha Khanna",
+          "role": "Faculty of Visual Communication",
+          "department": "Design",
+          "image": {
+            "src": "/images/faculty/faculty-3.jpg",
+            "alt": "Ms. Isha Khanna, Faculty of Visual Communication at AduCrest University"
+          }
+        },
+        {
+          "id": "sanjay-menon",
+          "name": "Dr. Sanjay Menon",
+          "role": "Faculty of Engineering",
+          "department": "Engineering",
+          "image": {
+            "src": "/images/faculty/faculty-4.jpg",
+            "alt": "Dr. Sanjay Menon, Faculty of Engineering at AduCrest University"
+          }
+        }
+      ],
+      "blogs": [
+        {
+          "id": "blog-1",
+          "slug": "successful-college-admission",
+          "title": "Tips for a Successful College Admission",
+          "category": "Admission",
+          "date": "August 10, 2026",
+          "author": "Neha Sharma",
+          "excerpt": "Discover essential tips and guidance to help you navigate the college admission process with confidence and ease.",
+          "image": {
+            "src": "/images/blogs/blog-1.jpg",
+            "alt": "Admission at AduCrest University"
+          },
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "A successful application starts with understanding what you want to learn. Explore programmes carefully, check their eligibility requirements and make a realistic plan for the application process."
+            },
+            {
+              "type": "paragraph",
+              "text": "Preparing early gives you space to make thoughtful choices. Keep your application details organised, read each requirement and review everything before submission."
+            },
+            {
+              "type": "quote",
+              "text": "The best application tells a clear, honest story about your interests and readiness to learn.",
+              "author": "Dr. Neha Sharma",
+              "role": "Education Expert"
+            },
+            {
+              "type": "image",
+              "image": {
+                "src": "/images/blogs/group.jpg",
+                "alt": "A group of university students studying together in the library"
+              }
+            },
+            {
+              "type": "heading",
+              "text": "Build Your Application with Confidence"
+            },
+            {
+              "type": "paragraph",
+              "text": "Good learning habits develop through practice, reflection and support. Take time to review what works for you, learn from feedback and build on each small step."
+            },
+            {
+              "type": "list",
+              "items": [
+                "Research course requirements and deadlines",
+                "Gather accurate academic information",
+                "Choose a programme that matches your interests",
+                "Ask the admissions team when you need guidance"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "blog-2",
+          "slug": "importance-of-group-learning",
+          "title": "The Importance of Group Learning",
+          "category": "Student Life",
+          "date": "August 08, 2026",
+          "author": "Arjun Mehta",
+          "excerpt": "Learn how collaborative learning helps students build confidence, improve understanding and achieve better results.",
+          "image": {
+            "src": "/images/blogs/blog-2.jpg",
+            "alt": "Student Life at AduCrest University"
+          },
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Learning with other people gives you the chance to explain ideas, ask questions and discover new perspectives. A good study group makes room for every member to contribute."
+            },
+            {
+              "type": "paragraph",
+              "text": "Keep your group small enough for useful discussion. Agree on practical tasks, share responsibilities and take a moment to reflect on what still needs attention."
+            },
+            {
+              "type": "quote",
+              "text": "We learn more deeply when we listen carefully and help each other understand.",
+              "author": "Dr. Arjun Mehta",
+              "role": "Education Expert"
+            },
+            {
+              "type": "image",
+              "image": {
+                "src": "/images/blogs/group.jpg",
+                "alt": "A group of university students studying together in the library"
+              }
+            },
+            {
+              "type": "heading",
+              "text": "Make Collaboration Work"
+            },
+            {
+              "type": "paragraph",
+              "text": "Good learning habits develop through practice, reflection and support. Take time to review what works for you, learn from feedback and build on each small step."
+            },
+            {
+              "type": "list",
+              "items": [
+                "Set a clear goal for every session",
+                "Give every member time to contribute",
+                "Explain ideas in your own words",
+                "Review what the group has learned"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "blog-3",
+          "slug": "stay-focused-while-studying",
+          "title": "How to Stay Focused While Studying",
+          "category": "Study Tips",
+          "date": "August 05, 2026",
+          "author": "Rohan Gupta",
+          "excerpt": "Explore practical study tips and techniques to stay motivated, manage time and improve productivity.",
+          "image": {
+            "src": "/images/blogs/blog-3.jpg",
+            "alt": "Study Tips at AduCrest University"
+          },
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Focused study begins with a manageable plan. Choose one task, create a calm workspace and give yourself a clear starting point rather than trying to complete everything at once."
+            },
+            {
+              "type": "paragraph",
+              "text": "Experiment with the length of your study sessions and notice when your attention is strongest. A routine that includes rest is easier to maintain over a full semester."
+            },
+            {
+              "type": "quote",
+              "text": "Consistency grows from small, repeatable habits.",
+              "author": "Dr. Rohan Gupta",
+              "role": "Education Expert"
+            },
+            {
+              "type": "image",
+              "image": {
+                "src": "/images/blogs/group.jpg",
+                "alt": "A group of university students studying together in the library"
+              }
+            },
+            {
+              "type": "heading",
+              "text": "Build a Sustainable Study Routine"
+            },
+            {
+              "type": "paragraph",
+              "text": "Good learning habits develop through practice, reflection and support. Take time to review what works for you, learn from feedback and build on each small step."
+            },
+            {
+              "type": "list",
+              "items": [
+                "Break large assignments into small tasks",
+                "Set a realistic goal for each study session",
+                "Keep distracting notifications out of reach",
+                "Take regular breaks and review your progress"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "blog-4",
+          "slug": "benefits-of-online-education-2026",
+          "title": "Benefits of Online Education in 2026",
+          "category": "Online Learning",
+          "date": "August 02, 2026",
+          "author": "Neha Sharma",
+          "excerpt": "Discover how online learning is creating new opportunities for students to learn flexibly and grow their skills.",
+          "image": {
+            "src": "/images/blogs/blog-4.jpg",
+            "alt": "Online Learning at AduCrest University"
+          },
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Online learning can make education easier to fit around other responsibilities. Recorded resources, digital reading and structured activities let students revisit key ideas at their own pace."
+            },
+            {
+              "type": "paragraph",
+              "text": "Flexibility works best alongside clear expectations. Check the delivery format for your chosen programme and stay connected with your instructors and classmates."
+            },
+            {
+              "type": "quote",
+              "text": "Flexible learning creates opportunity when students also have a clear path and good support.",
+              "author": "Dr. Neha Sharma",
+              "role": "Education Expert"
+            },
+            {
+              "type": "image",
+              "image": {
+                "src": "/images/blogs/group.jpg",
+                "alt": "A group of university students studying together in the library"
+              }
+            },
+            {
+              "type": "heading",
+              "text": "Learn with Flexibility and Purpose"
+            },
+            {
+              "type": "paragraph",
+              "text": "Good learning habits develop through practice, reflection and support. Take time to review what works for you, learn from feedback and build on each small step."
+            },
+            {
+              "type": "list",
+              "items": [
+                "Plan regular time for your online coursework",
+                "Participate in discussions and live sessions",
+                "Use recorded resources to review difficult topics",
+                "Ask for support when you need it"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "blog-5",
+          "slug": "complete-guide-to-campus-life",
+          "title": "A Complete Guide to Campus Life",
+          "category": "Campus Life",
+          "date": "July 28, 2026",
+          "author": "Pooja Verma",
+          "excerpt": "From academics to extracurricular activities, explore how to make the most of your university experience.",
+          "image": {
+            "src": "/images/blogs/blog-5.jpg",
+            "alt": "Campus Life at AduCrest University"
+          },
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Campus life brings together learning, friendship and opportunities to try something new. Start by getting familiar with your timetable, student services and the spaces available for study."
+            },
+            {
+              "type": "paragraph",
+              "text": "You do not need to do everything at once. Choose a few activities, build a reliable weekly routine and reach out to student support when you have questions."
+            },
+            {
+              "type": "quote",
+              "text": "A sense of belonging grows through everyday connections.",
+              "author": "Dr. Pooja Verma",
+              "role": "Education Expert"
+            },
+            {
+              "type": "image",
+              "image": {
+                "src": "/images/blogs/group.jpg",
+                "alt": "A group of university students studying together in the library"
+              }
+            },
+            {
+              "type": "heading",
+              "text": "Find Your Place on Campus"
+            },
+            {
+              "type": "paragraph",
+              "text": "Good learning habits develop through practice, reflection and support. Take time to review what works for you, learn from feedback and build on each small step."
+            },
+            {
+              "type": "list",
+              "items": [
+                "Explore the library and shared study spaces",
+                "Join a club that matches your interests",
+                "Meet classmates and join campus activities",
+                "Keep a healthy balance between study and rest"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "blog-6",
+          "slug": "skills-for-a-bright-career",
+          "title": "Top Skills to Build for a Bright Career",
+          "category": "Career Guidance",
+          "date": "July 25, 2026",
+          "author": "Kavya Nair",
+          "excerpt": "Explore useful skills and how you can develop them to prepare for a changing professional world.",
+          "image": {
+            "src": "/images/blogs/blog-6.jpg",
+            "alt": "Career Guidance at AduCrest University"
+          },
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "A strong career foundation includes subject knowledge and the ability to work well with other people. Communication, critical thinking and adaptability become stronger through regular practice."
+            },
+            {
+              "type": "paragraph",
+              "text": "Look for opportunities to apply your learning in projects, volunteering and group activities. Keep examples of your work and use them to explain your process and progress."
+            },
+            {
+              "type": "quote",
+              "text": "Your career develops one considered step, useful skill and learning experience at a time.",
+              "author": "Dr. Kavya Nair",
+              "role": "Education Expert"
+            },
+            {
+              "type": "image",
+              "image": {
+                "src": "/images/blogs/group.jpg",
+                "alt": "A group of university students studying together in the library"
+              }
+            },
+            {
+              "type": "heading",
+              "text": "Turn Learning into Professional Confidence"
+            },
+            {
+              "type": "paragraph",
+              "text": "Good learning habits develop through practice, reflection and support. Take time to review what works for you, learn from feedback and build on each small step."
+            },
+            {
+              "type": "list",
+              "items": [
+                "Practice clear written and verbal communication",
+                "Build a portfolio of meaningful project work",
+                "Ask for constructive feedback",
+                "Reflect on what each experience teaches you"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "blog-7",
+          "slug": "creating-inclusive-classrooms",
+          "title": "Creating Inclusive Classrooms for a Brighter Tomorrow",
+          "highlight": "Brighter Tomorrow",
+          "category": "Education",
+          "date": "August 6, 2026",
+          "author": "Neha Sharma",
+          "excerpt": "Discover how AduCrest University is building inclusive learning spaces where every student belongs, learns and grows.",
+          "image": {
+            "src": "/images/blogs/blog-1.jpg",
+            "alt": "Education at AduCrest University"
+          },
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "An inclusive classroom is more than just a learning space — it is a place where every student feels welcomed, valued and supported. Inclusivity in education helps create an environment where students from different backgrounds, abilities and perspectives can learn, grow and succeed together."
+            },
+            {
+              "type": "paragraph",
+              "text": "At our university, we believe that every learner has unique strengths and potential. By creating an inclusive culture, we can support equal opportunities, build confidence and prepare students for a brighter future."
+            },
+            {
+              "type": "quote",
+              "text": "When every student feels included, they are not just learning — they are belonging.",
+              "author": "Dr. Neha Sharma",
+              "role": "Education Expert"
+            },
+            {
+              "type": "paragraph",
+              "text": "Inclusivity allows students to bring their authentic selves into the classroom. It encourages respect, empathy and collaboration, which are essential skills for both academic and personal success. Teachers play a key role by offering diverse learning resources, adapting teaching methods and recognising individual needs."
+            },
+            {
+              "type": "image",
+              "image": {
+                "src": "/images/blogs/group.jpg",
+                "alt": "A group of university students studying together in the library"
+              }
+            },
+            {
+              "type": "heading",
+              "text": "Growing Better Every Day"
+            },
+            {
+              "type": "paragraph",
+              "text": "Inclusive education is a continuous journey. It requires commitment from educators, students and institutions to create a supportive and encouraging environment. By working together, we can break down barriers and empower every learner to reach their full potential."
+            },
+            {
+              "type": "list",
+              "items": [
+                "Encourages equal opportunities for all students",
+                "Builds confidence and self-esteem",
+                "Promotes respect, diversity and collaboration",
+                "Prepares students for a successful future"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "blog-8",
+          "slug": "learning-together-growing-together",
+          "title": "Learning Together, Growing Together",
+          "category": "Student Life",
+          "date": "August 8, 2026",
+          "author": "Ananya Singh",
+          "excerpt": "Explore how collaboration, friendship and shared experiences shape a successful university journey.",
+          "image": {
+            "src": "/images/blogs/blog-2.jpg",
+            "alt": "Student Life at AduCrest University"
+          },
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "University is a place to discover new ideas and build meaningful connections. Shared projects and everyday conversations help students learn about themselves and the people around them."
+            },
+            {
+              "type": "paragraph",
+              "text": "Working with others takes patience and practice. Make space for questions, be clear about responsibilities and recognise the different strengths each person brings."
+            },
+            {
+              "type": "quote",
+              "text": "A supportive learning community helps every member grow.",
+              "author": "Dr. Ananya Singh",
+              "role": "Education Expert"
+            },
+            {
+              "type": "image",
+              "image": {
+                "src": "/images/blogs/group.jpg",
+                "alt": "A group of university students studying together in the library"
+              }
+            },
+            {
+              "type": "heading",
+              "text": "Create Connections Through Learning"
+            },
+            {
+              "type": "paragraph",
+              "text": "Good learning habits develop through practice, reflection and support. Take time to review what works for you, learn from feedback and build on each small step."
+            },
+            {
+              "type": "list",
+              "items": [
+                "Listen to perspectives different from your own",
+                "Share ideas and resources thoughtfully",
+                "Celebrate progress within your study group",
+                "Reach out to classmates and offer support"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "blog-9",
+          "slug": "where-curiosity-becomes-confidence",
+          "title": "Where Curiosity Becomes Confidence Every Day",
+          "category": "Education",
+          "date": "August 5, 2026",
+          "author": "Vikram Joshi",
+          "excerpt": "Learn how students explore new ideas and build the confidence to achieve their goals.",
+          "image": {
+            "src": "/images/blogs/blog-3.jpg",
+            "alt": "Education at AduCrest University"
+          },
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Curiosity is the starting point for meaningful learning. Asking a question, trying a new approach and making a careful observation help students develop a confident understanding."
+            },
+            {
+              "type": "paragraph",
+              "text": "Confidence does not mean having every answer. It grows when you learn how to investigate uncertainty, seek guidance and keep working through a challenge."
+            },
+            {
+              "type": "quote",
+              "text": "Every thoughtful question opens another possibility for learning.",
+              "author": "Dr. Vikram Joshi",
+              "role": "Education Expert"
+            },
+            {
+              "type": "image",
+              "image": {
+                "src": "/images/blogs/group.jpg",
+                "alt": "A group of university students studying together in the library"
+              }
+            },
+            {
+              "type": "heading",
+              "text": "Keep Asking, Keep Growing"
+            },
+            {
+              "type": "paragraph",
+              "text": "Good learning habits develop through practice, reflection and support. Take time to review what works for you, learn from feedback and build on each small step."
+            },
+            {
+              "type": "list",
+              "items": [
+                "Ask questions in class and independent study",
+                "Try unfamiliar subjects and practical activities",
+                "Reflect on feedback and revise your approach",
+                "Recognise the progress you make over time"
+              ]
+            }
+          ]
+        }
+      ],
+      "testimonials": [
+        {
+          "id": "priya",
+          "quote": "The faculty here are incredibly supportive and the learning environment is truly inspiring. The practical exposure and well-structured courses have helped me gain real skills and confidence for my future career.",
+          "name": "Priya Sharma",
+          "course": "B.Tech Computer Science, India",
+          "image": {
+            "src": "/images/testimonials/student.jpg",
+            "alt": "Priya Sharma, a computer science student"
+          }
+        },
+        {
+          "id": "aarav",
+          "quote": "What I value most is the opportunity to put ideas into practice. Working on projects with my classmates has helped me become a more confident problem solver and a better teammate.",
+          "name": "Aarav Mehta",
+          "course": "Bachelor of Computer Applications, India",
+          "image": {
+            "src": "/images/faculty/faculty-9.jpg",
+            "alt": "Aarav Mehta, a computer applications student"
+          }
+        },
+        {
+          "id": "anika",
+          "quote": "AduCrest has given me room to explore my interests and learn from people with different perspectives. The encouragement from my teachers has made a real difference to my university journey.",
+          "name": "Anika Verma",
+          "course": "Bachelor of Arts, India",
+          "image": {
+            "src": "/images/faculty/faculty-12.jpg",
+            "alt": "Anika Verma, an arts student"
+          }
+        }
+      ],
+      "departments": [
+        {
+          "id": "arts-humanities",
+          "label": "Arts & Humanities"
+        },
+        {
+          "id": "science",
+          "label": "Science"
+        },
+        {
+          "id": "commerce",
+          "label": "Commerce"
+        },
+        {
+          "id": "engineering",
+          "label": "Engineering"
+        },
+        {
+          "id": "management",
+          "label": "Management"
+        },
+        {
+          "id": "computer-applications",
+          "label": "Computer Applications"
+        },
+        {
+          "id": "medical-health",
+          "label": "Medical & Health Sciences"
+        },
+        {
+          "id": "design",
+          "label": "Design"
+        }
+      ]
+    }
+  }
+}
