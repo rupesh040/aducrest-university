@@ -182,3 +182,5 @@ npm run build:sites
 No database, email account, or storage provider is required to run or build the default website.
 
 With a local server running, `npm run test:smoke` checks every configured route and the local form endpoints. Pass an alternate base URL after `--`; remote checks use `--skip-api`.
+
+The footer identifies the site as a design demonstration. Programme details, fees, enrolment figures, additional faculty profiles and student stories are illustrative content, requiring institutional verification for real use.
