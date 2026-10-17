@@ -147,6 +147,8 @@ After configuring a real service, update `Education.ui.forms.notice` and the rel
 
 The official supplied logo is included as `public/images/logo.png`. The optional light derivative improves wordmark contrast on navy backgrounds. Photographs are individual crops from the provided reference screenshots, rather than independent high-resolution originals. **`ASSETS.md`** records every source, crop, and limitation. No whole reference page is used as a background. Replace the JSON image paths with higher-resolution licensed photographs when those become available.
 
+Admission promotions preserve the portrait's complete aspect ratio and stack their image below the copy when space is limited. Mobile hero and faculty image framing, application assistance cards, and responsive image size hints are defined in `src/components/ui/responsive-images.css`; keep that stylesheet after the shared and form styles. Layouts were checked from 320px through 1440px, including the production image adapter.
+
 The sample university addresses and contact details reproduce the design brief and are illustrative. The map URL and location notice are configured under `Education.sections.contact.variants.EducationContact1.map`; the map is centered on New Delhi, not a verified campus address. Replace the address, map, phone numbers, email addresses, and social links with the university's verified details before launch. The included social links point to their platforms because no official university profiles were supplied.
 
 Course preview buttons use each course's configured `videoUrl`. A missing URL opens the JSON-configured unavailable message instead of pretending to play a video. Configure an actual supported HTTPS video URL to enable a preview.
