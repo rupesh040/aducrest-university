@@ -30,7 +30,8 @@
 
 .cta-photo img,
 .application-promo-image img {
-  object-fit: contain;
+  /* The Sites image adapter supplies an inline cover default for fill images. */
+  object-fit: contain !important;
   object-position: center bottom;
 }
 
@@ -168,7 +169,7 @@
   }
 
   .hero-photo img {
-    object-fit: contain;
+    object-fit: contain !important;
     object-position: center;
   }
 
