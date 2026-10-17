@@ -14,7 +14,7 @@ export function ApplicationSection({ data, initialCourse }: { data: ApplicationS
               <p>{data.promo.description}</p>
               <CheckList items={data.promo.benefits} />
             </div>
-            <Photo asset={data.promo.image} className="application-promo-image" sizes="(max-width: 767px) 45vw, 24vw" />
+            <Photo asset={data.promo.image} className="application-promo-image" sizes="(max-width: 495px) calc(100vw - 36px), (max-width: 767px) 460px, (max-width: 1023px) 47vw, (max-width: 1199px) 360px, 25vw" />
           </div>
           <div className="application-help">
             {data.help.map((help) => <a href={help.href} key={help.title} className="application-help-card">

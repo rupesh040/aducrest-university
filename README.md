@@ -4,7 +4,7 @@ A complete, responsive university website built with Next.js App Router, React, 
 
 ## Run locally
 
-Use Node.js **22.13 or newer** and npm. Open a terminal in this project directory:
+Use Node.js **22.x** (22.13 or newer within that release line) and npm. Open a terminal in this project directory:
 
 ```sh
 npm ci
@@ -168,6 +168,8 @@ The content verifier checks the JSON architecture and its referenced entries, li
 `npm run test:forms` runs 65 checks against the actual shared validation and submission-handler modules. It covers valid and malformed payloads, required fields, invalid contact details, invalid/future dates and the local-day boundary, unknown collection IDs, oversized bodies, strict origin handling (including localhost/127.0.0.1 development aliases), default validation-only responses, and successful/failing mocked HTTPS webhooks. The test uses the installed TypeScript dev dependency to transpile those modules in memory and makes no real outbound network requests.
 
 ## Deployment
+
+Import the GitHub repository into Vercel and keep the Next.js framework preset. `vercel.json` selects `npm ci` and `npm run build`; Node.js 22.x is pinned in `package.json`. Leave the output directory at Vercel's default. Each push to `main` deploys the updated application when Git integration is enabled.
 
 For a standard Next.js deployment, install with `npm ci`, build with `npm run build`, and start with `npm start`, or use a hosting provider's Next.js support. Supply the webhook environment variables only when a real submission service is ready. A static file-only host cannot execute the included API routes.
 

@@ -3,6 +3,7 @@ import { content } from '@/lib/content';
 import { SharedRenderer } from '@/lib/componentRegistry';
 import './globals.css';
 import '@/components/forms/forms.css';
+import '@/components/ui/responsive-images.css';
 
 export const metadata: Metadata = {
  title: { default: content.brand.name, template: '%s' }, description: content.brand.description,
