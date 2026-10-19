@@ -120,7 +120,9 @@
   /* Core Buttons with Shimmer & Micro-Interactions */
   .primary-button {
     @apply relative overflow-hidden inline-flex items-center justify-center gap-3.5 min-h-[46px] px-6 py-2.5 rounded-full bg-gradient-to-r from-[#ffb500] to-[#ffc637] text-navy font-bold text-[15px] leading-snug shadow-sm active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed;
-    transition: transform 0.25s var(--ease-smooth), box-shadow 0.25s var(--ease-smooth);
+    transition:
+      transform 0.25s var(--ease-smooth),
+      box-shadow 0.25s var(--ease-smooth);
   }
 
   .primary-button::after {
@@ -130,7 +132,12 @@
     left: -130%;
     width: 60%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.4),
+      transparent
+    );
     transform: skewX(-20deg);
     transition: left 0.75s ease;
     pointer-events: none;
@@ -148,12 +155,17 @@
   /* Cards with Fluid Elevation & Hover Zoom */
   .lift-card {
     @apply bg-white rounded-[10px] overflow-hidden shadow-card h-full;
-    transition: transform 0.35s var(--ease-smooth), box-shadow 0.35s var(--ease-smooth), border-color 0.35s var(--ease-smooth);
+    transition:
+      transform 0.35s var(--ease-smooth),
+      box-shadow 0.35s var(--ease-smooth),
+      border-color 0.35s var(--ease-smooth);
   }
 
   .lift-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 16px 32px -8px rgba(0, 43, 96, 0.14), 0 4px 12px -2px rgba(0, 43, 96, 0.05);
+    box-shadow:
+      0 16px 32px -8px rgba(0, 43, 96, 0.14),
+      0 4px 12px -2px rgba(0, 43, 96, 0.05);
   }
 
   .category-badge {
@@ -439,42 +451,51 @@
     transition: transform 0.08s linear;
   }
 
-
   /* ------------------------------------------------------------- */
   /* Scroll-Triggered Reveal Animations                            */
   /* ------------------------------------------------------------- */
   body.js-loaded .reveal {
     opacity: 0;
     transform: translate3d(0, 24px, 0);
-    transition: opacity 0.75s var(--ease-smooth), transform 0.75s var(--ease-smooth);
+    transition:
+      opacity 0.75s var(--ease-smooth),
+      transform 0.75s var(--ease-smooth);
     will-change: opacity, transform;
   }
 
   body.js-loaded .reveal-left {
     opacity: 0;
     transform: translate3d(-30px, 0, 0);
-    transition: opacity 0.75s var(--ease-smooth), transform 0.75s var(--ease-smooth);
+    transition:
+      opacity 0.75s var(--ease-smooth),
+      transform 0.75s var(--ease-smooth);
     will-change: opacity, transform;
   }
 
   body.js-loaded .reveal-right {
     opacity: 0;
     transform: translate3d(30px, 0, 0);
-    transition: opacity 0.75s var(--ease-smooth), transform 0.75s var(--ease-smooth);
+    transition:
+      opacity 0.75s var(--ease-smooth),
+      transform 0.75s var(--ease-smooth);
     will-change: opacity, transform;
   }
 
   body.js-loaded .reveal-zoom {
     opacity: 0;
     transform: scale3d(0.94, 0.94, 1);
-    transition: opacity 0.75s var(--ease-smooth), transform 0.75s var(--ease-smooth);
+    transition:
+      opacity 0.75s var(--ease-smooth),
+      transform 0.75s var(--ease-smooth);
     will-change: opacity, transform;
   }
 
   body.js-loaded .reveal-down {
     opacity: 0;
     transform: translate3d(0, -22px, 0);
-    transition: opacity 0.75s var(--ease-smooth), transform 0.75s var(--ease-smooth);
+    transition:
+      opacity 0.75s var(--ease-smooth),
+      transform 0.75s var(--ease-smooth);
     will-change: opacity, transform;
   }
 
@@ -489,14 +510,30 @@
   }
 
   /* Stagger Delays */
-  .delay-75 { transition-delay: 75ms; }
-  .delay-100 { transition-delay: 100ms; }
-  .delay-150 { transition-delay: 150ms; }
-  .delay-200 { transition-delay: 200ms; }
-  .delay-250 { transition-delay: 250ms; }
-  .delay-300 { transition-delay: 300ms; }
-  .delay-400 { transition-delay: 400ms; }
-  .delay-500 { transition-delay: 500ms; }
+  .delay-75 {
+    transition-delay: 75ms;
+  }
+  .delay-100 {
+    transition-delay: 100ms;
+  }
+  .delay-150 {
+    transition-delay: 150ms;
+  }
+  .delay-200 {
+    transition-delay: 200ms;
+  }
+  .delay-250 {
+    transition-delay: 250ms;
+  }
+  .delay-300 {
+    transition-delay: 300ms;
+  }
+  .delay-400 {
+    transition-delay: 400ms;
+  }
+  .delay-500 {
+    transition-delay: 500ms;
+  }
 
   /* Smooth Accordion Height via Modern CSS Grid */
   .accordion-grid {
@@ -513,7 +550,8 @@
 
   /* Ambient Floating Keyframes for Badges & Accents */
   @keyframes floatGentle {
-    0%, 100% {
+    0%,
+    100% {
       transform: translateY(0px) rotate(0deg);
     }
     50% {
@@ -522,7 +560,8 @@
   }
 
   @keyframes floatGentleReverse {
-    0%, 100% {
+    0%,
+    100% {
       transform: translateY(0px) rotate(0deg);
     }
     50% {
@@ -552,6 +591,38 @@
 
   .page-fade-in {
     animation: pageFadeIn 0.5s var(--ease-smooth) both;
+  }
+
+  /* Mobile Dropdown Open Animation */
+  @keyframes mobileMenuOpen {
+    from {
+      opacity: 0;
+      transform: translateY(-8px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-mobile-menu-open {
+    animation: mobileMenuOpen 0.25s var(--ease-smooth) both;
+  }
+
+  /* Mobile Nav Item Staggered Entrance */
+  @keyframes mobileItemSlide {
+    from {
+      opacity: 0;
+      transform: translateX(-12px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .animate-mobile-item {
+    animation: mobileItemSlide 0.28s var(--ease-smooth) both;
   }
 
   /* Accessibility: Prefers Reduced Motion */

@@ -67,7 +67,7 @@ export function CourseDetail({
         <aside className="reveal reveal-left delay-150 bg-white p-5 sm:p-6 rounded-xl shadow-card border border-[#e8eef6] max-w-lg lg:max-w-none mx-auto w-full lg:sticky lg:top-28 transition-all duration-300 hover:shadow-lift">
           <div className="relative rounded-lg overflow-hidden aspect-[1.6] mb-5">
             <Photo asset={course.previewImage} className="w-full h-full" />
-            <VideoPreview url={course.videoUrl} />
+            <VideoPreview url={course.videoUrl} title={course.title} />
           </div>
           <SectionHeading heading={data.detailsHeading} align="left" />
           <dl className="divide-y divide-[#e9edf2] my-5 text-sm">

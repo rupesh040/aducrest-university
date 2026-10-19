@@ -25,7 +25,7 @@ export function FAQAccordion({ items }: { items: FAQSectionData["items"] }) {
   }
 
   return (
-    <div className="space-y-3.5">
+    <div className="space-y-2.5 sm:space-y-3">
       {items.map((item, index) => {
         const open = item.id === openId;
         const id = `${prefix}-${item.id}`;
@@ -119,13 +119,13 @@ function renderHeadingTitle(title: string, highlight?: string) {
 
 export function FAQSectionView({ data }: { data: FAQSectionData }) {
   return (
-    <section className="section-padding bg-surface py-12 md:py-16">
-      <div className="container grid grid-cols-1 lg:grid-cols-[1.1fr_1.2fr] gap-10 lg:gap-14 xl:gap-16 items-start">
+    <section className="section-padding bg-surface py-6">
+      <div className="container grid grid-cols-1 lg:grid-cols-[1.1fr_1.2fr] gap-6 lg:gap-8 xl:gap-10 items-start">
         {/* Left Column: Heading + Image Composite */}
         <div className="reveal reveal-right flex flex-col">
           {/* Eyebrow */}
           {data.heading.eyebrow && (
-            <div className="flex items-center gap-3 text-navy uppercase text-xs font-bold tracking-[1.8px] mb-3">
+            <div className="flex items-center gap-3 text-navy uppercase text-xs font-bold tracking-[1.8px] mb-2 sm:mb-2.5">
               <span className="w-8 h-[2.5px] bg-gold rounded-full shrink-0" />
               <span>{data.heading.eyebrow}</span>
             </div>
@@ -138,13 +138,13 @@ export function FAQSectionView({ data }: { data: FAQSectionData }) {
 
           {/* Description */}
           {data.heading.description && (
-            <p className="mt-3.5 text-muted text-sm sm:text-base leading-relaxed max-w-xl">
+            <p className="mt-2.5 text-muted text-sm sm:text-base leading-relaxed max-w-xl">
               {data.heading.description}
             </p>
           )}
 
           {/* Image & Support Card Composite */}
-          <div className="relative mt-8 sm:mt-10 flex flex-col sm:flex-row items-center sm:items-end">
+          <div className="relative mt-5 sm:mt-6 flex flex-col sm:flex-row items-center sm:items-end">
             {/* Student Image */}
             <div className="relative shrink-0 select-none pointer-events-none">
               <Image
@@ -153,12 +153,12 @@ export function FAQSectionView({ data }: { data: FAQSectionData }) {
                 width={365}
                 height={423}
                 priority
-                className="w-[260px] sm:w-[300px] md:w-[330px] h-auto object-contain block"
+                className="w-[250px] sm:w-[280px] md:w-[310px] h-auto object-contain block"
               />
             </div>
 
             {/* Floating Support Card */}
-            <div className="relative -mt-8 sm:mt-0 sm:-ml-14 md:-ml-16 mb-4 sm:mb-6 z-10 w-full max-w-[270px] sm:max-w-[290px] shrink-0">
+            <div className="relative -mt-8 sm:mt-0 sm:-ml-14 md:-ml-16 mb-3 sm:mb-4 z-10 w-full max-w-[270px] sm:max-w-[285px] shrink-0">
               {/* Subtle Decorative Dashed Arc behind bottom-right */}
               <svg
                 className="absolute -right-3 -bottom-3 sm:-right-4 sm:-bottom-4 w-20 h-20 sm:w-24 sm:h-24 pointer-events-none text-gold/70 z-[-1]"
