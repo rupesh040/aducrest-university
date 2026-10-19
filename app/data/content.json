@@ -8,10 +8,10 @@
         "src": "/images/logo.png",
         "alt": "AduCrest University — Education for a Brighter Tomorrow"
       },
-      "email": "info@aducrest.edu.in",
-      "phone": "+91 98765 43210",
-      "address": "123 Education Street, New Delhi, India - 110001",
-      "admissionsEmail": "admissions@aducrest.edu.in"
+      "email": "info@xyz.com",
+      "phone": "+1 000-000-000",
+      "address": "Rachel Oto lemamea,300 Rexburg Ave,Fort Washington, MD 20744,United States",
+      "admissionsEmail": "info@xyz.com"
     },
     "ui": {
       "previous": "Previous",
@@ -337,13 +337,13 @@
               },
               {
                 "icon": "phone",
-                "label": "+91 98765 43210",
-                "href": "tel:+919876543210"
+                "label": "+1 000-000-000",
+                "href": "tel:+1000000000"
               },
               {
                 "icon": "mail",
-                "label": "info@aducrest.edu.in",
-                "href": "mailto:info@aducrest.edu.in"
+                "label": "info@xyz.com",
+                "href": "mailto:info@xyz.com"
               }
             ],
             "socials": [
@@ -508,23 +508,23 @@
               {
                 "icon": "mail",
                 "label": "Email Us",
-                "href": "mailto:info@aducrest.edu.in",
-                "value": "info@aducrest.edu.in"
+                "href": "mailto:info@xyz.com",
+                "value": "info@xyz.com"
               },
               {
                 "icon": "phone",
                 "label": "Call Us",
-                "href": "tel:+919876543210",
-                "value": "+91 98765 43210"
+                "href": "tel:+1000000000",
+                "value": "+1 000-000-000"
               },
               {
                 "icon": "mapPin",
                 "label": "Our Location",
                 "href": "/contact",
-                "value": "123 Education Street, New Delhi, India - 110001"
+                "value": "Rachel Oto lemamea,300 Rexburg Ave,Fort Washington, MD 20744,United States"
               }
             ],
-            "copyright": "© 2025 AduCrest University. All Rights Reserved."
+            "copyright": "© 2026 All Rights Reserved. Powered by Lestow"
           }
         }
       },
@@ -598,8 +598,8 @@
             },
             "phone": {
               "label": "Call Us Anytime",
-              "value": "+91 98765 43210",
-              "href": "tel:+919876543210"
+              "value": "+1 000-000-000",
+              "href": "tel:+1000000000"
             }
           }
         }
@@ -1074,19 +1074,19 @@
                 "icon": "phone",
                 "title": "Call Us",
                 "lines": [
-                  "+91 98765 43210",
+                  "+1 000-000-000",
                   "+91 87654 32109"
                 ],
-                "href": "tel:+919876543210"
+                "href": "tel:+1000000000"
               },
               {
                 "icon": "mail",
                 "title": "Email Us",
                 "lines": [
-                  "info@aducrest.edu.in",
-                  "admissions@aducrest.edu.in"
+                  "info@xyz.com",
+                  "info@xyz.com"
                 ],
-                "href": "mailto:info@aducrest.edu.in"
+                "href": "mailto:info@xyz.com"
               },
               {
                 "icon": "clock",
@@ -1177,15 +1177,15 @@
                 "icon": "phone",
                 "title": "Need Help?",
                 "description": "Call us anytime",
-                "value": "+91 98765 43210",
-                "href": "tel:+919876543210"
+                "value": "+1 000-000-000",
+                "href": "tel:+1000000000"
               },
               {
                 "icon": "mail",
                 "title": "Email Us",
                 "description": "For any query",
-                "value": "admissions@aducrest.edu.in",
-                "href": "mailto:admissions@aducrest.edu.in"
+                "value": "info@xyz.com",
+                "href": "mailto:info@xyz.com"
               },
               {
                 "icon": "mapPin",

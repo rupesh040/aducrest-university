@@ -2,12 +2,34 @@
 
 import { useEffect, useId, useRef, useState, type FormEvent } from "react";
 import { content } from "@/app/data";
-import { EMPTY_FORM, fieldsPayload, submissionFields, validateSubmission, type FormErrors, type FormFieldName, type FormValues, type SubmissionKind, type SubmissionResponse } from "@/app/lib/validation";
+import {
+  EMPTY_FORM,
+  fieldsPayload,
+  submissionFields,
+  validateSubmission,
+  type FormErrors,
+  type FormFieldName,
+  type FormValues,
+  type SubmissionKind,
+  type SubmissionResponse,
+} from "@/app/lib/validation";
 
-export function useUniversityForm(kind: SubmissionKind, initialCourse?: string) {
+export function useUniversityForm(
+  kind: SubmissionKind,
+  initialCourse?: string,
+) {
   const id = useId();
   function blankValues(): FormValues {
-    return { ...EMPTY_FORM, course: initialCourse && content.collections.courses.some((course) => course.id === initialCourse) ? initialCourse : "" };
+    return {
+      ...EMPTY_FORM,
+      course:
+        initialCourse &&
+        content.collections.courses.some(
+          (course) => course.id === initialCourse,
+        )
+          ? initialCourse
+          : "",
+    };
   }
   const [values, setValues] = useState<FormValues>(blankValues);
   const [errors, setErrors] = useState<FormErrors>({});
@@ -28,7 +50,8 @@ export function useUniversityForm(kind: SubmissionKind, initialCourse?: string) 
   function focusFirstError(form: HTMLFormElement, fieldErrors: FormErrors) {
     const first = submissionFields(kind).find((field) => fieldErrors[field]);
     const element = first ? form.elements.namedItem(first) : null;
-    if (element instanceof HTMLElement) requestAnimationFrame(() => element.focus());
+    if (element instanceof HTMLElement)
+      requestAnimationFrame(() => element.focus());
   }
   async function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -38,7 +61,11 @@ export function useUniversityForm(kind: SubmissionKind, initialCourse?: string) 
     setErrors(result.errors);
     setFeedback(null);
     if (!result.valid) {
-      setFeedback({ ok: false, status: "invalid", message: content.ui.forms.status.invalid });
+      setFeedback({
+        ok: false,
+        status: "invalid",
+        message: content.ui.forms.status.invalid,
+      });
       focusFirstError(form, result.errors);
       return;
     }
@@ -47,17 +74,35 @@ export function useUniversityForm(kind: SubmissionKind, initialCourse?: string) 
     activeRequest.current = controller;
     try {
       const response = await fetch(`/api/${kind}`, {
-        method: "POST", headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(fieldsPayload(result.values, kind)), signal: controller.signal,
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(fieldsPayload(result.values, kind)),
+        signal: controller.signal,
       });
       const body: unknown = await response.json();
-      if (!body || typeof body !== "object" || !("message" in body) || typeof body.message !== "string" || !("status" in body)) throw new Error("Invalid response");
+      if (
+        !body ||
+        typeof body !== "object" ||
+        !("message" in body) ||
+        typeof body.message !== "string" ||
+        !("status" in body)
+      )
+        throw new Error("Invalid response");
       const status = body as SubmissionResponse;
       setFeedback(status);
-      if (status.errors) { setErrors(status.errors); focusFirstError(form, status.errors); }
-      if (response.ok && status.ok && status.status === "delivered") setValues(blankValues());
+      if (status.errors) {
+        setErrors(status.errors);
+        focusFirstError(form, status.errors);
+      }
+      if (response.ok && status.ok && status.status === "delivered")
+        setValues(blankValues());
     } catch {
-      if (!controller.signal.aborted) setFeedback({ ok: false, status: "error", message: content.ui.forms.status.network });
+      if (!controller.signal.aborted)
+        setFeedback({
+          ok: false,
+          status: "error",
+          message: content.ui.forms.status.network,
+        });
     } finally {
       if (!controller.signal.aborted) setSubmitting(false);
       activeRequest.current = null;

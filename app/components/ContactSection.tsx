@@ -21,7 +21,7 @@ export function ContactSection({ data }: { data: ContactSectionData }) {
             <ContactForm data={data.form} />
             <div className="contact-information">
               {data.information.map((information) => {
-                const body = <><span className="contact-information-icon"><Icon name={information.icon} size={23} /></span><div><h3>{information.title}</h3>{information.lines.map((line) => <p key={line}>{line}</p>)}</div></>;
+                const body = <><span className="contact-information-icon"><Icon name={information.icon} size={23} /></span><div><h3>{information.title}</h3>{information.lines.map((line, index) => <p key={`${line}-${index}`}>{line}</p>)}</div></>;
                 return information.href
                   ? <a className="contact-information-card" href={information.href} key={information.title}>{body}</a>
                   : <div className="contact-information-card" key={information.title}>{body}</div>;
