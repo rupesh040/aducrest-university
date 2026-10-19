@@ -39,7 +39,6 @@ All photographs below were extracted from individual photographic areas of the s
 | `blogs/group.jpg` | `blog-detail.jpg` | `(69, 1691, 856, 1960)` |  |
 | `hero/admission.jpg` | `about.jpg` | `(884, 1835, 1312, 2240)` | Right portrait from admission banner; crop begins to the right of all text. |
 | `testimonials/student.jpg` | `home.jpg` | `(971, 3112, 1210, 3349)` | Circular portrait retained with navy corners matching testimonial panel. |
-| `banners/inner.jpg` | `faq.jpg` | `(762, 121, 1349, 511)` | Right-hand portion of common inner hero avoids baked page heading and breadcrumb. |
 | `contact/campus.jpg` | `contact.jpg` | `(925, 734, 1275, 1304)` |  |
 | `faq/student.jpg` | `faq.jpg` | `(37, 797, 402, 1220)` | Student cutout and pale blue decorative shape from FAQ illustration. |
 
@@ -51,7 +50,7 @@ The official logo contains navy wordmark text, so it is most legible on a light 
 
 ## Clean photographic banner
 
-`public/images/banners/inner-clean.png` is a built-in ImageGen edit of the photographic region cropped from `course.jpg`. It removes screenshot heading and breadcrumb graphics; the live site adds real HTML titles and breadcrumbs. The earlier text-free right crop remains available as `inner.jpg`. No complete screenshot is used as a background.
+`public/images/banners/inner-clean.png` is a built-in ImageGen edit of the photographic region cropped from `course.jpg`. It removes screenshot heading and breadcrumb graphics; the live site adds real HTML titles and breadcrumbs. The superseded `inner.jpg` crop was removed during project cleanup; the active banner is unchanged. No complete screenshot is used as a background.
 
 Final edit prompt (built-in tool mode):
 

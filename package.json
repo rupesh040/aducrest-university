@@ -14,7 +14,7 @@
     "build:sites": "node scripts/build-sites.mjs",
     "dev:sites": "node scripts/run-framework.mjs dev",
     "typecheck": "tsc --noEmit",
-    "lint": "eslint app src",
+    "lint": "eslint app",
     "verify:content": "node scripts/verify-content.mjs",
     "test:forms": "node tests/forms.test.cjs",
     "test:smoke": "node scripts/smoke-test.mjs"

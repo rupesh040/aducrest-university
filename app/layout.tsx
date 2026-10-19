@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
-import { content } from '@/lib/content';
-import { SharedRenderer } from '@/lib/componentRegistry';
+import { content } from '@/app/data';
+import { SharedRenderer } from '@/app/components/ComponentRenderer';
 import './globals.css';
-import '@/components/forms/forms.css';
-import '@/components/ui/responsive-images.css';
+import './components/forms.css';
+import './components/responsive-images.css';
 
 export const metadata: Metadata = {
  title: { default: content.brand.name, template: '%s' }, description: content.brand.description,

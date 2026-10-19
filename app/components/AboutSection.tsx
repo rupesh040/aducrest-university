@@ -1,0 +1,5 @@
+import { Phone } from 'lucide-react';
+import { Photo, PrimaryButton, SectionHeading, Icon } from './Primitives';
+import type { AboutSection } from '@/app/data/types';
+
+export function About({data}:{data:AboutSection}){return <section className="about-section section-padding"><div className="container about-grid"><div className="about-images"><div className="image-decoration"/><Photo asset={data.images[0]} className="about-student" sizes="(max-width: 767px) 76vw, 34vw"/><Photo asset={data.images[1]} className="about-campus" sizes="(max-width: 767px) 43vw, 24vw"/></div><div className="about-content"><SectionHeading heading={data.heading} align="left"/>{data.paragraphs.map(p=><p key={p}>{p}</p>)}<div className="benefits">{data.benefits.map(b=><div className="benefit" key={b.title}><span><Icon name={b.icon} size={25}/></span><div><h3>{b.title}</h3><p>{b.description}</p></div></div>)}</div><div className="about-actions"><PrimaryButton button={data.button}/><a className="phone-support" href={data.phone.href}><span><Phone size={22}/></span><div><small>{data.phone.label}</small><strong>{data.phone.value}</strong></div></a></div></div></div></section>;}

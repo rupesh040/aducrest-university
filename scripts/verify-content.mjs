@@ -5,7 +5,7 @@ import { fileURLToPath } from 'node:url';
 // Validate the actual content architecture and references before a build.
 // This script intentionally uses only Node's standard library.
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
-const filename = resolve(root, 'src/data/content.json');
+const filename = resolve(root, 'app/data/content.json');
 const publicDirectory = resolve(root, 'public');
 const errors = [];
 const fail = (path, message) => errors.push(`${path}: ${message}`);
@@ -127,7 +127,7 @@ let parsed;
 try {
   parsed = JSON.parse(readFileSync(filename, 'utf8').replace(/^\uFEFF/, ''));
 } catch (error) {
-  console.error(`Content validation failed: cannot read or parse src/data/content.json.\n${error.message}`);
+  console.error(`Content validation failed: cannot read or parse app/data/content.json.\n${error.message}`);
   process.exit(1);
 }
 
@@ -249,7 +249,7 @@ for (const [sectionKey, section] of Object.entries(sections)) {
 
 const templates = content.templateComponents;
 if (!requireObject(templates, 'templateComponents') || Object.keys(templates).length === 0) fail('templateComponents', 'must contain at least one template');
-if (!object(templates?.['template-1'])) fail('templateComponents.template-1', 'active template used by src/lib/content.ts must exist');
+if (!object(templates?.['template-1'])) fail('templateComponents.template-1', 'active template used by app/data/index.ts must exist');
 for (const [templateId, template] of Object.entries(object(templates) ? templates : {})) {
   const templatePath = `templateComponents.${templateId}`;
   if (!requireObject(template, templatePath)) continue;

@@ -18,7 +18,7 @@ try {
   process.exit(1);
 }
 
-const content = JSON.parse(readFileSync(resolve(root, 'src/data/content.json'), 'utf8').replace(/^\uFEFF/, '')).Education;
+const content = JSON.parse(readFileSync(resolve(root, 'app/data/content.json'), 'utf8').replace(/^\uFEFF/, '')).Education;
 const failures = [];
 let successfulPages = 0;
 let successfulMissing = 0;

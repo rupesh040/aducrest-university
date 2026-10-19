@@ -3,12 +3,12 @@ const path = require('node:path');
 const assert = require('node:assert/strict');
 const project = path.resolve(__dirname, '..');
 const ts = require(path.join(project, 'node_modules/typescript/lib/typescript.js'));
-const content = JSON.parse(readFileSync(path.join(project, 'src/data/content.json'), 'utf8')).Education;
-const modules = { './content': { content } };
+const content = JSON.parse(readFileSync(path.join(project, 'app/data/content.json'), 'utf8')).Education;
+const modules = { '../data': { content } };
 // Transpile the real shared TypeScript modules in memory using the project's
 // existing dev dependency. The only runtime imports are explicit local fixtures.
 function compile(name) {
-  const source = readFileSync(path.join(project, `src/lib/${name}.ts`), 'utf8');
+  const source = readFileSync(path.join(project, `app/lib/${name}.ts`), 'utf8');
   const code = ts.transpileModule(source, { compilerOptions: { target: ts.ScriptTarget.ES2022, module: ts.ModuleKind.CommonJS } }).outputText;
   const result = { exports: {} };
   new Function('require', 'module', 'exports', code)((id) => {

@@ -39,7 +39,7 @@ Every JSON course and article has its own slug route and metadata. Unknown cours
 
 ## Content architecture
 
-Edit **`src/data/content.json`** to update the website. All visible website copy, navigation labels, images and alt text, course and faculty data, article blocks, form labels, validation messages, and submission feedback come from this file.
+Edit **`app/data/content.json`** to update the website. All visible website copy, navigation labels, images and alt text, course and faculty data, article blocks, form labels, validation messages, and submission feedback come from this file.
 
 ```text
 Education
@@ -67,9 +67,9 @@ Education
 { "key": "popular-courses", "component": "EducationPopularCourses1" }
 ```
 
-The renderer resolves that identifier through `src/lib/componentRegistry.tsx` and reads its data from `Education.sections[key].variants[component]`. Reordering a page's `components` array changes section order. Shared component configurations are reused across routes. Unknown registered identifiers are handled by the registry's fallback behavior.
+The renderer resolves that identifier through `app/components/ComponentRenderer.tsx` and reads its data from `Education.sections[key].variants[component]`. Reordering a page's `components` array changes section order. Shared component configurations are reused across routes. Unknown registered identifiers are handled by the registry's fallback behavior.
 
-To change a section, edit its variant. To add a new variant, implement the React component, register its identifier, add its variant data, and reference it in a page configuration. TypeScript interfaces live in `src/types/content.ts`; content access helpers live in `src/lib/content.ts`.
+To change a section, edit its variant. To add a new variant, implement the React component, register its identifier, add its variant data, and reference it in a page configuration. TypeScript interfaces live in `app/data/types.ts`; content access helpers live in `app/data/index.ts`.
 
 Course, faculty, article, and department collections render automatically. Keep IDs and slugs unique. Preview sections select collection items using their configured slug or ID arrays; include a newly added item there when it should also appear in a homepage carousel. Listing `pageSize` settings control pagination. Blog `blocks` support paragraphs, headings, quotes, images, and checklists without embedding article HTML in JSX.
 
@@ -78,20 +78,26 @@ Changing a content file requires a rebuild on a production deployment; the proje
 ## Project layout
 
 ```text
-app/                         Next.js App Router pages and API routes
-src/components/layout/       Shared topbar, navigation, footer, banners
-src/components/sections/     Home/About sections, listings, cards, and detail renderers
-src/components/forms/        Controlled forms and admission/contact sections
-src/components/faq/          Accessible FAQ accordion
-src/components/ui/           Reusable design primitives and interactions
-src/data/content.json        Central website content
-src/lib/                     Content helpers, registry, validation, submission handler
-src/types/content.ts         Content interfaces
-public/images/               Local photographic and branding assets
-scripts/verify-content.mjs   Content, route, and local asset checks
+app/
+  about/, apply-now/, blog/, contact/, courses/, faculty/, faq/
+                             Existing page routes and dynamic details
+  api/                       Contact and admission API handlers
+  components/                Flat collection of shared UI and section components
+  data/content.json          Central website content
+  data/index.ts              Typed content access and collection helpers
+  data/types.ts              Shared content interfaces
+  lib/                       Metadata, validation and submission handlers
+  globals.css                Global responsive styles
+  layout.tsx, page.tsx        Shared layout and home route
+public/images/               Active photographs and branding assets
+scripts/                     Content verification, smoke checks and hosting builds
+tests/                       Form and submission-handler checks
+build/                       Required Sites hosting adapter and runtime support
 ```
 
-The App Router is deliberately at the project root, while the reusable implementation is under `src/`. The `@/` import alias points to `src/`.
+The organization follows [rupesh040/template](https://github.com/rupesh040/template): page routes, a flat `app/components/` directory, and `app/data/` live together under `app/`; public assets and configuration remain at the project root. The `@/` alias points to the project root. All existing university routes, JSON content, API handlers and responsive styles are preserved. Application-specific server helpers remain in `app/lib/`; the existing Sites deployment requires the additional adapter files under `build/` and `scripts/`.
+
+Unused starter SVGs, the superseded banner crop, unused auth/utility/connector facades, and unimported vendor CSS were removed. Active image URLs remain unchanged. Font files and unrelated content from the reference template are not copied.
 
 ## Contact and admission forms
 
@@ -147,7 +153,7 @@ After configuring a real service, update `Education.ui.forms.notice` and the rel
 
 The official supplied logo is included as `public/images/logo.png`. The optional light derivative improves wordmark contrast on navy backgrounds. Photographs are individual crops from the provided reference screenshots, rather than independent high-resolution originals. **`ASSETS.md`** records every source, crop, and limitation. No whole reference page is used as a background. Replace the JSON image paths with higher-resolution licensed photographs when those become available.
 
-Admission promotions preserve the portrait's complete aspect ratio and stack their image below the copy when space is limited. Mobile hero and faculty image framing, application assistance cards, and responsive image size hints are defined in `src/components/ui/responsive-images.css`; keep that stylesheet after the shared and form styles. Layouts were checked from 320px through 1440px, including the production image adapter.
+Admission promotions preserve the portrait's complete aspect ratio and stack their image below the copy when space is limited. Mobile hero and faculty image framing, application assistance cards, and responsive image size hints are defined in `app/components/responsive-images.css`; keep that stylesheet after the shared and form styles. Layouts were checked from 320px through 1440px, including the production image adapter.
 
 The sample university addresses and contact details reproduce the design brief and are illustrative. The map URL and location notice are configured under `Education.sections.contact.variants.EducationContact1.map`; the map is centered on New Delhi, not a verified campus address. Replace the address, map, phone numbers, email addresses, and social links with the university's verified details before launch. The included social links point to their platforms because no official university profiles were supplied.
 
@@ -181,7 +187,7 @@ The source also includes the optional Sites/Vinext adapter used for private Site
 npm run build:sites
 ```
 
-`build:sites` packages the same Next.js application through the adapter. `npm run dev:sites` runs its local adapter development mode. These commands are separate from the standard Next.js build and require the included adapter tooling and hosting environment. Keep `build/`, `vendor/`, `vite.config.ts`, and adapter scripts when using that path. The checkout-local `.sites-runtime` directory is tooling state and is excluded from version control.
+`build:sites` packages the same Next.js application through the adapter. `npm run dev:sites` runs its local adapter development mode. These commands are separate from the standard Next.js build and require the included adapter tooling and hosting environment. Keep `build/`, `vite.config.ts`, and adapter scripts when using that path. The checkout-local `.sites-runtime` directory is tooling state and is excluded from version control.
 
 No database, email account, or storage provider is required to run or build the default website.
 

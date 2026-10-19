@@ -47,6 +47,8 @@ next-env.d.ts
 !/build/sites-vite-plugin.LICENSE
 !/build/sites-vite-plugin.ts
 !/build/sites-worker.ts
+!/build/runtime/
+!/build/runtime/**
 
 /dist/
 /.wrangler/
