@@ -1,4 +1,5 @@
 "use client";
+
 import { Children, useEffect, useRef, useState, type ReactNode } from "react";
 import { ArrowLeft, ArrowRight, ArrowUp, X, Play } from "lucide-react";
 import { content } from "@/app/data";
@@ -18,6 +19,7 @@ export function Carousel({
   const [index, setIndex] = useState(0);
   const [visible, setVisible] = useState(columns);
   const items = Children.toArray(children);
+
   useEffect(() => {
     const el = track.current;
     if (!el) return;
@@ -36,6 +38,7 @@ export function Carousel({
     observer.observe(el);
     return () => observer.disconnect();
   }, []);
+
   const pages = Math.max(1, Math.ceil(items.length / visible));
   const go = (page: number) => {
     const el = track.current;
@@ -55,7 +58,9 @@ export function Carousel({
     });
     setIndex(target);
   };
+
   if (!items.length) return null;
+
   return (
     <div
       className={`carousel ${dark ? "is-dark" : ""}`}
@@ -123,6 +128,7 @@ export function Carousel({
     </div>
   );
 }
+
 export function PaginatedGrid({
   children,
   pageSize,
@@ -136,13 +142,22 @@ export function PaginatedGrid({
   const [page, setPage] = useState(1);
   const total = Math.max(1, Math.ceil(items.length / pageSize));
   const start = useRef<HTMLDivElement>(null);
+
   const go = (p: number) => {
     setPage(p);
     start.current?.scrollIntoView({ block: "start", behavior: "smooth" });
   };
+
   return (
-    <div ref={start} className="paginated-grid">
-      <div className={`card-grid grid-${columns}`}>
+    <div ref={start} className="scroll-mt-28">
+      <div
+        key={page}
+        className={`grid gap-5 sm:gap-6 page-fade-in ${
+          columns === 3
+            ? "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
+            : "grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
+        }`}
+      >
         {items.slice((page - 1) * pageSize, page * pageSize)}
       </div>
       {total > 1 && (
@@ -177,11 +192,12 @@ export function PaginatedGrid({
     </div>
   );
 }
+
 export function ScrollToTop() {
   return (
     <button
       type="button"
-      className="scroll-top"
+      className="absolute right-4 sm:right-8 top-1/2 -translate-y-1/2 w-10 h-10 grid place-items-center rounded-full bg-gold text-navy shadow-md hover:bg-[#ffce52] transition-colors"
       aria-label={content.ui.scrollToTop}
       onClick={() =>
         window.scrollTo({
@@ -192,21 +208,24 @@ export function ScrollToTop() {
         })
       }
     >
-      <ArrowUp size={22} />
+      <ArrowUp size={20} />
     </button>
   );
 }
+
 export function VideoPreview({ url }: { url: string | null }) {
   const [open, setOpen] = useState(false);
   const close = useRef<HTMLButtonElement>(null);
   const trigger = useRef<HTMLButtonElement>(null);
   const dialog = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
     if (!open) return;
     const returnTarget = trigger.current;
     const originalOverflow = document.body.style.overflow;
     document.body.style.overflow = "hidden";
     close.current?.focus();
+
     const handler = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
         setOpen(false);
@@ -228,6 +247,7 @@ export function VideoPreview({ url }: { url: string | null }) {
         first?.focus();
       }
     };
+
     window.addEventListener("keydown", handler);
     return () => {
       document.body.style.overflow = originalOverflow;
@@ -235,22 +255,26 @@ export function VideoPreview({ url }: { url: string | null }) {
       returnTarget?.focus();
     };
   }, [open]);
+
   return (
     <>
       <button
         ref={trigger}
         type="button"
-        className="play-button"
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-14 h-14 bg-[#ffca24] text-white rounded-full grid place-items-center shadow-lg transition-transform hover:scale-110 active:scale-95"
         aria-label={content.ui.videoPreview}
         onClick={() => setOpen(true)}
       >
-        <Play fill="currentColor" />
+        <Play fill="currentColor" size={24} className="ml-1" />
       </button>
       {open && (
-        <div className="modal-backdrop" onClick={() => setOpen(false)}>
+        <div
+          className="fixed inset-0 z-50 grid place-items-center bg-navy-darker/80 p-4 sm:p-6 backdrop-blur-sm transition-opacity duration-300"
+          onClick={() => setOpen(false)}
+        >
           <div
             ref={dialog}
-            className="video-modal"
+            className="relative w-full max-w-2xl bg-white rounded-2xl p-6 sm:p-8 shadow-2xl page-fade-in"
             role="dialog"
             aria-modal="true"
             aria-labelledby="video-title"
@@ -258,18 +282,30 @@ export function VideoPreview({ url }: { url: string | null }) {
           >
             <button
               ref={close}
-              className="modal-close"
+              className="absolute right-4 top-4 grid place-items-center bg-[#eaf2fa] rounded-full w-8 h-8 text-navy transition-colors hover:bg-gold"
               type="button"
               aria-label={content.ui.closeVideo}
               onClick={() => setOpen(false)}
             >
-              <X />
+              <X size={18} />
             </button>
-            <h2 id="video-title">{content.ui.videoPreview}</h2>
+            <h2
+              id="video-title"
+              className="font-heading font-bold text-xl sm:text-2xl text-heading mb-4 pr-8"
+            >
+              {content.ui.videoPreview}
+            </h2>
             {url ? (
-              <video src={url} controls autoPlay />
+              <video
+                src={url}
+                controls
+                autoPlay
+                className="w-full rounded-xl mt-3"
+              />
             ) : (
-              <p>{content.ui.videoUnavailable}</p>
+              <p className="text-muted text-sm">
+                {content.ui.videoUnavailable}
+              </p>
             )}
           </div>
         </div>

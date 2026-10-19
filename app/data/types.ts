@@ -38,11 +38,11 @@ export type PageId =
   | "courses"
   | "course-detail"
   | "faculty"
+  | "faculty-detail"
   | "blog"
   | "blog-detail"
   | "faq"
-  | "contact"
-  | "apply-now";
+  | "contact";
 export interface TopbarSection {
   contacts: ContactLink[];
   socials: SocialLink[];
@@ -180,6 +180,38 @@ export interface ApplicationProcessSection {
   heading: Heading;
   steps: { title: string; description: string; icon: string }[];
 }
+export interface FacultyEducation {
+  degree: string;
+  institution: string;
+  year: string;
+}
+
+export interface FacultyExperience {
+  position: string;
+  institution: string;
+  year: string;
+}
+
+export interface FacultyContact {
+  phone: string;
+  email: string;
+  office: string;
+}
+
+export interface FacultySocial {
+  platform: string;
+  href: string;
+}
+
+export interface FacultyDetailSection {
+  profileEyebrow?: string;
+  contactTitle?: string;
+  subjectsTitle?: string;
+  aboutTitle?: string;
+  educationTitle?: string;
+  experienceTitle?: string;
+}
+
 export type SectionData =
   | TopbarSection
   | HeaderSection
@@ -189,6 +221,7 @@ export type SectionData =
   | PopularCoursesSection
   | AdmissionCTASection
   | FacultyPreviewSection
+  | FacultyDetailSection
   | TestimonialsSection
   | LatestBlogsSection
   | BannerSection
@@ -227,10 +260,18 @@ export interface Course {
 }
 export interface Faculty {
   id: string;
+  slug: string;
   name: string;
   role: string;
   department: string;
   image: ImageAsset;
+  shortBio?: string;
+  about?: string[];
+  contact?: FacultyContact;
+  socials?: FacultySocial[];
+  education?: FacultyEducation[];
+  experience?: FacultyExperience[];
+  subjects?: string[];
 }
 export interface Testimonial {
   id: string;

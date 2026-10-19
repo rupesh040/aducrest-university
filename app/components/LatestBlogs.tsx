@@ -9,14 +9,18 @@ export function LatestBlogs({ data }: { data: LatestBlogsSection }) {
     content.collections.blogs.filter((b) => b.slug === slug),
   );
   return (
-    <section className="section-padding latest-blogs">
+    <section className="section-padding bg-surface">
       <div className="container">
-        <SectionHeading heading={data.heading} />
-        <Carousel columns={data.pageSize} label={content.ui.blogsNavigation}>
-          {blogs.map((b) => (
-            <BlogCard key={b.id} blog={b} />
-          ))}
-        </Carousel>
+        <div className="reveal">
+          <SectionHeading heading={data.heading} />
+        </div>
+        <div className="reveal delay-150">
+          <Carousel columns={data.pageSize} label={content.ui.blogsNavigation}>
+            {blogs.map((b) => (
+              <BlogCard key={b.id} blog={b} />
+            ))}
+          </Carousel>
+        </div>
       </div>
     </section>
   );

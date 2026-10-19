@@ -19,25 +19,38 @@ export function UniversityForm({
   const form = useUniversityForm(kind, initialCourse);
   const contact = kind === "contact";
   const FormHeading = contact ? "h3" : "h2";
+
   return (
     <div
-      className={`university-form ${contact ? "contact-form" : "admission-form"}`}
+      className={`rounded-xl overflow-hidden shadow-form min-w-0 ${
+        contact
+          ? "bg-gradient-to-br from-[#06447d] to-[#052c49] text-white p-6 sm:p-7.5 md:p-8"
+          : "bg-white border border-[#e1eaf1] p-6 sm:p-7.5 md:p-8"
+      }`}
     >
-      <div className="university-form-heading">
-        <span className="form-heading-rule" aria-hidden="true" />
-        <FormHeading id={`${form.id}-heading`}>
-          {data.title} <span>{data.highlight}</span>
+      <div className="mb-6">
+        <span
+          className="block w-10 h-[3px] bg-gold mb-3.5"
+          aria-hidden="true"
+        />
+        <FormHeading
+          id={`${form.id}-heading`}
+          className="font-heading font-bold text-2xl md:text-[28px] leading-tight mb-2 text-inherit"
+        >
+          {data.title} <span className="text-gold">{data.highlight}</span>
         </FormHeading>
-        <p>{data.description}</p>
+        <p className="text-xs sm:text-sm leading-relaxed m-0 text-inherit opacity-90">
+          {data.description}
+        </p>
       </div>
       <form
         onSubmit={form.submit}
         noValidate
         aria-busy={form.submitting}
         aria-labelledby={`${form.id}-heading`}
-        className="university-form-body"
+        className="min-w-0"
       >
-        <div className="form-grid">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {data.fields.map((name) => (
             <FormField
               key={name}
@@ -54,7 +67,7 @@ export function UniversityForm({
           ))}
         </div>
         <button
-          className="primary-button form-submit"
+          className="primary-button w-full mt-5 justify-center min-h-[46px] text-sm"
           type="submit"
           disabled={form.submitting}
         >
@@ -63,7 +76,7 @@ export function UniversityForm({
             : data.submitLabel}
           {form.submitting ? (
             <LoaderCircle
-              className="form-spinner"
+              className="animate-spin"
               size={19}
               aria-hidden="true"
             />
@@ -71,17 +84,29 @@ export function UniversityForm({
             <ArrowRight size={20} aria-hidden="true" />
           )}
         </button>
-        <p className="form-notice">
-          <Info size={15} aria-hidden="true" />
+        <p
+          className={`text-[11px] leading-relaxed mt-3.5 flex items-start gap-1.5 ${
+            contact ? "text-[#d3e3f5]" : "text-muted"
+          }`}
+        >
+          <Info size={15} aria-hidden="true" className="shrink-0 mt-0.5" />
           {content.ui.forms.notice}
         </p>
         {form.feedback && (
           <div
-            className={`form-feedback ${form.feedback.ok ? "form-feedback--success" : "form-feedback--error"}`}
-            role={form.feedback.ok ? "status" : "alert"}
-            tabIndex={-1}
+            className={`p-3.5 mt-4 rounded-lg text-xs sm:text-[13px] leading-relaxed flex items-start gap-2 ${
+              form.feedback.ok
+                ? "bg-[#e7f4ec] text-[#14552c] border border-[#b6dfc4]"
+                : "bg-[#fff0ee] text-[#a12c1c] border border-[#f4bdb5]"
+            }`}
+            role="status"
+            aria-live="polite"
           >
-            {form.feedback.ok && <CheckCircle2 size={19} aria-hidden="true" />}
+            {form.feedback.ok ? (
+              <CheckCircle2 size={18} className="shrink-0 mt-0.5" />
+            ) : (
+              <Info size={18} className="shrink-0 mt-0.5" />
+            )}
             <span>{form.feedback.message}</span>
           </div>
         )}

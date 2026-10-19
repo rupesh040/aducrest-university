@@ -67,7 +67,8 @@ export function Icon({
   const normalized = name.replace(/-([a-z])/g, (_, letter: string) =>
     letter.toUpperCase(),
   );
-  if (["facebook", "instagram", "linkedin", "youtube"].includes(normalized))
+  const socialKey = name.toLowerCase();
+  if (["facebook", "instagram", "linkedin", "youtube"].includes(socialKey))
     return (
       <svg
         aria-hidden="true"
@@ -77,9 +78,9 @@ export function Icon({
         className={className}
         fill="currentColor"
       >
-        {normalized === "facebook" ? (
+        {socialKey === "facebook" ? (
           <path d="M14 22v-9h3l.5-4H14V6.5c0-1 .3-1.5 1.7-1.5H18V1.4A25 25 0 0 0 14.8 1C11.6 1 10 3 10 6v3H7v4h3v9z" />
-        ) : normalized === "instagram" ? (
+        ) : socialKey === "instagram" ? (
           <>
             <rect
               x="3"
@@ -101,11 +102,12 @@ export function Icon({
             />
             <circle cx="17.5" cy="6.5" r="1.2" />
           </>
-        ) : normalized === "youtube" ? (
-          <>
-            <rect x="2" y="5" width="20" height="14" rx="4" />
-            <path d="m10 8 6 4-6 4z" fill="var(--navy)" />
-          </>
+        ) : socialKey === "youtube" ? (
+          <path
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
+          />
         ) : (
           <>
             <circle cx="4.5" cy="4.5" r="2" />
@@ -172,7 +174,7 @@ export function SectionHeading({
   align?: "center" | "left";
 }) {
   return (
-    <div className={`section-heading ${align === "left" ? "align-left" : ""}`}>
+    <div className={`section-heading  ${align === "left" ? "align-left" : ""}`}>
       {heading.eyebrow && (
         <div className="eyebrow">
           <span />

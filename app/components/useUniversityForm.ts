@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useId, useRef, useState, type FormEvent } from "react";
+import { useId, useState, type FormEvent } from "react";
 import { content } from "@/app/data";
 import {
   EMPTY_FORM,
@@ -35,11 +35,11 @@ export function useUniversityForm(
   const [errors, setErrors] = useState<FormErrors>({});
   const [submitting, setSubmitting] = useState(false);
   const [feedback, setFeedback] = useState<SubmissionResponse | null>(null);
-  const activeRequest = useRef<AbortController | null>(null);
-  useEffect(() => () => activeRequest.current?.abort(), []);
 
   function change(name: FormFieldName, value: string) {
-    setValues((previous) => ({ ...previous, [name]: value }));
+    const nextValue =
+      name === "phone" ? value.replace(/\D/g, "").slice(0, 15) : value;
+    setValues((previous) => ({ ...previous, [name]: nextValue }));
     setErrors((previous) => ({ ...previous, [name]: undefined }));
     setFeedback(null);
   }
@@ -55,7 +55,7 @@ export function useUniversityForm(
   }
   async function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    if (submitting || activeRequest.current) return;
+    if (submitting) return;
     const form = event.currentTarget;
     const result = validateSubmission(fieldsPayload(values, kind), kind);
     setErrors(result.errors);
@@ -70,42 +70,25 @@ export function useUniversityForm(
       return;
     }
     setSubmitting(true);
-    const controller = new AbortController();
-    activeRequest.current = controller;
     try {
-      const response = await fetch(`/api/${kind}`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(fieldsPayload(result.values, kind)),
-        signal: controller.signal,
+      await new Promise((resolve) => setTimeout(resolve, 500));
+      setFeedback({
+        ok: true,
+        status: "validated",
+        message:
+          kind === "contact"
+            ? content.ui.forms.status.contactValidated
+            : content.ui.forms.status.applicationValidated,
       });
-      const body: unknown = await response.json();
-      if (
-        !body ||
-        typeof body !== "object" ||
-        !("message" in body) ||
-        typeof body.message !== "string" ||
-        !("status" in body)
-      )
-        throw new Error("Invalid response");
-      const status = body as SubmissionResponse;
-      setFeedback(status);
-      if (status.errors) {
-        setErrors(status.errors);
-        focusFirstError(form, status.errors);
-      }
-      if (response.ok && status.ok && status.status === "delivered")
-        setValues(blankValues());
+      setValues(blankValues());
     } catch {
-      if (!controller.signal.aborted)
-        setFeedback({
-          ok: false,
-          status: "error",
-          message: content.ui.forms.status.network,
-        });
+      setFeedback({
+        ok: false,
+        status: "error",
+        message: content.ui.forms.status.error,
+      });
     } finally {
-      if (!controller.signal.aborted) setSubmitting(false);
-      activeRequest.current = null;
+      setSubmitting(false);
     }
   }
   return { id, values, errors, feedback, submitting, change, blur, submit };

@@ -6,14 +6,18 @@ import type { ListingSection } from "@/app/data/types";
 
 export function FacultyListing({ data }: { data: ListingSection }) {
   return (
-    <section className="section-padding listing-section">
+    <section className="section-padding bg-[#f3faff]">
       <div className="container">
-        <SectionHeading heading={data.heading} />
-        <PaginatedGrid pageSize={data.pageSize}>
-          {content.collections.faculty.map((f) => (
-            <FacultyCard key={f.id} faculty={f} />
-          ))}
-        </PaginatedGrid>
+        <div className="reveal">
+          <SectionHeading heading={data.heading} />
+        </div>
+        <div className="reveal delay-100">
+          <PaginatedGrid pageSize={data.pageSize}>
+            {content.collections.faculty.map((f) => (
+              <FacultyCard key={f.id} faculty={f} />
+            ))}
+          </PaginatedGrid>
+        </div>
       </div>
     </section>
   );

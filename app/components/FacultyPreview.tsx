@@ -9,14 +9,18 @@ export function FacultyPreview({ data }: { data: FacultyPreviewSection }) {
     data.facultyIds.includes(f.id),
   );
   return (
-    <section className="section-padding faculty-section">
+    <section className="section-padding bg-[#f4faff]">
       <div className="container">
-        <SectionHeading heading={data.heading} />
-        <Carousel columns={data.pageSize} label={content.ui.facultyNavigation}>
-          {faculty.map((f) => (
-            <FacultyCard key={f.id} faculty={f} />
-          ))}
-        </Carousel>
+        <div className="reveal">
+          <SectionHeading heading={data.heading} />
+        </div>
+        <div className="reveal delay-150">
+          <Carousel columns={data.pageSize} label={content.ui.facultyNavigation}>
+            {faculty.map((f) => (
+              <FacultyCard key={f.id} faculty={f} />
+            ))}
+          </Carousel>
+        </div>
       </div>
     </section>
   );

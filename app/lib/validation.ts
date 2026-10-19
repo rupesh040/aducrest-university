@@ -53,7 +53,7 @@ export function validateSubmission(input: unknown, kind: SubmissionKind, now = n
     errors.email = messages.email;
   }
   const digits = values.phone.replace(/\D/g, "");
-  if (values.phone && (!/^\+?[\d ()-]+$/.test(values.phone) || digits.length < 7 || digits.length > 15 || values.phone.length > 30)) {
+  if (values.phone && (!/^\d+$/.test(values.phone) || digits.length < 7 || digits.length > 15)) {
     errors.phone = messages.phone;
   }
   if (values.course && !content.collections.courses.some((course) => course.id === values.course)) errors.course = messages.course;

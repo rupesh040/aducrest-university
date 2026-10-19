@@ -60,6 +60,53 @@ export function FormField({
             label: department.label,
           }))
         : [];
+  const isPhone = name === "phone";
+
+  const handleKeyDown = (
+    event: React.KeyboardEvent<
+      HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
+    >,
+  ) => {
+    if (isPhone) {
+      if (
+        event.key === "Backspace" ||
+        event.key === "Tab" ||
+        event.key === "Enter" ||
+        event.key === "Escape" ||
+        event.key === "Delete" ||
+        event.key === "ArrowLeft" ||
+        event.key === "ArrowRight" ||
+        event.key === "ArrowUp" ||
+        event.key === "ArrowDown" ||
+        event.key === "Home" ||
+        event.key === "End" ||
+        event.ctrlKey ||
+        event.metaKey
+      ) {
+        return;
+      }
+      if (!/^\d$/.test(event.key)) {
+        event.preventDefault();
+      }
+    }
+  };
+
+  const handlePaste = (
+    event: React.ClipboardEvent<
+      HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
+    >,
+  ) => {
+    if (isPhone) {
+      event.preventDefault();
+      const text = event.clipboardData.getData("text");
+      const digits = text.replace(/\D/g, "");
+      if (digits) {
+        const newValue = ((value || "") + digits).slice(0, 15);
+        onChange(name, newValue);
+      }
+    }
+  };
+
   const attributes = {
     id,
     name,
@@ -72,7 +119,15 @@ export function FormField({
       event: React.ChangeEvent<
         HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
       >,
-    ) => onChange(name, event.target.value),
+    ) => {
+      let val = event.target.value;
+      if (isPhone) {
+        val = val.replace(/\D/g, "").slice(0, 15);
+      }
+      onChange(name, val);
+    },
+    onKeyDown: isPhone ? handleKeyDown : undefined,
+    onPaste: isPhone ? handlePaste : undefined,
     onBlur: () => onBlur(name),
   };
   return (
@@ -120,7 +175,9 @@ export function FormField({
           <input
             {...attributes}
             className="form-input"
-            type={field.type}
+            type={isPhone ? "tel" : field.type}
+            inputMode={isPhone ? "numeric" : undefined}
+            pattern={isPhone ? "[0-9]*" : undefined}
             placeholder={field.placeholder}
             autoComplete={
               name === "fullName"
@@ -139,7 +196,7 @@ export function FormField({
                 : name === "email"
                   ? 254
                   : name === "phone"
-                    ? 30
+                    ? 15
                     : undefined
             }
             min={name === "birthDate" ? "1900-01-01" : undefined}

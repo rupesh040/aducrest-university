@@ -3,6 +3,7 @@ import type {
   Blog,
   Course,
   EducationContent,
+  Faculty,
   PageId,
   SectionData,
 } from "@/app/data/types";
@@ -34,3 +35,10 @@ export function getCourse(slug: string): Course | undefined {
 export function getBlog(slug: string): Blog | undefined {
   return content.collections.blogs.find((blog) => blog.slug === slug);
 }
+
+export function getFaculty(slug: string): Faculty | undefined {
+  return content.collections.faculty.find(
+    (faculty) => faculty.slug === slug || faculty.id === slug,
+  );
+}
+

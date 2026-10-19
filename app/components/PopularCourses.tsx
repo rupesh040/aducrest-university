@@ -9,14 +9,18 @@ export function PopularCourses({ data }: { data: PopularCoursesSection }) {
     data.courseSlugs.includes(c.slug),
   );
   return (
-    <section className="section-padding courses-section">
+    <section className="section-padding bg-[#f1faff]">
       <div className="container">
-        <SectionHeading heading={data.heading} />
-        <Carousel columns={data.pageSize} label={content.ui.coursesNavigation}>
-          {courses.map((c) => (
-            <CourseCard key={c.id} course={c} eligibility />
-          ))}
-        </Carousel>
+        <div className="reveal">
+          <SectionHeading heading={data.heading} />
+        </div>
+        <div className="reveal delay-150">
+          <Carousel columns={data.pageSize} label={content.ui.coursesNavigation}>
+            {courses.map((c) => (
+              <CourseCard key={c.id} course={c} eligibility />
+            ))}
+          </Carousel>
+        </div>
       </div>
     </section>
   );

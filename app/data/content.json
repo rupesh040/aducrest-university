@@ -304,21 +304,17 @@
               }
             ]
           },
-          "apply-now": {
-            "title": "Apply Now | AduCrest University",
-            "description": "Begin your academic journey with the AduCrest University application form.",
+          "faculty-detail": {
+            "title": "Faculty Profile | AduCrest University",
+            "description": "Explore faculty credentials, academic research, and teaching expertise.",
             "components": [
               {
-                "key": "banner-apply-now",
+                "key": "banner-faculty-detail",
                 "component": "EducationInnerBanner1"
               },
               {
-                "key": "application",
-                "component": "EducationApplicationForm1"
-              },
-              {
-                "key": "application-process",
-                "component": "EducationApplicationProcess1"
+                "key": "faculty-detail",
+                "component": "EducationFacultyDetail1"
               }
             ]
           }
@@ -332,7 +328,7 @@
             "contacts": [
               {
                 "icon": "mapPin",
-                "label": "123 University Road, New Delhi, India - 110001",
+                "label": "Rachel Oto lemamea,300 Rexburg Ave,Fort Washington, MD 20744,United States",
                 "href": "/contact"
               },
               {
@@ -398,15 +394,11 @@
               {
                 "label": "Blog",
                 "href": "/blog"
-              },
-              {
-                "label": "Contact",
-                "href": "/contact"
               }
             ],
             "apply": {
-              "label": "Apply Now",
-              "href": "/apply-now"
+              "label": "Contact us",
+              "href": "/contact"
             }
           }
         }
@@ -460,7 +452,7 @@
                 "href": "/faculty"
               },
               {
-                "label": "Latest News",
+                "label": "Blogs",
                 "href": "/blog"
               },
               {
@@ -552,7 +544,7 @@
               "href": "/courses"
             },
             "image": {
-              "src": "/images/hero/student.jpg",
+              "src": "/images/hero/students.webp",
               "alt": "A university student holding books on a sunlit campus"
             }
           }
@@ -572,11 +564,11 @@
             ],
             "images": [
               {
-                "src": "/images/about/student.jpg",
+                "src": "/images/hero/students.webp",
                 "alt": "A smiling AduCrest student holding her notebooks"
               },
               {
-                "src": "/images/about/campus.jpg",
+                "src": "/images/about/campus.webp",
                 "alt": "The university's historic academic building and landscaped grounds"
               }
             ],
@@ -655,11 +647,11 @@
               }
             ],
             "button": {
-              "label": "Apply Now",
-              "href": "/apply-now"
+              "label": "Contact us",
+              "href": "/contact"
             },
             "image": {
-              "src": "/images/hero/admission.jpg",
+              "src": "/images/hero/admissions.webp",
               "alt": "A student ready to begin her academic journey"
             }
           }
@@ -736,7 +728,7 @@
           "EducationInnerBanner1": {
             "title": "About Us",
             "image": {
-              "src": "/images/banners/inner-clean.png",
+              "src": "/images/banners/inner-clean.webp",
               "alt": "A smiling student speaking with an adviser"
             },
             "breadcrumbs": [
@@ -756,7 +748,7 @@
           "EducationInnerBanner1": {
             "title": "Our Courses",
             "image": {
-              "src": "/images/banners/inner-clean.png",
+              "src": "/images/banners/inner-clean.webp",
               "alt": "A smiling student speaking with an adviser"
             },
             "breadcrumbs": [
@@ -776,13 +768,17 @@
           "EducationInnerBanner1": {
             "title": "Course Detail",
             "image": {
-              "src": "/images/banners/inner-clean.png",
+              "src": "/images/banners/inner-clean.webp",
               "alt": "A smiling student speaking with an adviser"
             },
             "breadcrumbs": [
               {
                 "label": "Home",
                 "href": "/"
+              },
+              {
+                "label": "Course",
+                "href": "/courses"
               },
               {
                 "label": "Course Detail"
@@ -796,7 +792,7 @@
           "EducationInnerBanner1": {
             "title": "Faculty",
             "image": {
-              "src": "/images/banners/inner-clean.png",
+              "src": "/images/banners/inner-clean.webp",
               "alt": "A smiling student speaking with an adviser"
             },
             "breadcrumbs": [
@@ -816,7 +812,7 @@
           "EducationInnerBanner1": {
             "title": "Blog",
             "image": {
-              "src": "/images/banners/inner-clean.png",
+              "src": "/images/banners/inner-clean.webp",
               "alt": "A smiling student speaking with an adviser"
             },
             "breadcrumbs": [
@@ -836,13 +832,17 @@
           "EducationInnerBanner1": {
             "title": "Blog Detail",
             "image": {
-              "src": "/images/banners/inner-clean.png",
+              "src": "/images/banners/inner-clean.webp",
               "alt": "A smiling student speaking with an adviser"
             },
             "breadcrumbs": [
               {
                 "label": "Home",
                 "href": "/"
+              },
+              {
+                "label": "Blog",
+                "href": "/blog"
               },
               {
                 "label": "Blog Detail"
@@ -856,7 +856,7 @@
           "EducationInnerBanner1": {
             "title": "Faq",
             "image": {
-              "src": "/images/banners/inner-clean.png",
+              "src": "/images/banners/inner-clean.webp",
               "alt": "A smiling student speaking with an adviser"
             },
             "breadcrumbs": [
@@ -876,7 +876,7 @@
           "EducationInnerBanner1": {
             "title": "Contact Us",
             "image": {
-              "src": "/images/banners/inner-clean.png",
+              "src": "/images/banners/inner-clean.webp",
               "alt": "A smiling student speaking with an adviser"
             },
             "breadcrumbs": [
@@ -894,9 +894,9 @@
       "banner-apply-now": {
         "variants": {
           "EducationInnerBanner1": {
-            "title": "Apply Now",
+            "title": "Contact us",
             "image": {
-              "src": "/images/banners/inner-clean.png",
+              "src": "/images/banners/inner-clean.webp",
               "alt": "A smiling student speaking with an adviser"
             },
             "breadcrumbs": [
@@ -905,7 +905,7 @@
                 "href": "/"
               },
               {
-                "label": "Apply Now"
+                "label": "Contact us"
               }
             ]
           }
@@ -939,7 +939,7 @@
               "title": "Course",
               "highlight": "Details"
             },
-            "applyLabel": "Apply Now"
+            "applyLabel": "Contact us"
           }
         }
       },
@@ -1065,17 +1065,17 @@
                 "icon": "mapPin",
                 "title": "Our Address",
                 "lines": [
-                  "123 Education Street,",
-                  "New Delhi, India - 110001"
+                  "Rachel Oto lemamea, 300 Rexburg Ave,",
+                  "Fort Washington, MD 20744, United States"
                 ],
-                "href": "https://maps.google.com/?q=New+Delhi+India"
+                "href": "https://maps.google.com/?q=300+Rexburg+Ave+Fort+Washington+MD+20744"
               },
               {
                 "icon": "phone",
                 "title": "Call Us",
                 "lines": [
                   "+1 000-000-000",
-                  "+91 87654 32109"
+                  "+1 000-000-000"
                 ],
                 "href": "tel:+1000000000"
               },
@@ -1125,8 +1125,8 @@
               }
             ],
             "map": {
-              "embedUrl": "https://maps.google.com/maps?q=New%20Delhi%20India&t=&z=12&ie=UTF8&iwloc=&output=embed",
-              "title": "Illustrative map of New Delhi",
+              "embedUrl": "https://maps.google.com/maps?q=300%20Rexburg%20Ave%2C%20Fort%20Washington%2C%20MD%2020744&t=&z=14&ie=UTF8&iwloc=&output=embed",
+              "title": "Illustrative map of campus location",
               "notice": "The supplied university address is illustrative. Confirm campus location with admissions before planning a visit."
             }
           }
@@ -1161,7 +1161,7 @@
                 "highlight": "Academic Journey With Us"
               },
               "image": {
-                "src": "/images/hero/admission.jpg",
+                "src": "/images/hero/admissions.webp",
                 "alt": "A prospective student carrying books and a backpack"
               },
               "description": "Join a vibrant learning community and build the skills, knowledge and confidence to shape a successful future.",
@@ -1190,8 +1190,8 @@
               {
                 "icon": "mapPin",
                 "title": "Visit Campus",
-                "description": "123 Education Street,",
-                "value": "New Delhi, India - 110001",
+                "description": "Rachel Oto lemamea, 300 Rexburg Ave,",
+                "value": "Fort Washington, MD 20744, United States",
                 "href": "/contact"
               }
             ]
@@ -1230,6 +1230,42 @@
             ]
           }
         }
+      },
+      "faculty-detail": {
+        "variants": {
+          "EducationFacultyDetail1": {
+            "profileEyebrow": "Faculty Profile",
+            "contactTitle": "Get in Touch",
+            "subjectsTitle": "Subjects Teaching",
+            "aboutTitle": "About",
+            "educationTitle": "Education",
+            "experienceTitle": "Experience"
+          }
+        }
+      },
+      "banner-faculty-detail": {
+        "variants": {
+          "EducationInnerBanner1": {
+            "title": "Faculty Profile",
+            "image": {
+              "src": "/images/banners/inner-clean.webp",
+              "alt": "A smiling student speaking with an adviser"
+            },
+            "breadcrumbs": [
+              {
+                "label": "Home",
+                "href": "/"
+              },
+              {
+                "label": "Faculty",
+                "href": "/faculty"
+              },
+              {
+                "label": "Faculty Profile"
+              }
+            ]
+          }
+        }
       }
     },
     "collections": {
@@ -1242,7 +1278,7 @@
           "duration": "3 Years",
           "eligibility": "12th Pass (Any Stream)",
           "image": {
-            "src": "/images/courses/course-1.jpg",
+            "src": "/images/courses/course-1.webp",
             "alt": "Arts & Humanities student at AduCrest University"
           },
           "mainImage": {
@@ -1250,7 +1286,7 @@
             "alt": "A university classroom for the Bachelor of Arts (B.A.) programme"
           },
           "previewImage": {
-            "src": "/images/courses/course-1.jpg",
+            "src": "/images/courses/course-1.webp",
             "alt": "Bachelor of Arts (B.A.) course preview"
           },
           "updated": "September 12, 2026",
@@ -1267,7 +1303,7 @@
             "Connect the humanities with contemporary issues"
           ],
           "meta": {
-            "cost": "₹45,000 / year",
+            "cost": "$45,000 / year",
             "instructor": "Dr. Pooja Verma",
             "duration": "3 Years",
             "students": "1200+",
@@ -1286,7 +1322,7 @@
           "duration": "3 Years",
           "eligibility": "12th Pass (Science Stream)",
           "image": {
-            "src": "/images/courses/course-2.jpg",
+            "src": "/images/courses/course-2.webp",
             "alt": "Science student at AduCrest University"
           },
           "mainImage": {
@@ -1294,7 +1330,7 @@
             "alt": "A university classroom for the Bachelor of Science (B.Sc.) programme"
           },
           "previewImage": {
-            "src": "/images/courses/course-2.jpg",
+            "src": "/images/courses/course-2.webp",
             "alt": "Bachelor of Science (B.Sc.) course preview"
           },
           "updated": "September 12, 2026",
@@ -1311,7 +1347,7 @@
             "Communicate scientific findings clearly"
           ],
           "meta": {
-            "cost": "₹55,000 / year",
+            "cost": "$55,000 / year",
             "instructor": "Mr. Aditya Rao",
             "duration": "3 Years",
             "students": "950+",
@@ -1330,7 +1366,7 @@
           "duration": "3 Years",
           "eligibility": "12th Pass (Any Stream)",
           "image": {
-            "src": "/images/courses/course-3.jpg",
+            "src": "/images/courses/course-3.webp",
             "alt": "Commerce student at AduCrest University"
           },
           "mainImage": {
@@ -1338,7 +1374,7 @@
             "alt": "A university classroom for the Bachelor of Commerce (B.Com.) programme"
           },
           "previewImage": {
-            "src": "/images/courses/course-3.jpg",
+            "src": "/images/courses/course-3.webp",
             "alt": "Bachelor of Commerce (B.Com.) course preview"
           },
           "updated": "September 12, 2026",
@@ -1355,7 +1391,7 @@
             "Build professional communication skills"
           ],
           "meta": {
-            "cost": "₹48,000 / year",
+            "cost": "$48,000 / year",
             "instructor": "Dr. Kavya Nair",
             "duration": "3 Years",
             "students": "1100+",
@@ -1374,7 +1410,7 @@
           "duration": "4 Years",
           "eligibility": "12th Pass (PCM)",
           "image": {
-            "src": "/images/courses/course-4.jpg",
+            "src": "/images/courses/course-4.webp",
             "alt": "Engineering student at AduCrest University"
           },
           "mainImage": {
@@ -1382,7 +1418,7 @@
             "alt": "A university classroom for the Bachelor of Technology (B.Tech.) programme"
           },
           "previewImage": {
-            "src": "/images/courses/course-4.jpg",
+            "src": "/images/courses/course-4.webp",
             "alt": "Bachelor of Technology (B.Tech.) course preview"
           },
           "updated": "September 12, 2026",
@@ -1399,7 +1435,7 @@
             "Present engineering solutions"
           ],
           "meta": {
-            "cost": "₹95,000 / year",
+            "cost": "$95,000 / year",
             "instructor": "Prof. Rohan Gupta",
             "duration": "4 Years",
             "students": "1800+",
@@ -1445,7 +1481,7 @@
             "Prepare for career growth in business"
           ],
           "meta": {
-            "cost": "₹1,20,000 / year",
+            "cost": "$120,000 / year",
             "instructor": "Prof. Arjun Mehta",
             "duration": "2 Years",
             "students": "850+",
@@ -1489,7 +1525,7 @@
             "Build and document a complete application"
           ],
           "meta": {
-            "cost": "₹85,000 / year",
+            "cost": "$85,000 / year",
             "instructor": "Dr. Neha Sharma",
             "duration": "2 Years",
             "students": "720+",
@@ -1533,7 +1569,7 @@
             "Communicate clearly in healthcare settings"
           ],
           "meta": {
-            "cost": "₹90,000 / year",
+            "cost": "$90,000 / year",
             "instructor": "Dr. Manish Pandey",
             "duration": "4 Years",
             "students": "640+",
@@ -1577,7 +1613,7 @@
             "Present design decisions clearly"
           ],
           "meta": {
-            "cost": "₹80,000 / year",
+            "cost": "$80,000 / year",
             "instructor": "Ms. Riya Malhotra",
             "duration": "4 Years",
             "students": "510+",
@@ -1596,7 +1632,7 @@
           "duration": "3 Years",
           "eligibility": "12th Pass (Any Stream)",
           "image": {
-            "src": "/images/courses/course-1.jpg",
+            "src": "/images/courses/course-1.webp",
             "alt": "Management student at AduCrest University"
           },
           "mainImage": {
@@ -1604,7 +1640,7 @@
             "alt": "A university classroom for the Bachelor of Business Administration (BBA) programme"
           },
           "previewImage": {
-            "src": "/images/courses/course-1.jpg",
+            "src": "/images/courses/course-1.webp",
             "alt": "Bachelor of Business Administration (BBA) course preview"
           },
           "updated": "September 12, 2026",
@@ -1621,7 +1657,7 @@
             "Make evidence-informed decisions"
           ],
           "meta": {
-            "cost": "₹60,000 / year",
+            "cost": "$60,000 / year",
             "instructor": "Prof. Arjun Mehta",
             "duration": "3 Years",
             "students": "760+",
@@ -1640,7 +1676,7 @@
           "duration": "2 Years",
           "eligibility": "Bachelor's Degree (Relevant Discipline)",
           "image": {
-            "src": "/images/courses/course-2.jpg",
+            "src": "/images/courses/course-2.webp",
             "alt": "Arts & Humanities student at AduCrest University"
           },
           "mainImage": {
@@ -1648,7 +1684,7 @@
             "alt": "A university classroom for the Master of Arts (M.A.) programme"
           },
           "previewImage": {
-            "src": "/images/courses/course-2.jpg",
+            "src": "/images/courses/course-2.webp",
             "alt": "Master of Arts (M.A.) course preview"
           },
           "updated": "September 12, 2026",
@@ -1665,7 +1701,7 @@
             "Connect study to wider debates"
           ],
           "meta": {
-            "cost": "₹50,000 / year",
+            "cost": "$50,000 / year",
             "instructor": "Dr. Pooja Verma",
             "duration": "2 Years",
             "students": "420+",
@@ -1684,7 +1720,7 @@
           "duration": "2 Years",
           "eligibility": "Bachelor's Degree in Science",
           "image": {
-            "src": "/images/courses/course-3.jpg",
+            "src": "/images/courses/course-3.webp",
             "alt": "Science student at AduCrest University"
           },
           "mainImage": {
@@ -1692,7 +1728,7 @@
             "alt": "A university classroom for the Master of Science (M.Sc.) programme"
           },
           "previewImage": {
-            "src": "/images/courses/course-3.jpg",
+            "src": "/images/courses/course-3.webp",
             "alt": "Master of Science (M.Sc.) course preview"
           },
           "updated": "September 12, 2026",
@@ -1709,7 +1745,7 @@
             "Present a scientific project"
           ],
           "meta": {
-            "cost": "₹65,000 / year",
+            "cost": "$65,000 / year",
             "instructor": "Ms. Sneha Kapoor",
             "duration": "2 Years",
             "students": "380+",
@@ -1728,7 +1764,7 @@
           "duration": "3 Years",
           "eligibility": "12th Pass with Mathematics",
           "image": {
-            "src": "/images/courses/course-4.jpg",
+            "src": "/images/courses/course-4.webp",
             "alt": "Computer Applications student at AduCrest University"
           },
           "mainImage": {
@@ -1736,7 +1772,7 @@
             "alt": "A university classroom for the Bachelor of Computer Applications (BCA) programme"
           },
           "previewImage": {
-            "src": "/images/courses/course-4.jpg",
+            "src": "/images/courses/course-4.webp",
             "alt": "Bachelor of Computer Applications (BCA) course preview"
           },
           "updated": "September 12, 2026",
@@ -1753,7 +1789,7 @@
             "Collaborate on software projects"
           ],
           "meta": {
-            "cost": "₹58,000 / year",
+            "cost": "$58,000 / year",
             "instructor": "Mr. Kunal Sharma",
             "duration": "3 Years",
             "students": "890+",
@@ -1774,7 +1810,78 @@
           "image": {
             "src": "/images/faculty/faculty-1.jpg",
             "alt": "Dr. Neha Sharma, Professor of Computer Science at AduCrest University"
-          }
+          },
+          "slug": "neha-sharma",
+          "shortBio": "Dr. Neha Sharma is a dedicated educator and researcher with a strong passion for technology and student success. With years of academic and industry experience, she focuses on delivering practical, future-ready knowledge and inspiring students to achieve their goals.",
+          "contact": {
+            "phone": "+1 000-000-000",
+            "email": "info@xyz.com",
+            "office": "Rachel Oto lemamea,300 Rexburg Ave,Fort Washington, MD 20744,United States"
+          },
+          "socials": [
+            {
+              "platform": "facebook",
+              "href": "https://www.facebook.com/"
+            },
+            {
+              "platform": "linkedin",
+              "href": "https://www.linkedin.com/"
+            },
+            {
+              "platform": "instagram",
+              "href": "https://www.instagram.com/"
+            },
+            {
+              "platform": "mail",
+              "href": "mailto:info@xyz.com"
+            }
+          ],
+          "about": [
+            "Dr. Neha Sharma is a Professor of Computer Science at AduCrest University. She has a deep interest in emerging technologies, software development and AI-driven solutions. Her teaching approach combines theoretical knowledge with real-world applications, helping students build strong technical skills and problem-solving abilities.",
+            "With a strong academic foundation and active research engagement, she mentors undergraduate and postgraduate students in competitive programming, full-stack engineering, and distributed systems. Her published research focuses on machine learning architectures and scalable cloud infrastructure."
+          ],
+          "education": [
+            {
+              "degree": "Ph.D. in Computer Science",
+              "institution": "Delhi University, New Delhi",
+              "year": "2018 - 2022"
+            },
+            {
+              "degree": "M.Tech. in Computer Science",
+              "institution": "IIT Delhi, India",
+              "year": "2014 - 2016"
+            },
+            {
+              "degree": "B.Tech. in Information Technology",
+              "institution": "University of Delhi, India",
+              "year": "2010 - 2014"
+            }
+          ],
+          "experience": [
+            {
+              "position": "Professor of Computer Science",
+              "institution": "AduCrest University, New Delhi",
+              "year": "2018 - Present"
+            },
+            {
+              "position": "Associate Professor",
+              "institution": "Modern Institute of Technology, Delhi",
+              "year": "2014 - 2018"
+            },
+            {
+              "position": "Assistant Professor",
+              "institution": "Global Education College, New Delhi",
+              "year": "2010 - 2014"
+            }
+          ],
+          "subjects": [
+            "Computer Programming",
+            "Data Structures",
+            "Web Development",
+            "Software Engineering",
+            "Artificial Intelligence",
+            "Database Management"
+          ]
         },
         {
           "id": "arjun-mehta",
@@ -1784,7 +1891,78 @@
           "image": {
             "src": "/images/faculty/faculty-2.jpg",
             "alt": "Prof. Arjun Mehta, Head of Business Management at AduCrest University"
-          }
+          },
+          "slug": "arjun-mehta",
+          "shortBio": "Prof. Arjun Mehta is a seasoned business strategist and academic leader with extensive corporate consulting and management education experience.",
+          "contact": {
+            "phone": "+1 000-000-000",
+            "email": "info@xyz.com",
+            "office": "Rachel Oto lemamea,300 Rexburg Ave,Fort Washington, MD 20744,United States"
+          },
+          "socials": [
+            {
+              "platform": "facebook",
+              "href": "https://www.facebook.com/"
+            },
+            {
+              "platform": "linkedin",
+              "href": "https://www.linkedin.com/"
+            },
+            {
+              "platform": "instagram",
+              "href": "https://www.instagram.com/"
+            },
+            {
+              "platform": "mail",
+              "href": "mailto:info@xyz.com"
+            }
+          ],
+          "about": [
+            "Prof. Arjun Mehta heads the Department of Business Management at AduCrest University. He specializes in strategic management, corporate leadership, and enterprise development.",
+            "He brings over 18 years of corporate consulting and executive coaching to the classroom, preparing aspiring entrepreneurs and managers for the dynamic global economy."
+          ],
+          "education": [
+            {
+              "degree": "Ph.D. in Management Studies",
+              "institution": "FMS, Delhi University",
+              "year": "2012 - 2016"
+            },
+            {
+              "degree": "MBA in Strategic Management",
+              "institution": "IIM Ahmedabad",
+              "year": "2006 - 2008"
+            },
+            {
+              "degree": "B.Com. (Honours)",
+              "institution": "SRCC, Delhi University",
+              "year": "2003 - 2006"
+            }
+          ],
+          "experience": [
+            {
+              "position": "Head of Business Management",
+              "institution": "AduCrest University",
+              "year": "2019 - Present"
+            },
+            {
+              "position": "Senior Management Consultant",
+              "institution": "Global McKinsey Advisory",
+              "year": "2014 - 2019"
+            },
+            {
+              "position": "Assistant Professor of Management",
+              "institution": "Symbiosis University",
+              "year": "2008 - 2014"
+            }
+          ],
+          "subjects": [
+            "Strategic Management",
+            "Corporate Finance",
+            "Organizational Behavior",
+            "Entrepreneurship Development",
+            "Business Ethics & Leadership",
+            "Marketing Strategy"
+          ]
         },
         {
           "id": "pooja-verma",
@@ -1794,7 +1972,73 @@
           "image": {
             "src": "/images/faculty/faculty-3.jpg",
             "alt": "Dr. Pooja Verma, Faculty of English Literature at AduCrest University"
-          }
+          },
+          "slug": "pooja-verma",
+          "shortBio": "Dr. Pooja Verma is an accomplished scholar of English Literature, critical theory, and postcolonial narratives with numerous peer-reviewed publications.",
+          "contact": {
+            "phone": "+1 000-000-000",
+            "email": "info@xyz.com",
+            "office": "Rachel Oto lemamea,300 Rexburg Ave,Fort Washington, MD 20744,United States"
+          },
+          "socials": [
+            {
+              "platform": "facebook",
+              "href": "https://www.facebook.com/"
+            },
+            {
+              "platform": "linkedin",
+              "href": "https://www.linkedin.com/"
+            },
+            {
+              "platform": "instagram",
+              "href": "https://www.instagram.com/"
+            },
+            {
+              "platform": "mail",
+              "href": "mailto:info@xyz.com"
+            }
+          ],
+          "about": [
+            "Dr. Pooja Verma guides students through British, American, and contemporary postcolonial literature, fostering critical enquiry and creative expression.",
+            "Her interactive seminar model empowers students to analyze cultural narratives, rhetoric, and modern literary forms with analytical rigor."
+          ],
+          "education": [
+            {
+              "degree": "Ph.D. in English Literature",
+              "institution": "Jawaharlal Nehru University, New Delhi",
+              "year": "2015 - 2019"
+            },
+            {
+              "degree": "M.A. in English",
+              "institution": "St. Stephen’s College, Delhi",
+              "year": "2013 - 2015"
+            },
+            {
+              "degree": "B.A. (Hons) in English",
+              "institution": "Miranda House, Delhi University",
+              "year": "2010 - 2013"
+            }
+          ],
+          "experience": [
+            {
+              "position": "Associate Professor",
+              "institution": "AduCrest University",
+              "year": "2020 - Present"
+            },
+            {
+              "position": "Assistant Professor",
+              "institution": "Lady Shri Ram College, Delhi",
+              "year": "2015 - 2020"
+            }
+          ],
+          "subjects": [
+            "Modern British Poetry",
+            "Postcolonial Studies",
+            "Literary Theory & Criticism",
+            "Creative Writing",
+            "World Literature in Translation",
+            "Academic Research & Writing"
+          ]
         },
         {
           "id": "rohan-gupta",
@@ -1804,7 +2048,72 @@
           "image": {
             "src": "/images/faculty/faculty-4.jpg",
             "alt": "Prof. Rohan Gupta, Faculty of Mathematics at AduCrest University"
-          }
+          },
+          "slug": "rohan-gupta",
+          "shortBio": "Prof. Rohan Gupta is an esteemed educator in Science at AduCrest University, committed to research excellence, interactive mentoring, and academic success.",
+          "contact": {
+            "phone": "+1 000-000-000",
+            "email": "info@xyz.com",
+            "office": "Rachel Oto lemamea,300 Rexburg Ave,Fort Washington, MD 20744,United States"
+          },
+          "socials": [
+            {
+              "platform": "facebook",
+              "href": "https://www.facebook.com/"
+            },
+            {
+              "platform": "linkedin",
+              "href": "https://www.linkedin.com/"
+            },
+            {
+              "platform": "instagram",
+              "href": "https://www.instagram.com/"
+            },
+            {
+              "platform": "mail",
+              "href": "mailto:info@xyz.com"
+            }
+          ],
+          "about": [
+            "Prof. Rohan Gupta serves as Faculty of Mathematics at AduCrest University. With dedicated expertise in Science, they bring modern pedagogy and industry perspectives into classroom discussions.",
+            "Passionate about fostering critical thinking and research methodology, Prof. Rohan Gupta supervises undergraduate student projects and coordinates academic workshops across the faculty."
+          ],
+          "education": [
+            {
+              "degree": "Ph.D. in Science",
+              "institution": "Premier Central University, New Delhi",
+              "year": "2014 - 2018"
+            },
+            {
+              "degree": "Master's in Science",
+              "institution": "National Institute of Technology",
+              "year": "2011 - 2013"
+            },
+            {
+              "degree": "Bachelor's Degree",
+              "institution": "State University",
+              "year": "2007 - 2011"
+            }
+          ],
+          "experience": [
+            {
+              "position": "Faculty of Mathematics",
+              "institution": "AduCrest University, New Delhi",
+              "year": "2019 - Present"
+            },
+            {
+              "position": "Senior Lecturer",
+              "institution": "Institute of Higher Studies",
+              "year": "2014 - 2019"
+            }
+          ],
+          "subjects": [
+            "Science Foundations",
+            "Advanced Research Methodology",
+            "Applied Analytical Methods",
+            "Professional Seminar",
+            "Capstone Project Mentorship"
+          ]
         },
         {
           "id": "ananya-singh",
@@ -1814,7 +2123,72 @@
           "image": {
             "src": "/images/faculty/faculty-5.jpg",
             "alt": "Ms. Ananya Singh, Faculty of Psychology at AduCrest University"
-          }
+          },
+          "slug": "ananya-singh",
+          "shortBio": "Ms. Ananya Singh is an esteemed educator in Arts & Humanities at AduCrest University, committed to research excellence, interactive mentoring, and academic success.",
+          "contact": {
+            "phone": "+1 000-000-000",
+            "email": "info@xyz.com",
+            "office": "Rachel Oto lemamea,300 Rexburg Ave,Fort Washington, MD 20744,United States"
+          },
+          "socials": [
+            {
+              "platform": "facebook",
+              "href": "https://www.facebook.com/"
+            },
+            {
+              "platform": "linkedin",
+              "href": "https://www.linkedin.com/"
+            },
+            {
+              "platform": "instagram",
+              "href": "https://www.instagram.com/"
+            },
+            {
+              "platform": "mail",
+              "href": "mailto:info@xyz.com"
+            }
+          ],
+          "about": [
+            "Ms. Ananya Singh serves as Faculty of Psychology at AduCrest University. With dedicated expertise in Arts & Humanities, they bring modern pedagogy and industry perspectives into classroom discussions.",
+            "Passionate about fostering critical thinking and research methodology, Ms. Ananya Singh supervises undergraduate student projects and coordinates academic workshops across the faculty."
+          ],
+          "education": [
+            {
+              "degree": "Ph.D. in Arts & Humanities",
+              "institution": "Premier Central University, New Delhi",
+              "year": "2014 - 2018"
+            },
+            {
+              "degree": "Master's in Arts & Humanities",
+              "institution": "National Institute of Technology",
+              "year": "2011 - 2013"
+            },
+            {
+              "degree": "Bachelor's Degree",
+              "institution": "State University",
+              "year": "2007 - 2011"
+            }
+          ],
+          "experience": [
+            {
+              "position": "Faculty of Psychology",
+              "institution": "AduCrest University, New Delhi",
+              "year": "2019 - Present"
+            },
+            {
+              "position": "Senior Lecturer",
+              "institution": "Institute of Higher Studies",
+              "year": "2014 - 2019"
+            }
+          ],
+          "subjects": [
+            "Arts & Humanities Foundations",
+            "Advanced Research Methodology",
+            "Applied Analytical Methods",
+            "Professional Seminar",
+            "Capstone Project Mentorship"
+          ]
         },
         {
           "id": "vikram-joshi",
@@ -1824,7 +2198,72 @@
           "image": {
             "src": "/images/faculty/faculty-6.jpg",
             "alt": "Dr. Vikram Joshi, Faculty of History at AduCrest University"
-          }
+          },
+          "slug": "vikram-joshi",
+          "shortBio": "Dr. Vikram Joshi is an esteemed educator in Arts & Humanities at AduCrest University, committed to research excellence, interactive mentoring, and academic success.",
+          "contact": {
+            "phone": "+1 000-000-000",
+            "email": "info@xyz.com",
+            "office": "Rachel Oto lemamea,300 Rexburg Ave,Fort Washington, MD 20744,United States"
+          },
+          "socials": [
+            {
+              "platform": "facebook",
+              "href": "https://www.facebook.com/"
+            },
+            {
+              "platform": "linkedin",
+              "href": "https://www.linkedin.com/"
+            },
+            {
+              "platform": "instagram",
+              "href": "https://www.instagram.com/"
+            },
+            {
+              "platform": "mail",
+              "href": "mailto:info@xyz.com"
+            }
+          ],
+          "about": [
+            "Dr. Vikram Joshi serves as Faculty of History at AduCrest University. With dedicated expertise in Arts & Humanities, they bring modern pedagogy and industry perspectives into classroom discussions.",
+            "Passionate about fostering critical thinking and research methodology, Dr. Vikram Joshi supervises undergraduate student projects and coordinates academic workshops across the faculty."
+          ],
+          "education": [
+            {
+              "degree": "Ph.D. in Arts & Humanities",
+              "institution": "Premier Central University, New Delhi",
+              "year": "2014 - 2018"
+            },
+            {
+              "degree": "Master's in Arts & Humanities",
+              "institution": "National Institute of Technology",
+              "year": "2011 - 2013"
+            },
+            {
+              "degree": "Bachelor's Degree",
+              "institution": "State University",
+              "year": "2007 - 2011"
+            }
+          ],
+          "experience": [
+            {
+              "position": "Faculty of History",
+              "institution": "AduCrest University, New Delhi",
+              "year": "2019 - Present"
+            },
+            {
+              "position": "Senior Lecturer",
+              "institution": "Institute of Higher Studies",
+              "year": "2014 - 2019"
+            }
+          ],
+          "subjects": [
+            "Arts & Humanities Foundations",
+            "Advanced Research Methodology",
+            "Applied Analytical Methods",
+            "Professional Seminar",
+            "Capstone Project Mentorship"
+          ]
         },
         {
           "id": "kunal-sharma",
@@ -1834,7 +2273,72 @@
           "image": {
             "src": "/images/faculty/faculty-7.jpg",
             "alt": "Mr. Kunal Sharma, Assistant Professor at AduCrest University"
-          }
+          },
+          "slug": "kunal-sharma",
+          "shortBio": "Mr. Kunal Sharma is an esteemed educator in Computer Applications at AduCrest University, committed to research excellence, interactive mentoring, and academic success.",
+          "contact": {
+            "phone": "+1 000-000-000",
+            "email": "info@xyz.com",
+            "office": "Rachel Oto lemamea,300 Rexburg Ave,Fort Washington, MD 20744,United States"
+          },
+          "socials": [
+            {
+              "platform": "facebook",
+              "href": "https://www.facebook.com/"
+            },
+            {
+              "platform": "linkedin",
+              "href": "https://www.linkedin.com/"
+            },
+            {
+              "platform": "instagram",
+              "href": "https://www.instagram.com/"
+            },
+            {
+              "platform": "mail",
+              "href": "mailto:info@xyz.com"
+            }
+          ],
+          "about": [
+            "Mr. Kunal Sharma serves as Assistant Professor at AduCrest University. With dedicated expertise in Computer Applications, they bring modern pedagogy and industry perspectives into classroom discussions.",
+            "Passionate about fostering critical thinking and research methodology, Mr. Kunal Sharma supervises undergraduate student projects and coordinates academic workshops across the faculty."
+          ],
+          "education": [
+            {
+              "degree": "Ph.D. in Computer Applications",
+              "institution": "Premier Central University, New Delhi",
+              "year": "2014 - 2018"
+            },
+            {
+              "degree": "Master's in Computer Applications",
+              "institution": "National Institute of Technology",
+              "year": "2011 - 2013"
+            },
+            {
+              "degree": "Bachelor's Degree",
+              "institution": "State University",
+              "year": "2007 - 2011"
+            }
+          ],
+          "experience": [
+            {
+              "position": "Assistant Professor",
+              "institution": "AduCrest University, New Delhi",
+              "year": "2019 - Present"
+            },
+            {
+              "position": "Senior Lecturer",
+              "institution": "Institute of Higher Studies",
+              "year": "2014 - 2019"
+            }
+          ],
+          "subjects": [
+            "Computer Applications Foundations",
+            "Advanced Research Methodology",
+            "Applied Analytical Methods",
+            "Professional Seminar",
+            "Capstone Project Mentorship"
+          ]
         },
         {
           "id": "kavya-nair",
@@ -1844,7 +2348,72 @@
           "image": {
             "src": "/images/faculty/faculty-8.jpg",
             "alt": "Dr. Kavya Nair, Faculty of Economics at AduCrest University"
-          }
+          },
+          "slug": "kavya-nair",
+          "shortBio": "Dr. Kavya Nair is an esteemed educator in Commerce at AduCrest University, committed to research excellence, interactive mentoring, and academic success.",
+          "contact": {
+            "phone": "+1 000-000-000",
+            "email": "info@xyz.com",
+            "office": "Rachel Oto lemamea,300 Rexburg Ave,Fort Washington, MD 20744,United States"
+          },
+          "socials": [
+            {
+              "platform": "facebook",
+              "href": "https://www.facebook.com/"
+            },
+            {
+              "platform": "linkedin",
+              "href": "https://www.linkedin.com/"
+            },
+            {
+              "platform": "instagram",
+              "href": "https://www.instagram.com/"
+            },
+            {
+              "platform": "mail",
+              "href": "mailto:info@xyz.com"
+            }
+          ],
+          "about": [
+            "Dr. Kavya Nair serves as Faculty of Economics at AduCrest University. With dedicated expertise in Commerce, they bring modern pedagogy and industry perspectives into classroom discussions.",
+            "Passionate about fostering critical thinking and research methodology, Dr. Kavya Nair supervises undergraduate student projects and coordinates academic workshops across the faculty."
+          ],
+          "education": [
+            {
+              "degree": "Ph.D. in Commerce",
+              "institution": "Premier Central University, New Delhi",
+              "year": "2014 - 2018"
+            },
+            {
+              "degree": "Master's in Commerce",
+              "institution": "National Institute of Technology",
+              "year": "2011 - 2013"
+            },
+            {
+              "degree": "Bachelor's Degree",
+              "institution": "State University",
+              "year": "2007 - 2011"
+            }
+          ],
+          "experience": [
+            {
+              "position": "Faculty of Economics",
+              "institution": "AduCrest University, New Delhi",
+              "year": "2019 - Present"
+            },
+            {
+              "position": "Senior Lecturer",
+              "institution": "Institute of Higher Studies",
+              "year": "2014 - 2019"
+            }
+          ],
+          "subjects": [
+            "Commerce Foundations",
+            "Advanced Research Methodology",
+            "Applied Analytical Methods",
+            "Professional Seminar",
+            "Capstone Project Mentorship"
+          ]
         },
         {
           "id": "aditya-rao",
@@ -1854,7 +2423,72 @@
           "image": {
             "src": "/images/faculty/faculty-9.jpg",
             "alt": "Mr. Aditya Rao, Faculty of Physics at AduCrest University"
-          }
+          },
+          "slug": "aditya-rao",
+          "shortBio": "Mr. Aditya Rao is an esteemed educator in Science at AduCrest University, committed to research excellence, interactive mentoring, and academic success.",
+          "contact": {
+            "phone": "+1 000-000-000",
+            "email": "info@xyz.com",
+            "office": "Rachel Oto lemamea,300 Rexburg Ave,Fort Washington, MD 20744,United States"
+          },
+          "socials": [
+            {
+              "platform": "facebook",
+              "href": "https://www.facebook.com/"
+            },
+            {
+              "platform": "linkedin",
+              "href": "https://www.linkedin.com/"
+            },
+            {
+              "platform": "instagram",
+              "href": "https://www.instagram.com/"
+            },
+            {
+              "platform": "mail",
+              "href": "mailto:info@xyz.com"
+            }
+          ],
+          "about": [
+            "Mr. Aditya Rao serves as Faculty of Physics at AduCrest University. With dedicated expertise in Science, they bring modern pedagogy and industry perspectives into classroom discussions.",
+            "Passionate about fostering critical thinking and research methodology, Mr. Aditya Rao supervises undergraduate student projects and coordinates academic workshops across the faculty."
+          ],
+          "education": [
+            {
+              "degree": "Ph.D. in Science",
+              "institution": "Premier Central University, New Delhi",
+              "year": "2014 - 2018"
+            },
+            {
+              "degree": "Master's in Science",
+              "institution": "National Institute of Technology",
+              "year": "2011 - 2013"
+            },
+            {
+              "degree": "Bachelor's Degree",
+              "institution": "State University",
+              "year": "2007 - 2011"
+            }
+          ],
+          "experience": [
+            {
+              "position": "Faculty of Physics",
+              "institution": "AduCrest University, New Delhi",
+              "year": "2019 - Present"
+            },
+            {
+              "position": "Senior Lecturer",
+              "institution": "Institute of Higher Studies",
+              "year": "2014 - 2019"
+            }
+          ],
+          "subjects": [
+            "Science Foundations",
+            "Advanced Research Methodology",
+            "Applied Analytical Methods",
+            "Professional Seminar",
+            "Capstone Project Mentorship"
+          ]
         },
         {
           "id": "sneha-kapoor",
@@ -1864,7 +2498,72 @@
           "image": {
             "src": "/images/faculty/faculty-10.jpg",
             "alt": "Ms. Sneha Kapoor, Faculty of Biology at AduCrest University"
-          }
+          },
+          "slug": "sneha-kapoor",
+          "shortBio": "Ms. Sneha Kapoor is an esteemed educator in Science at AduCrest University, committed to research excellence, interactive mentoring, and academic success.",
+          "contact": {
+            "phone": "+1 000-000-000",
+            "email": "info@xyz.com",
+            "office": "Rachel Oto lemamea,300 Rexburg Ave,Fort Washington, MD 20744,United States"
+          },
+          "socials": [
+            {
+              "platform": "facebook",
+              "href": "https://www.facebook.com/"
+            },
+            {
+              "platform": "linkedin",
+              "href": "https://www.linkedin.com/"
+            },
+            {
+              "platform": "instagram",
+              "href": "https://www.instagram.com/"
+            },
+            {
+              "platform": "mail",
+              "href": "mailto:info@xyz.com"
+            }
+          ],
+          "about": [
+            "Ms. Sneha Kapoor serves as Faculty of Biology at AduCrest University. With dedicated expertise in Science, they bring modern pedagogy and industry perspectives into classroom discussions.",
+            "Passionate about fostering critical thinking and research methodology, Ms. Sneha Kapoor supervises undergraduate student projects and coordinates academic workshops across the faculty."
+          ],
+          "education": [
+            {
+              "degree": "Ph.D. in Science",
+              "institution": "Premier Central University, New Delhi",
+              "year": "2014 - 2018"
+            },
+            {
+              "degree": "Master's in Science",
+              "institution": "National Institute of Technology",
+              "year": "2011 - 2013"
+            },
+            {
+              "degree": "Bachelor's Degree",
+              "institution": "State University",
+              "year": "2007 - 2011"
+            }
+          ],
+          "experience": [
+            {
+              "position": "Faculty of Biology",
+              "institution": "AduCrest University, New Delhi",
+              "year": "2019 - Present"
+            },
+            {
+              "position": "Senior Lecturer",
+              "institution": "Institute of Higher Studies",
+              "year": "2014 - 2019"
+            }
+          ],
+          "subjects": [
+            "Science Foundations",
+            "Advanced Research Methodology",
+            "Applied Analytical Methods",
+            "Professional Seminar",
+            "Capstone Project Mentorship"
+          ]
         },
         {
           "id": "manish-pandey",
@@ -1874,7 +2573,72 @@
           "image": {
             "src": "/images/faculty/faculty-11.jpg",
             "alt": "Dr. Manish Pandey, Faculty of Chemistry at AduCrest University"
-          }
+          },
+          "slug": "manish-pandey",
+          "shortBio": "Dr. Manish Pandey is an esteemed educator in Science at AduCrest University, committed to research excellence, interactive mentoring, and academic success.",
+          "contact": {
+            "phone": "+1 000-000-000",
+            "email": "info@xyz.com",
+            "office": "Rachel Oto lemamea,300 Rexburg Ave,Fort Washington, MD 20744,United States"
+          },
+          "socials": [
+            {
+              "platform": "facebook",
+              "href": "https://www.facebook.com/"
+            },
+            {
+              "platform": "linkedin",
+              "href": "https://www.linkedin.com/"
+            },
+            {
+              "platform": "instagram",
+              "href": "https://www.instagram.com/"
+            },
+            {
+              "platform": "mail",
+              "href": "mailto:info@xyz.com"
+            }
+          ],
+          "about": [
+            "Dr. Manish Pandey serves as Faculty of Chemistry at AduCrest University. With dedicated expertise in Science, they bring modern pedagogy and industry perspectives into classroom discussions.",
+            "Passionate about fostering critical thinking and research methodology, Dr. Manish Pandey supervises undergraduate student projects and coordinates academic workshops across the faculty."
+          ],
+          "education": [
+            {
+              "degree": "Ph.D. in Science",
+              "institution": "Premier Central University, New Delhi",
+              "year": "2014 - 2018"
+            },
+            {
+              "degree": "Master's in Science",
+              "institution": "National Institute of Technology",
+              "year": "2011 - 2013"
+            },
+            {
+              "degree": "Bachelor's Degree",
+              "institution": "State University",
+              "year": "2007 - 2011"
+            }
+          ],
+          "experience": [
+            {
+              "position": "Faculty of Chemistry",
+              "institution": "AduCrest University, New Delhi",
+              "year": "2019 - Present"
+            },
+            {
+              "position": "Senior Lecturer",
+              "institution": "Institute of Higher Studies",
+              "year": "2014 - 2019"
+            }
+          ],
+          "subjects": [
+            "Science Foundations",
+            "Advanced Research Methodology",
+            "Applied Analytical Methods",
+            "Professional Seminar",
+            "Capstone Project Mentorship"
+          ]
         },
         {
           "id": "riya-malhotra",
@@ -1884,7 +2648,72 @@
           "image": {
             "src": "/images/faculty/faculty-12.jpg",
             "alt": "Ms. Riya Malhotra, Faculty of Arts at AduCrest University"
-          }
+          },
+          "slug": "riya-malhotra",
+          "shortBio": "Ms. Riya Malhotra is an esteemed educator in Design at AduCrest University, committed to research excellence, interactive mentoring, and academic success.",
+          "contact": {
+            "phone": "+1 000-000-000",
+            "email": "info@xyz.com",
+            "office": "Rachel Oto lemamea,300 Rexburg Ave,Fort Washington, MD 20744,United States"
+          },
+          "socials": [
+            {
+              "platform": "facebook",
+              "href": "https://www.facebook.com/"
+            },
+            {
+              "platform": "linkedin",
+              "href": "https://www.linkedin.com/"
+            },
+            {
+              "platform": "instagram",
+              "href": "https://www.instagram.com/"
+            },
+            {
+              "platform": "mail",
+              "href": "mailto:info@xyz.com"
+            }
+          ],
+          "about": [
+            "Ms. Riya Malhotra serves as Faculty of Arts at AduCrest University. With dedicated expertise in Design, they bring modern pedagogy and industry perspectives into classroom discussions.",
+            "Passionate about fostering critical thinking and research methodology, Ms. Riya Malhotra supervises undergraduate student projects and coordinates academic workshops across the faculty."
+          ],
+          "education": [
+            {
+              "degree": "Ph.D. in Design",
+              "institution": "Premier Central University, New Delhi",
+              "year": "2014 - 2018"
+            },
+            {
+              "degree": "Master's in Design",
+              "institution": "National Institute of Technology",
+              "year": "2011 - 2013"
+            },
+            {
+              "degree": "Bachelor's Degree",
+              "institution": "State University",
+              "year": "2007 - 2011"
+            }
+          ],
+          "experience": [
+            {
+              "position": "Faculty of Arts",
+              "institution": "AduCrest University, New Delhi",
+              "year": "2019 - Present"
+            },
+            {
+              "position": "Senior Lecturer",
+              "institution": "Institute of Higher Studies",
+              "year": "2014 - 2019"
+            }
+          ],
+          "subjects": [
+            "Design Foundations",
+            "Advanced Research Methodology",
+            "Applied Analytical Methods",
+            "Professional Seminar",
+            "Capstone Project Mentorship"
+          ]
         },
         {
           "id": "meera-iyer",
@@ -1894,7 +2723,72 @@
           "image": {
             "src": "/images/faculty/faculty-1.jpg",
             "alt": "Dr. Meera Iyer, Faculty of Environmental Studies at AduCrest University"
-          }
+          },
+          "slug": "meera-iyer",
+          "shortBio": "Dr. Meera Iyer is an esteemed educator in Science at AduCrest University, committed to research excellence, interactive mentoring, and academic success.",
+          "contact": {
+            "phone": "+1 000-000-000",
+            "email": "info@xyz.com",
+            "office": "Rachel Oto lemamea,300 Rexburg Ave,Fort Washington, MD 20744,United States"
+          },
+          "socials": [
+            {
+              "platform": "facebook",
+              "href": "https://www.facebook.com/"
+            },
+            {
+              "platform": "linkedin",
+              "href": "https://www.linkedin.com/"
+            },
+            {
+              "platform": "instagram",
+              "href": "https://www.instagram.com/"
+            },
+            {
+              "platform": "mail",
+              "href": "mailto:info@xyz.com"
+            }
+          ],
+          "about": [
+            "Dr. Meera Iyer serves as Faculty of Environmental Studies at AduCrest University. With dedicated expertise in Science, they bring modern pedagogy and industry perspectives into classroom discussions.",
+            "Passionate about fostering critical thinking and research methodology, Dr. Meera Iyer supervises undergraduate student projects and coordinates academic workshops across the faculty."
+          ],
+          "education": [
+            {
+              "degree": "Ph.D. in Science",
+              "institution": "Premier Central University, New Delhi",
+              "year": "2014 - 2018"
+            },
+            {
+              "degree": "Master's in Science",
+              "institution": "National Institute of Technology",
+              "year": "2011 - 2013"
+            },
+            {
+              "degree": "Bachelor's Degree",
+              "institution": "State University",
+              "year": "2007 - 2011"
+            }
+          ],
+          "experience": [
+            {
+              "position": "Faculty of Environmental Studies",
+              "institution": "AduCrest University, New Delhi",
+              "year": "2019 - Present"
+            },
+            {
+              "position": "Senior Lecturer",
+              "institution": "Institute of Higher Studies",
+              "year": "2014 - 2019"
+            }
+          ],
+          "subjects": [
+            "Science Foundations",
+            "Advanced Research Methodology",
+            "Applied Analytical Methods",
+            "Professional Seminar",
+            "Capstone Project Mentorship"
+          ]
         },
         {
           "id": "rahul-bhatia",
@@ -1904,7 +2798,72 @@
           "image": {
             "src": "/images/faculty/faculty-2.jpg",
             "alt": "Prof. Rahul Bhatia, Faculty of Accounting at AduCrest University"
-          }
+          },
+          "slug": "rahul-bhatia",
+          "shortBio": "Prof. Rahul Bhatia is an esteemed educator in Commerce at AduCrest University, committed to research excellence, interactive mentoring, and academic success.",
+          "contact": {
+            "phone": "+1 000-000-000",
+            "email": "info@xyz.com",
+            "office": "Rachel Oto lemamea,300 Rexburg Ave,Fort Washington, MD 20744,United States"
+          },
+          "socials": [
+            {
+              "platform": "facebook",
+              "href": "https://www.facebook.com/"
+            },
+            {
+              "platform": "linkedin",
+              "href": "https://www.linkedin.com/"
+            },
+            {
+              "platform": "instagram",
+              "href": "https://www.instagram.com/"
+            },
+            {
+              "platform": "mail",
+              "href": "mailto:info@xyz.com"
+            }
+          ],
+          "about": [
+            "Prof. Rahul Bhatia serves as Faculty of Accounting at AduCrest University. With dedicated expertise in Commerce, they bring modern pedagogy and industry perspectives into classroom discussions.",
+            "Passionate about fostering critical thinking and research methodology, Prof. Rahul Bhatia supervises undergraduate student projects and coordinates academic workshops across the faculty."
+          ],
+          "education": [
+            {
+              "degree": "Ph.D. in Commerce",
+              "institution": "Premier Central University, New Delhi",
+              "year": "2014 - 2018"
+            },
+            {
+              "degree": "Master's in Commerce",
+              "institution": "National Institute of Technology",
+              "year": "2011 - 2013"
+            },
+            {
+              "degree": "Bachelor's Degree",
+              "institution": "State University",
+              "year": "2007 - 2011"
+            }
+          ],
+          "experience": [
+            {
+              "position": "Faculty of Accounting",
+              "institution": "AduCrest University, New Delhi",
+              "year": "2019 - Present"
+            },
+            {
+              "position": "Senior Lecturer",
+              "institution": "Institute of Higher Studies",
+              "year": "2014 - 2019"
+            }
+          ],
+          "subjects": [
+            "Commerce Foundations",
+            "Advanced Research Methodology",
+            "Applied Analytical Methods",
+            "Professional Seminar",
+            "Capstone Project Mentorship"
+          ]
         },
         {
           "id": "isha-khanna",
@@ -1914,7 +2873,72 @@
           "image": {
             "src": "/images/faculty/faculty-3.jpg",
             "alt": "Ms. Isha Khanna, Faculty of Visual Communication at AduCrest University"
-          }
+          },
+          "slug": "isha-khanna",
+          "shortBio": "Ms. Isha Khanna is an esteemed educator in Design at AduCrest University, committed to research excellence, interactive mentoring, and academic success.",
+          "contact": {
+            "phone": "+1 000-000-000",
+            "email": "info@xyz.com",
+            "office": "Rachel Oto lemamea,300 Rexburg Ave,Fort Washington, MD 20744,United States"
+          },
+          "socials": [
+            {
+              "platform": "facebook",
+              "href": "https://www.facebook.com/"
+            },
+            {
+              "platform": "linkedin",
+              "href": "https://www.linkedin.com/"
+            },
+            {
+              "platform": "instagram",
+              "href": "https://www.instagram.com/"
+            },
+            {
+              "platform": "mail",
+              "href": "mailto:info@xyz.com"
+            }
+          ],
+          "about": [
+            "Ms. Isha Khanna serves as Faculty of Visual Communication at AduCrest University. With dedicated expertise in Design, they bring modern pedagogy and industry perspectives into classroom discussions.",
+            "Passionate about fostering critical thinking and research methodology, Ms. Isha Khanna supervises undergraduate student projects and coordinates academic workshops across the faculty."
+          ],
+          "education": [
+            {
+              "degree": "Ph.D. in Design",
+              "institution": "Premier Central University, New Delhi",
+              "year": "2014 - 2018"
+            },
+            {
+              "degree": "Master's in Design",
+              "institution": "National Institute of Technology",
+              "year": "2011 - 2013"
+            },
+            {
+              "degree": "Bachelor's Degree",
+              "institution": "State University",
+              "year": "2007 - 2011"
+            }
+          ],
+          "experience": [
+            {
+              "position": "Faculty of Visual Communication",
+              "institution": "AduCrest University, New Delhi",
+              "year": "2019 - Present"
+            },
+            {
+              "position": "Senior Lecturer",
+              "institution": "Institute of Higher Studies",
+              "year": "2014 - 2019"
+            }
+          ],
+          "subjects": [
+            "Design Foundations",
+            "Advanced Research Methodology",
+            "Applied Analytical Methods",
+            "Professional Seminar",
+            "Capstone Project Mentorship"
+          ]
         },
         {
           "id": "sanjay-menon",
@@ -1924,7 +2948,72 @@
           "image": {
             "src": "/images/faculty/faculty-4.jpg",
             "alt": "Dr. Sanjay Menon, Faculty of Engineering at AduCrest University"
-          }
+          },
+          "slug": "sanjay-menon",
+          "shortBio": "Dr. Sanjay Menon is an esteemed educator in Engineering at AduCrest University, committed to research excellence, interactive mentoring, and academic success.",
+          "contact": {
+            "phone": "+1 000-000-000",
+            "email": "info@xyz.com",
+            "office": "Rachel Oto lemamea,300 Rexburg Ave,Fort Washington, MD 20744,United States"
+          },
+          "socials": [
+            {
+              "platform": "facebook",
+              "href": "https://www.facebook.com/"
+            },
+            {
+              "platform": "linkedin",
+              "href": "https://www.linkedin.com/"
+            },
+            {
+              "platform": "instagram",
+              "href": "https://www.instagram.com/"
+            },
+            {
+              "platform": "mail",
+              "href": "mailto:info@xyz.com"
+            }
+          ],
+          "about": [
+            "Dr. Sanjay Menon serves as Faculty of Engineering at AduCrest University. With dedicated expertise in Engineering, they bring modern pedagogy and industry perspectives into classroom discussions.",
+            "Passionate about fostering critical thinking and research methodology, Dr. Sanjay Menon supervises undergraduate student projects and coordinates academic workshops across the faculty."
+          ],
+          "education": [
+            {
+              "degree": "Ph.D. in Engineering",
+              "institution": "Premier Central University, New Delhi",
+              "year": "2014 - 2018"
+            },
+            {
+              "degree": "Master's in Engineering",
+              "institution": "National Institute of Technology",
+              "year": "2011 - 2013"
+            },
+            {
+              "degree": "Bachelor's Degree",
+              "institution": "State University",
+              "year": "2007 - 2011"
+            }
+          ],
+          "experience": [
+            {
+              "position": "Faculty of Engineering",
+              "institution": "AduCrest University, New Delhi",
+              "year": "2019 - Present"
+            },
+            {
+              "position": "Senior Lecturer",
+              "institution": "Institute of Higher Studies",
+              "year": "2014 - 2019"
+            }
+          ],
+          "subjects": [
+            "Engineering Foundations",
+            "Advanced Research Methodology",
+            "Applied Analytical Methods",
+            "Professional Seminar",
+            "Capstone Project Mentorship"
+          ]
         }
       ],
       "blogs": [

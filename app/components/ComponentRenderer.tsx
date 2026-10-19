@@ -15,16 +15,24 @@ import { FacultyListing } from "@/app/components/FacultyListing";
 import { BlogListing } from "@/app/components/BlogListing";
 import { CourseDetail } from "@/app/components/CourseDetail";
 import { BlogDetail } from "@/app/components/BlogDetail";
+import { FacultyDetail } from "@/app/components/FacultyDetail";
 import { ContactSection } from "@/app/components/ContactSection";
 import { ApplicationSection } from "@/app/components/ApplicationSection";
 import { ApplicationProcess } from "@/app/components/ApplicationProcess";
 import { FAQSectionView } from "@/app/components/FAQAccordion";
 import { content, getPage, activeTemplate } from "@/app/data";
-import type { SectionData, Course, Blog, PageId } from "@/app/data/types";
+import type {
+  SectionData,
+  Course,
+  Blog,
+  Faculty,
+  PageId,
+} from "@/app/data/types";
 
 interface RenderContext {
   course?: Course;
   blog?: Blog;
+  faculty?: Faculty;
   initialCourse?: string;
 }
 interface RendererProps extends RenderContext {
@@ -48,7 +56,14 @@ export const componentRegistry = {
   EducationFaculty1: component(FacultyPreview),
   EducationTestimonials1: component(Testimonials),
   EducationBlog1: component(LatestBlogs),
-  EducationInnerBanner1: component(PageBanner),
+  EducationInnerBanner1: ({ data, course, blog, faculty }: RendererProps) => (
+    <PageBanner
+      data={data as Parameters<typeof PageBanner>[0]["data"]}
+      course={course}
+      blog={blog}
+      faculty={faculty}
+    />
+  ),
   EducationCourseListing1: component(CourseListing),
   EducationFacultyListing1: component(FacultyListing),
   EducationBlogListing1: component(BlogListing),
@@ -73,6 +88,13 @@ export const componentRegistry = {
       <BlogDetail
         data={data as Parameters<typeof BlogDetail>[0]["data"]}
         blog={blog}
+      />
+    ) : null,
+  EducationFacultyDetail1: ({ data, faculty }: RendererProps) =>
+    faculty ? (
+      <FacultyDetail
+        data={data as Parameters<typeof FacultyDetail>[0]["data"]}
+        faculty={faculty}
       />
     ) : null,
 } satisfies Record<string, ComponentType<RendererProps>>;
