@@ -2,14 +2,12 @@
 
 import { useEffect, useState, useCallback } from "react";
 import { usePathname } from "next/navigation";
-import { ArrowUp } from "lucide-react";
 
 export function AnimationController() {
   const pathname = usePathname();
   const [scrollProgress, setScrollProgress] = useState(0);
-  const [showScrollTop, setShowScrollTop] = useState(false);
 
-  // Track scroll progress and scroll-to-top button visibility
+  // Track scroll progress
   useEffect(() => {
     let ticking = false;
 
@@ -24,7 +22,6 @@ export function AnimationController() {
             setScrollProgress(Math.min(1, Math.max(0, currentScroll / totalHeight)));
           }
 
-          setShowScrollTop(currentScroll > 320);
           ticking = false;
         });
         ticking = true;
@@ -103,15 +100,6 @@ export function AnimationController() {
     };
   }, [pathname, setupObserver]);
 
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches
-        ? "instant"
-        : "smooth",
-    });
-  };
-
   return (
     <>
       {/* Top Scroll Progress Indicator */}
@@ -122,18 +110,6 @@ export function AnimationController() {
         }}
         aria-hidden="true"
       />
-
-      {/* Floating Scroll To Top Button */}
-      <button
-        type="button"
-        onClick={scrollToTop}
-        className={`floating-scroll-top ${
-          showScrollTop ? "is-visible" : ""
-        }`}
-        aria-label="Scroll to top of page"
-      >
-        <ArrowUp size={22} strokeWidth={2.6} />
-      </button>
     </>
   );
 }

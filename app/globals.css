@@ -439,44 +439,6 @@
     transition: transform 0.08s linear;
   }
 
-  /* ------------------------------------------------------------- */
-  /* Floating Scroll to Top Button                                 */
-  /* ------------------------------------------------------------- */
-  .floating-scroll-top {
-    position: fixed;
-    bottom: 24px;
-    right: 24px;
-    z-index: 50;
-    width: 46px;
-    height: 46px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, #ffb800 0%, #ffc637 100%);
-    color: #002b60;
-    display: grid;
-    place-items: center;
-    box-shadow: 0 8px 24px rgba(255, 184, 0, 0.4), 0 4px 10px rgba(0, 43, 96, 0.12);
-    border: 2px solid #ffffff;
-    cursor: pointer;
-    opacity: 0;
-    visibility: hidden;
-    transform: scale(0.7) translateY(16px);
-    transition: opacity 0.3s var(--ease-smooth), transform 0.3s var(--ease-spring), visibility 0.3s, background-color 0.2s, box-shadow 0.2s;
-    pointer-events: none;
-  }
-  .floating-scroll-top.is-visible {
-    opacity: 1;
-    visibility: visible;
-    transform: scale(1) translateY(0);
-    pointer-events: auto;
-  }
-  .floating-scroll-top:hover {
-    transform: scale(1.08) translateY(-4px);
-    box-shadow: 0 12px 28px rgba(255, 184, 0, 0.55), 0 6px 14px rgba(0, 43, 96, 0.2);
-    background: #ffce52;
-  }
-  .floating-scroll-top:active {
-    transform: scale(0.95) translateY(0);
-  }
 
   /* ------------------------------------------------------------- */
   /* Scroll-Triggered Reveal Animations                            */
