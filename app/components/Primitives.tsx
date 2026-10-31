@@ -52,8 +52,11 @@ const icons: Record<string, LucideIcon> = {
   globe: Globe,
   user: UserRound,
   FilePenLine,
+  filePenLine: FilePenLine,
   ClipboardCheck,
+  clipboardCheck: ClipboardCheck,
   MailOpen,
+  mailOpen: MailOpen,
 };
 export function Icon({
   name,
@@ -169,25 +172,32 @@ export function PrimaryButton({
 export function SectionHeading({
   heading,
   align = "center",
+  className = "",
 }: {
   heading: Heading;
   align?: "center" | "left";
+  className?: string;
 }) {
+  const isLeft = align === "left";
   return (
-    <div className={`section-heading  ${align === "left" ? "align-left" : ""}`}>
+    <div
+      className={`section-heading ${isLeft ? "align-left" : ""} ${className}`.trim()}
+    >
       {heading.eyebrow && (
         <div className="eyebrow">
-          <span />
-          {heading.eyebrow}
-          <span />
+          <span className="eyebrow-line" aria-hidden="true" />
+          <span className="eyebrow-text whitespace-nowrap">
+            {heading.eyebrow}
+          </span>
+          {!isLeft && <span className="eyebrow-line" aria-hidden="true" />}
         </div>
       )}
       <h2>
-        {heading.title}
+        <span className="inline-block">{heading.title}</span>
         {heading.highlight && (
           <>
             {" "}
-            <em>{heading.highlight}</em>
+            <em className="inline-block">{heading.highlight}</em>
           </>
         )}
       </h2>

@@ -3,7 +3,7 @@ import type { AdmissionCTASection } from "@/app/data/types";
 
 export function AdmissionCTA({ data }: { data: AdmissionCTASection }) {
   return (
-    <section className="section-padding">
+    <section className="section-padding py-8">
       <div className="container">
         <div className="reveal reveal-zoom admission-cta relative isolate overflow-hidden rounded-2xl border border-[#e3eaf0] bg-[#f7faff] shadow-card">
           <div

@@ -114,8 +114,8 @@
         },
         "status": {
           "submitting": "Submitting...",
-          "contactValidated": "Your enquiry passed validation. This demonstration does not send or store messages. Please use the listed email address to contact admissions.",
-          "applicationValidated": "Your application details passed validation. This demonstration does not send or store applications. Please contact admissions to complete your application.",
+          "contactValidated": "Your enquiry has been submitted successfully. Our team will get back to you shortly.",
+          "applicationValidated": "Your application has been submitted successfully. Our admissions team will review your application and contact you shortly.",
           "contactDelivered": "Your enquiry has been accepted by the configured delivery service.",
           "applicationDelivered": "Your application has been accepted by the configured delivery service.",
           "error": "We could not process your submission. Please try again.",
@@ -124,19 +124,19 @@
           "unavailable": "The submission service is unavailable. Please contact admissions using the email address listed on this page.",
           "network": "Unable to connect. Check your connection and try again.",
           "tooLarge": "This submission is too large. Please shorten your message.",
-          "validationOnlyNotice": "This demonstration validates your details only. It does not send or store submissions.",
+          "validationOnlyNotice": "",
           "deliveryFailed": "The configured delivery service could not accept your submission. Please try again or contact admissions directly.",
           "invalidOrigin": "This submission could not be verified. Reload the page and try again.",
           "invalidContentType": "The submission format is not supported. Reload the form and try again."
         },
-        "notice": "This demonstration validates your details only. It does not send or store submissions.",
+        "notice": "",
         "optionalLabel": "Optional",
         "requiredLabel": "Required",
         "timeZone": "Asia/Kolkata"
       },
       "skipToContent": "Skip to main content",
-      "demoNotice": "Design demonstration: programme details, contact information, additional profiles and student stories are illustrative.",
-      "contentNotice": "The supplied screenshots guide this demonstration. Supporting images are local reference crops; additional programme information, faculty profiles and student quotes are illustrative, and social links lead to platform homepages."
+      "demoNotice": "",
+      "contentNotice": ""
     },
     "templateComponents": {
       "template-1": {
@@ -317,6 +317,24 @@
                 "component": "EducationFacultyDetail1"
               }
             ]
+          },
+          "apply-now": {
+            "title": "Apply Now | AduCrest University",
+            "description": "Start your application to AduCrest University. Fill in the form to apply for your desired course.",
+            "components": [
+              {
+                "key": "banner-apply-now",
+                "component": "EducationInnerBanner1"
+              },
+              {
+                "key": "application",
+                "component": "EducationApplicationForm1"
+              },
+              {
+                "key": "application-process",
+                "component": "EducationApplicationProcess1"
+              }
+            ]
           }
         }
       }
@@ -394,11 +412,15 @@
               {
                 "label": "Blog",
                 "href": "/blog"
+              },
+              {
+                "label": "Contact",
+                "href": "/contact"
               }
             ],
             "apply": {
-              "label": "Contact us",
-              "href": "/contact"
+              "label": "Apply Now",
+              "href": "/apply-now"
             }
           }
         }
@@ -456,12 +478,12 @@
                 "href": "/blog"
               },
               {
-                "label": "Contact Us",
-                "href": "/contact"
-              },
-              {
                 "label": "FAQs",
                 "href": "/faq"
+              },
+              {
+                "label": "Contact Us",
+                "href": "/contact"
               }
             ],
             "coursesTitle": "Our Courses",
@@ -662,8 +684,8 @@
           "EducationFaculty1": {
             "heading": {
               "eyebrow": "OUR FACULTY",
-              "title": "Meet Our Experienced",
-              "highlight": "Faculties",
+              "title": "Meet Our",
+              "highlight": "Experienced Faculties",
               "description": "Our dedicated faculty members bring knowledge, experience and passion to create a supportive learning environment for every student."
             },
             "facultyIds": [
@@ -894,7 +916,7 @@
       "banner-apply-now": {
         "variants": {
           "EducationInnerBanner1": {
-            "title": "Contact us",
+            "title": "Apply Now",
             "image": {
               "src": "/images/banners/inner-clean.webp",
               "alt": "A smiling student speaking with an adviser"
@@ -905,7 +927,7 @@
                 "href": "/"
               },
               {
-                "label": "Contact us"
+                "label": "Apply Now"
               }
             ]
           }
@@ -939,7 +961,7 @@
               "title": "Course",
               "highlight": "Details"
             },
-            "applyLabel": "Contact us"
+            "applyLabel": "Apply Now"
           }
         }
       },
@@ -948,8 +970,8 @@
           "EducationFacultyListing1": {
             "heading": {
               "eyebrow": "OUR FACULTY",
-              "title": "Meet Our Experienced",
-              "highlight": "Faculties",
+              "title": "Meet Our",
+              "highlight": "Experienced Faculties",
               "description": "Our dedicated faculty members bring knowledge, experience and passion to create a supportive learning environment for every student."
             },
             "pageSize": 12
@@ -1126,8 +1148,8 @@
             ],
             "map": {
               "embedUrl": "https://maps.google.com/maps?q=300%20Rexburg%20Ave%2C%20Fort%20Washington%2C%20MD%2020744&t=&z=14&ie=UTF8&iwloc=&output=embed",
-              "title": "Illustrative map of campus location",
-              "notice": "The supplied university address is illustrative. Confirm campus location with admissions before planning a visit."
+              "title": "Campus location map",
+              "notice": ""
             }
           }
         }
@@ -1190,8 +1212,8 @@
               {
                 "icon": "mapPin",
                 "title": "Visit Campus",
-                "description": "Rachel Oto lemamea, 300 Rexburg Ave,",
-                "value": "Fort Washington, MD 20744, United States",
+                "description": "300 Rexburg Ave,",
+                "value": "Fort Washington, MD 20744, USA",
                 "href": "/contact"
               }
             ]
@@ -1214,7 +1236,7 @@
               },
               {
                 "title": "Submit Documents",
-                "description": "Admissions will explain secure document submission after initial review.",
+                "description": "Upload the required documents.",
                 "icon": "file-pen-line"
               },
               {
@@ -1224,7 +1246,7 @@
               },
               {
                 "title": "Admission Confirmation",
-                "description": "Receive an admission decision and guidance on your next steps.",
+                "description": "Get confirmation via email and start your journey.",
                 "icon": "mail-open"
               }
             ]

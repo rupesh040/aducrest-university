@@ -20,7 +20,7 @@ export function FacultyDetail({ data, faculty }: FacultyDetailProps) {
   const firstName = nameParts.join(" ");
 
   return (
-    <section className="section-padding bg-[#f2f5f9]">
+    <section className="section-padding py-8 bg-[#f2f5f9]">
       <div className="container max-w-container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           <div className="reveal lg:col-span-8 bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-10 shadow-sm border border-slate-100 space-y-10">

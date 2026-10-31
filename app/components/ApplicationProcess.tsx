@@ -1,6 +1,7 @@
+import React from "react";
 import { ChevronRight } from "lucide-react";
 import type { ApplicationProcessSection } from "@/app/data/types";
-import { Icon, SectionHeading } from "@/app/components/Primitives";
+import { Icon } from "@/app/components/Primitives";
 
 export function ApplicationProcess({
   data,
@@ -8,41 +9,64 @@ export function ApplicationProcess({
   data: ApplicationProcessSection;
 }) {
   return (
-    <section className="section-padding bg-[#f4faff]">
-      <div className="container">
-        <div className="reveal">
-          <SectionHeading heading={data.heading} />
+    <section className="section-padding py-8 bg-[#fcf9f4]">
+      <div className="container max-w-[1260px] mx-auto px-4 sm:px-6">
+        {/* Header */}
+        <div className="text-center mb-10 md:mb-14 reveal">
+          <div className="flex items-center justify-center gap-2.5 mb-2.5">
+            <span className="w-5 h-[2px] bg-[#d99b26] rounded-full" />
+            <span className="text-xs sm:text-[13px] font-bold tracking-widest text-[#0a2540] uppercase">
+              {data.heading.eyebrow ?? "SIMPLE STEPS"}
+            </span>
+            <span className="w-5 h-[2px] bg-[#d99b26] rounded-full" />
+          </div>
+          <h2 className="font-heading font-bold text-3xl sm:text-4xl md:text-[38px] text-[#0a2540] leading-tight">
+            {data.heading.title}{" "}
+            <span className="text-[#d99b26]">{data.heading.highlight}</span>
+          </h2>
         </div>
-        <ol className="list-none m-0 p-0 grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mt-9">
-          {data.steps.map((step, index) => (
-            <li
-              key={step.title}
-              className={`reveal delay-${(index + 1) * 100} group relative bg-white rounded-xl p-6 md:p-8 shadow-card border border-[#e8eef6] flex flex-col items-center text-center transition-all duration-300 hover:-translate-y-2 hover:shadow-lift`}
-            >
-              <span className="w-16 h-16 rounded-full bg-[#eaf2ff] text-gold grid place-items-center mb-4 transition-all duration-300 group-hover:scale-110 group-hover:bg-[#ffeed1]">
-                <Icon name={step.icon} size={32} />
-              </span>
-              <div>
-                <h3 className="font-bold text-base sm:text-lg text-heading mb-2 group-hover:text-gold transition-colors duration-200">
-                  <span className="text-gold">
-                    {String(index + 1).padStart(2, "0")}.{" "}
-                  </span>
-                  {step.title}
-                </h3>
-                <p className="text-muted text-xs sm:text-sm leading-relaxed m-0">
-                  {step.description}
-                </p>
-              </div>
-              {index < data.steps.length - 1 && (
-                <ChevronRight
-                  className="hidden md:block absolute -right-4 top-1/2 -translate-y-1/2 text-gold z-10 transition-transform duration-300 group-hover:translate-x-1"
-                  aria-hidden="true"
-                  size={24}
-                />
-              )}
-            </li>
-          ))}
-        </ol>
+
+        {/* 4 Steps Horizontal Flow */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:flex lg:items-center lg:justify-between gap-6 lg:gap-3 xl:gap-4 reveal delay-100">
+          {data.steps.map((step, index) => {
+            const isBlue = index % 2 === 0;
+            const stepNumber = String(index + 1).padStart(2, "0");
+            const cleanTitle = step.title.replace(/^\d+\.\s*/, "");
+
+            return (
+              <React.Fragment key={step.title}>
+                <div className="flex items-center gap-4 w-full lg:w-auto lg:max-w-[260px] xl:max-w-[280px]">
+                  <div
+                    className={`w-13 h-13 sm:w-14 sm:h-14 rounded-2xl flex items-center justify-center shrink-0 shadow-xs transition-transform duration-200 hover:scale-105 ${
+                      isBlue
+                        ? "bg-[#e3effc] text-[#155a9d]"
+                        : "bg-[#fef2d8] text-[#c5841b]"
+                    }`}
+                  >
+                    <Icon name={step.icon} size={24} />
+                  </div>
+                  <div className="min-w-0">
+                    <h3 className="font-bold text-sm sm:text-base text-[#0a2540] mb-1 leading-snug">
+                      {stepNumber}. {cleanTitle}
+                    </h3>
+                    <p className="text-xs sm:text-[13px] text-slate-500 leading-relaxed m-0">
+                      {step.description}
+                    </p>
+                  </div>
+                </div>
+
+                {index < data.steps.length - 1 && (
+                  <div
+                    className="hidden lg:flex items-center justify-center text-[#2b6cb0] shrink-0"
+                    aria-hidden="true"
+                  >
+                    <ChevronRight size={20} strokeWidth={2.5} />
+                  </div>
+                )}
+              </React.Fragment>
+            );
+          })}
+        </div>
       </div>
     </section>
   );

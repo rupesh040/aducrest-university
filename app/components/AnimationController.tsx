@@ -1,38 +1,10 @@
 "use client";
 
-import { useEffect, useState, useCallback } from "react";
+import { useEffect, useCallback } from "react";
 import { usePathname } from "next/navigation";
 
 export function AnimationController() {
   const pathname = usePathname();
-  const [scrollProgress, setScrollProgress] = useState(0);
-
-  // Track scroll progress
-  useEffect(() => {
-    let ticking = false;
-
-    const handleScroll = () => {
-      if (!ticking) {
-        window.requestAnimationFrame(() => {
-          const totalHeight =
-            document.documentElement.scrollHeight - window.innerHeight;
-          const currentScroll = window.scrollY;
-
-          if (totalHeight > 0) {
-            setScrollProgress(Math.min(1, Math.max(0, currentScroll / totalHeight)));
-          }
-
-          ticking = false;
-        });
-        ticking = true;
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    handleScroll();
-
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   // Initialize IntersectionObserver for scroll-reveal animations
   const setupObserver = useCallback(() => {
@@ -100,16 +72,5 @@ export function AnimationController() {
     };
   }, [pathname, setupObserver]);
 
-  return (
-    <>
-      {/* Top Scroll Progress Indicator */}
-      <div
-        className="scroll-progress-bar"
-        style={{
-          transform: `scaleX(${scrollProgress})`,
-        }}
-        aria-hidden="true"
-      />
-    </>
-  );
+  return null;
 }

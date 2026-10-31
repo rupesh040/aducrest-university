@@ -14,18 +14,32 @@ export function Header({ data }: { data: HeaderSection }) {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
+    let ticking = false;
     const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const y = window.scrollY;
+          setScrolled((prev) => {
+            if (!prev && y > 45) return true;
+            if (prev && y < 15) return false;
+            return prev;
+          });
+          ticking = false;
+        });
+        ticking = true;
+      }
     };
     window.addEventListener("scroll", handleScroll, { passive: true });
     handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Close mobile menu on route change
-  useEffect(() => {
+  // Close mobile menu on route change without cascading effect renders
+  const [prevPath, setPrevPath] = useState(path);
+  if (prevPath !== path) {
+    setPrevPath(path);
     setOpen(false);
-  }, [path]);
+  }
 
   // Prevent background scrolling on mobile when menu is open
   useEffect(() => {
@@ -42,24 +56,22 @@ export function Header({ data }: { data: HeaderSection }) {
   return (
     <>
       <header
-        className={`sticky top-0 z-40 text-white transition-all duration-300 ease-in-out ${
+        className={`sticky top-0 z-50 w-full text-white bg-gradient-to-r from-[#073b6c] via-[#093563] to-[#0b305b] transform-gpu [transform:translateZ(0)] [backface-visibility:hidden] transition-[box-shadow,border-color] duration-300 ease-in-out ${
           scrolled
-            ? "bg-[#073b6c]/95 backdrop-blur-md shadow-[0_8px_30px_rgba(0,35,80,0.22)] py-0 border-b border-white/10"
-            : "bg-gradient-to-r from-[#073b6c] via-[#093563] to-[#0b305b] shadow-md border-b border-transparent"
+            ? "shadow-[0_8px_30px_rgba(0,35,80,0.25)] border-b border-white/10"
+            : "shadow-md border-b border-transparent"
         }`}
       >
         {/* Luminous gold accent line at bottom when scrolled */}
         <div
-          className={`absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-gold/60 to-transparent transition-opacity duration-500 pointer-events-none ${
+          className={`absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-gold/60 to-transparent transition-opacity duration-300 pointer-events-none ${
             scrolled ? "opacity-100" : "opacity-0"
           }`}
           aria-hidden="true"
         />
 
         <div
-          className={`container flex items-center justify-between gap-3 sm:gap-4 md:gap-10 transition-all duration-300 ${
-            scrolled ? "h-16 md:h-[72px]" : "h-20 md:h-[84px]"
-          }`}
+          className="container flex items-center justify-between gap-3 sm:gap-4 md:gap-10 h-20 md:h-[84px]"
         >
           {/* Brand Logo with responsive sizing to prevent mobile crowding */}
           <Link
@@ -74,7 +86,7 @@ export function Header({ data }: { data: HeaderSection }) {
               width={270}
               height={90}
               priority
-              className="w-[155px] xs:w-[185px] sm:w-[220px] md:w-[250px] max-w-[60vw] sm:max-w-none h-auto max-h-[52px] sm:max-h-[72px] object-contain transition-all duration-300"
+              className="w-[155px] xs:w-[185px] sm:w-[220px] md:w-[250px] max-w-[60vw] sm:max-w-none h-auto max-h-[58px] sm:max-h-[72px] object-contain transition-transform duration-300"
             />
           </Link>
 
@@ -159,7 +171,7 @@ export function Header({ data }: { data: HeaderSection }) {
         {/* Mobile Navigation Drawer */}
         <div
           id="main-navigation"
-          className={`lg:hidden absolute top-full left-0 right-0 bg-[#073b6c] border-t border-white/15 shadow-2xl transition-all duration-300 ease-out origin-top z-40 ${
+          className={`lg:hidden absolute top-full left-0 right-0 bg-[#073b6c] border-t border-white/15 shadow-2xl transition-all duration-300 ease-out origin-top z-50 ${
             open
               ? "max-h-[calc(100dvh-70px)] opacity-100 scale-y-100 pointer-events-auto"
               : "max-h-0 opacity-0 scale-y-95 pointer-events-none overflow-hidden"
@@ -209,8 +221,7 @@ export function Header({ data }: { data: HeaderSection }) {
       {/* Dimmed backdrop overlay covering the rest of the screen */}
       {open && (
         <div
-          className="lg:hidden fixed inset-0 bg-black/60 backdrop-blur-xs z-30 transition-opacity duration-300"
-          style={{ top: scrolled ? "64px" : "80px" }}
+          className="lg:hidden fixed inset-0 bg-black/60 backdrop-blur-xs z-40 transition-opacity duration-300"
           onClick={() => setOpen(false)}
           aria-hidden="true"
         />

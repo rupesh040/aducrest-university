@@ -119,7 +119,7 @@ function renderHeadingTitle(title: string, highlight?: string) {
 
 export function FAQSectionView({ data }: { data: FAQSectionData }) {
   return (
-    <section className="section-padding bg-surface py-6">
+    <section className="section-padding py-8 bg-surface">
       <div className="container grid grid-cols-1 lg:grid-cols-[1.1fr_1.2fr] gap-6 lg:gap-8 xl:gap-10 items-start">
         {/* Left Column: Heading + Image Composite */}
         <div className="reveal reveal-right flex flex-col">

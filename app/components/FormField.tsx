@@ -2,10 +2,12 @@
 
 import {
   BookOpen,
+  Calendar,
   CalendarDays,
+  ChevronDown,
   GraduationCap,
   Mail,
-  MessageSquare,
+  FileText,
   Phone,
   UserRound,
 } from "lucide-react";
@@ -19,8 +21,9 @@ const fieldIcons = {
   birthDate: CalendarDays,
   course: GraduationCap,
   department: BookOpen,
-  message: MessageSquare,
+  message: FileText,
 };
+
 interface FormFieldProps {
   name: FormFieldName;
   id: string;
@@ -130,22 +133,24 @@ export function FormField({
     onPaste: isPhone ? handlePaste : undefined,
     onBlur: () => onBlur(name),
   };
+
   return (
     <div
       className={`form-field ${name === "message" || (name === "phone" && hideLabel) || (name === "course" && hideLabel) ? "form-field--wide" : ""}`}
     >
       <label
-        className={hideLabel ? "visually-hidden" : "form-label"}
+        className={hideLabel ? "visually-hidden" : "form-label !text-[13px] sm:!text-sm"}
         htmlFor={id}
       >
         {field.label}
         {required ? (
-          <span className="form-required" aria-label={ui.requiredLabel}>
-            {" "}
-            *
+          <span className="text-red-500 font-bold ml-0.5" aria-label={ui.requiredLabel}>
+            {" "}*
           </span>
         ) : (
-          <span className="form-optional"> {ui.optionalLabel}</span>
+          <span className="text-slate-400 font-normal text-xs ml-1">
+            {ui.optionalLabel.startsWith("(") ? ui.optionalLabel : `(${ui.optionalLabel})`}
+          </span>
         )}
       </label>
       <div
@@ -153,28 +158,54 @@ export function FormField({
       >
         <Icon className="form-input-icon" size={18} aria-hidden="true" />
         {field.type === "select" ? (
-          <select {...attributes} className="form-input">
-            <option value="" disabled>
-              {field.placeholder}
-            </option>
-            {options.map((option) => (
-              <option key={option.value} value={option.value}>
-                {option.label}
+          <div className="relative">
+            <select
+              {...attributes}
+              className="form-input appearance-none pr-9 cursor-pointer !text-sm"
+            >
+              <option value="" disabled>
+                {field.placeholder}
               </option>
-            ))}
-          </select>
+              {options.map((option) => (
+                <option key={option.value} value={option.value}>
+                  {option.label}
+                </option>
+              ))}
+            </select>
+            <ChevronDown
+              className="absolute right-3.5 top-1/2 -translate-y-1/2 text-[#7589a5] pointer-events-none"
+              size={16}
+              aria-hidden="true"
+            />
+          </div>
         ) : field.type === "textarea" ? (
           <textarea
             {...attributes}
-            className="form-input"
+            className="form-input resize-y !text-sm"
             placeholder={field.placeholder}
-            rows={4}
+            rows={3}
             maxLength={3000}
           />
+        ) : name === "birthDate" ? (
+          <div className="relative">
+            <input
+              {...attributes}
+              className="form-input pr-9 !text-sm"
+              type="date"
+              placeholder={field.placeholder}
+              autoComplete="bday"
+              min="1900-01-01"
+            />
+            <Calendar
+              className="absolute right-3.5 top-1/2 -translate-y-1/2 text-[#7589a5] pointer-events-none"
+              size={16}
+              aria-hidden="true"
+            />
+          </div>
         ) : (
           <input
             {...attributes}
-            className="form-input"
+            className="form-input !text-sm"
             type={isPhone ? "tel" : field.type}
             inputMode={isPhone ? "numeric" : undefined}
             pattern={isPhone ? "[0-9]*" : undefined}
@@ -186,9 +217,7 @@ export function FormField({
                   ? "email"
                   : name === "phone"
                     ? "tel"
-                    : name === "birthDate"
-                      ? "bday"
-                      : undefined
+                    : undefined
             }
             maxLength={
               name === "fullName"
@@ -199,7 +228,6 @@ export function FormField({
                     ? 15
                     : undefined
             }
-            min={name === "birthDate" ? "1900-01-01" : undefined}
           />
         )}
       </div>

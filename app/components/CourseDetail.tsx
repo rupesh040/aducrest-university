@@ -29,7 +29,7 @@ export function CourseDetail({
   course: Course;
 }) {
   return (
-    <section className="section-padding bg-surface">
+    <section className="section-padding py-8 bg-surface">
       <div className="container grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-8 lg:gap-10 items-start">
         <article className="reveal min-w-0">
           <Photo
@@ -47,10 +47,12 @@ export function CourseDetail({
               {content.ui.lastUpdated} {course.updated}
             </span>
           </div>
-          <h2 className="text-2xl sm:text-3xl font-heading font-bold text-heading my-4">
+          <h2 className="text-2xl sm:text-[28px] font-heading font-bold text-heading my-4 leading-tight">
             {course.title}
           </h2>
-          <SectionHeading heading={data.overviewHeading} align="left" />
+          <div className="course-detail-heading">
+            <SectionHeading heading={data.overviewHeading} align="left" />
+          </div>
           <div className="space-y-3 mb-6">
             {course.overview.map((p, idx) => (
               <p
@@ -61,7 +63,9 @@ export function CourseDetail({
               </p>
             ))}
           </div>
-          <SectionHeading heading={data.outcomesHeading} align="left" />
+          <div className="course-detail-heading">
+            <SectionHeading heading={data.outcomesHeading} align="left" />
+          </div>
           <CheckList items={course.outcomes} />
         </article>
         <aside className="reveal reveal-left delay-150 bg-white p-5 sm:p-6 rounded-xl shadow-card border border-[#e8eef6] max-w-lg lg:max-w-none mx-auto w-full lg:sticky lg:top-28 transition-all duration-300 hover:shadow-lift">
@@ -69,7 +73,9 @@ export function CourseDetail({
             <Photo asset={course.previewImage} className="w-full h-full" />
             <VideoPreview url={course.videoUrl} title={course.title} />
           </div>
-          <SectionHeading heading={data.detailsHeading} align="left" />
+          <div className="course-detail-heading">
+            <SectionHeading heading={data.detailsHeading} align="left" />
+          </div>
           <dl className="divide-y divide-[#e9edf2] my-5 text-sm">
             {(Object.keys(metaIcons) as (keyof CourseMeta)[]).map((key) => (
               <div
@@ -89,7 +95,7 @@ export function CourseDetail({
           <PrimaryButton
             button={{
               label: data.applyLabel,
-              href: `/contact`,
+              href: `/apply-now`,
             }}
             className="w-full !text-base"
           />

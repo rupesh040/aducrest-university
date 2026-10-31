@@ -9,7 +9,7 @@ export function About({ data }: { data: AboutSection }) {
   const pathname = usePathname();
   const isAboutPage = pathname === "/about";
   return (
-    <section className="section-padding bg-surface overflow-hidden">
+    <section className="section-padding py-8 bg-surface overflow-hidden">
       <div className="container grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
         <div className="reveal reveal-right relative min-h-[380px] sm:min-h-[460px] lg:min-h-[520px] max-w-[500px] lg:max-w-none mx-auto w-full">
           <div className="absolute w-[72%] h-[75%] bg-[#e5edf8] top-8 left-8 sm:top-10 sm:left-10 rounded-2xl animate-float-reverse" />

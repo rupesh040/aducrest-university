@@ -106,7 +106,7 @@
 @layer components {
   /* Layout helpers */
   .section-padding {
-    @apply py-6;
+    @apply py-8;
   }
 
   .photo {
@@ -191,17 +191,24 @@
 
   /* Section Headings */
   .eyebrow {
-    @apply flex items-center justify-center gap-3 md:gap-4 text-navy uppercase text-[10px] md:text-xs font-bold tracking-[1.5px] md:tracking-[1.8px] mb-3 md:mb-4;
+    @apply flex items-center justify-center gap-2.5 sm:gap-3 md:gap-4 text-navy uppercase text-[10px] md:text-xs font-bold tracking-[1.5px] md:tracking-[1.8px] mb-3 md:mb-4 whitespace-nowrap flex-nowrap;
   }
-  .eyebrow > span {
-    @apply w-7 md:w-[38px] h-0.5 bg-gold shrink-0;
+  .eyebrow .eyebrow-line,
+  .eyebrow > span:empty {
+    @apply w-5 sm:w-7 md:w-[38px] h-0.5 bg-gold shrink-0 rounded-full;
+  }
+  .eyebrow .eyebrow-text {
+    @apply shrink-0 whitespace-nowrap;
   }
 
   .section-heading {
-    @apply text-center mb-7 md:mb-9;
+    @apply text-center mb-7 md:mb-9 pt-2;
   }
   .section-heading h2 {
-    @apply text-heading font-heading font-bold text-2xl sm:text-3xl md:text-[40px] lg:text-[44px] tracking-tight leading-[1.15];
+    @apply text-heading font-heading font-bold text-2xl sm:text-3xl md:text-[40px] lg:text-[44px] tracking-tight leading-[1.15] text-balance;
+  }
+  .section-heading h2 em {
+    @apply not-italic text-gold font-bold;
   }
   .section-heading p {
     @apply max-w-[730px] mx-auto mt-3.5 text-sm md:text-base leading-relaxed;
@@ -212,11 +219,36 @@
   .align-left .eyebrow {
     @apply justify-start;
   }
-  .align-left .eyebrow > span:last-child {
+  .align-left .eyebrow .eyebrow-line:last-child,
+  .align-left .eyebrow > span:empty:last-child {
     @apply hidden;
   }
   .align-left p {
     @apply ml-0;
+  }
+
+  /* Admission CTA heading size override */
+  .admission-cta-heading .section-heading h2 {
+    @apply text-2xl sm:text-[28px] md:text-[32px] leading-tight;
+  }
+
+  /* Course detail sub-heading size override */
+  .course-detail-heading .section-heading {
+    @apply mb-3 md:mb-4 pt-1;
+  }
+  .course-detail-heading .section-heading h2 {
+    @apply text-lg sm:text-xl md:text-[22px] lg:text-[22px] leading-snug;
+  }
+
+  /* Application promo heading size override */
+  .application-promo-heading .section-heading {
+    @apply mb-2.5 sm:mb-3 pt-0;
+  }
+  .application-promo-heading .section-heading h2 {
+    @apply text-xl sm:text-[22px] md:text-2xl leading-tight;
+  }
+  .application-promo-heading .eyebrow {
+    @apply mb-2;
   }
 
   /* CheckList */
@@ -393,16 +425,16 @@
 
   /* Application Process */
   .application-steps {
-    @apply list-none m-0 p-0 grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mt-9;
+    @apply list-none m-0 p-0 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mt-9;
   }
   .application-steps > li {
-    @apply relative bg-white rounded-xl p-6 shadow-sm border border-[#e8eef6] flex flex-col items-center text-center;
+    @apply relative bg-white rounded-xl p-6 xl:p-8 shadow-sm border border-[#e8eef6] flex flex-col items-center text-center;
   }
   .process-icon {
     @apply w-16 h-16 rounded-full bg-[#eaf2ff] text-navy grid place-items-center mb-4 text-gold;
   }
   .process-arrow {
-    @apply hidden md:block absolute -right-4 top-1/2 -translate-y-1/2 text-gold z-10;
+    @apply absolute left-full top-1/2 -translate-y-1/2 w-6 lg:w-8 flex items-center justify-center text-gold z-10 pointer-events-none;
   }
 
   /* Promotional Images (Admission & Application Promo) */
@@ -434,22 +466,6 @@
     @apply bg-gold border-gold;
   }
 
-  /* ------------------------------------------------------------- */
-  /* Scroll Progress Bar at the top of the viewport                */
-  /* ------------------------------------------------------------- */
-  .scroll-progress-bar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 3.5px;
-    background: linear-gradient(90deg, #ffb800 0%, #ffd35a 50%, #ff9900 100%);
-    z-index: 9999;
-    transform-origin: 0% 50%;
-    box-shadow: 0 1px 10px rgba(255, 184, 0, 0.6);
-    pointer-events: none;
-    transition: transform 0.08s linear;
-  }
 
   /* ------------------------------------------------------------- */
   /* Scroll-Triggered Reveal Animations                            */

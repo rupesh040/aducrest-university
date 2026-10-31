@@ -34,7 +34,7 @@ export function PageBanner({ data, course, blog, faculty }: PageBannerProps) {
   }
 
   return (
-    <section className="relative h-52 sm:h-80 md:h-96 lg:h-[310px] grid place-items-center bg-[#242724] overflow-hidden">
+    <section className="py-8 relative h-52 sm:h-80 md:h-96 lg:h-[310px] grid place-items-center bg-[#242724] overflow-hidden">
       <div className="w-full h-full absolute inset-0">
         <Photo
           asset={data.image}

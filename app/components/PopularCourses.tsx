@@ -9,7 +9,7 @@ export function PopularCourses({ data }: { data: PopularCoursesSection }) {
     data.courseSlugs.includes(c.slug),
   );
   return (
-    <section className="section-padding bg-[#f1faff]">
+    <section className="section-padding py-8 bg-[#f1faff]">
       <div className="container">
         <div className="reveal">
           <SectionHeading heading={data.heading} />

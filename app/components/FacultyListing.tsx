@@ -6,7 +6,7 @@ import type { ListingSection } from "@/app/data/types";
 
 export function FacultyListing({ data }: { data: ListingSection }) {
   return (
-    <section className="section-padding bg-[#f3faff]">
+    <section className="section-padding py-8 bg-[#f3faff]">
       <div className="container">
         <div className="reveal">
           <SectionHeading heading={data.heading} />

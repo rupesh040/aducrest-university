@@ -9,7 +9,7 @@ export function LatestBlogs({ data }: { data: LatestBlogsSection }) {
     content.collections.blogs.filter((b) => b.slug === slug),
   );
   return (
-    <section className="section-padding bg-surface">
+    <section className="section-padding py-8 bg-surface">
       <div className="container">
         <div className="reveal">
           <SectionHeading heading={data.heading} />

@@ -1,7 +1,14 @@
 import type { Metadata } from "next";
-import { content } from "@/app/data";
-import { SharedRenderer } from "@/app/components/ComponentRenderer";
+import { content, section } from "@/app/data";
+import { Topbar } from "@/app/components/Topbar";
+import { Header } from "@/app/components/Header";
+import { Footer } from "@/app/components/Footer";
 import { AnimationController } from "@/app/components/AnimationController";
+import type {
+  TopbarSection,
+  HeaderSection,
+  FooterSection,
+} from "@/app/data/types";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -25,12 +32,12 @@ export default function RootLayout({
         >
           {content.ui.skipToContent}
         </a>
-        <SharedRenderer name="Topbar" />
-        <SharedRenderer name="Header" />
+        <Topbar data={section<TopbarSection>("topbar", "EducationTopbar1")} />
+        <Header data={section<HeaderSection>("header", "EducationHeader1")} />
         <main id="main-content" className="flex-1 flex flex-col page-fade-in">
           {children}
         </main>
-        <SharedRenderer name="Footer" />
+        <Footer data={section<FooterSection>("footer", "EducationFooter1")} />
       </body>
     </html>
   );

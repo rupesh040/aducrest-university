@@ -21,7 +21,7 @@ export function ContactSection({ data }: { data: ContactSectionData }) {
   const embedUrl = mapEmbedUrl(data.map.embedUrl);
   return (
     <>
-      <section className="section-padding bg-surface">
+      <section className="section-padding py-8 bg-surface">
         <div className="container">
           <div className="reveal">
             <SectionHeading heading={data.heading} />
@@ -110,9 +110,11 @@ export function ContactSection({ data }: { data: ContactSectionData }) {
             className="w-full h-72 sm:h-96 md:h-[420px] border-0"
           />
         )}
-        <p className="text-center text-xs text-muted py-3 bg-[#f0f4fa] m-0 border-t border-[#e2eaf2]">
-          {data.map.notice}
-        </p>
+        {data.map.notice ? (
+          <p className="text-center text-xs text-muted py-3 bg-[#f0f4fa] m-0 border-t border-[#e2eaf2]">
+            {data.map.notice}
+          </p>
+        ) : null}
       </section>
     </>
   );

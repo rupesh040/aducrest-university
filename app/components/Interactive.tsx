@@ -1,9 +1,11 @@
 "use client";
 
-import { Children, useEffect, useRef, useState, type ReactNode } from "react";
+import { Children, useEffect, useRef, useState, useSyncExternalStore, type ReactNode } from "react";
 import { createPortal } from "react-dom";
 import { ArrowLeft, ArrowRight, ArrowUp, X, Play } from "lucide-react";
 import { content } from "@/app/data";
+
+const emptySubscribe = () => () => {};
 
 export function Carousel({
   children,
@@ -259,15 +261,11 @@ export function VideoPreview({
   title?: string;
 }) {
   const [open, setOpen] = useState(false);
-  const [mounted, setMounted] = useState(false);
+  const mounted = useSyncExternalStore(emptySubscribe, () => true, () => false);
   const [activeEmbedUrl, setActiveEmbedUrl] = useState<string>("");
   const close = useRef<HTMLButtonElement>(null);
   const trigger = useRef<HTMLButtonElement>(null);
   const dialog = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
 
   const handleOpen = () => {
     setActiveEmbedUrl(formatYouTubeEmbedUrl(url));

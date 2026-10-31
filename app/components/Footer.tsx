@@ -9,15 +9,19 @@ import type { FooterSection } from "@/app/data/types";
 export function Footer({ data }: { data: FooterSection }) {
   return (
     <footer className="bg-gradient-to-r from-[#00366b] to-[#003168] text-[#e7eef7] mt-auto">
-      <div className="reveal container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1.1fr_1.1fr] gap-8 lg:gap-10 py-[42px] lg:py-[58px]">
+      <div className="reveal container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1.1fr_1.1fr] gap-8 lg:gap-10 py-8">
         <div className="sm:col-span-2 lg:col-span-1">
-          <Link href="/" className="inline-block mb-4 transition-transform duration-300 hover:scale-[1.02]">
+          <Link
+            href="/"
+            className="inline-block mb-4 transition-transform duration-300 hover:scale-[1.02]"
+            aria-label={content.brand.name}
+          >
             <Image
               src={data.logo.src}
               alt={data.logo.alt}
-              width={295}
+              width={270}
               height={90}
-              className="w-[240px] sm:w-[270px] h-auto object-contain"
+              className="w-[155px] xs:w-[185px] sm:w-[220px] md:w-[250px] max-w-[60vw] sm:max-w-none h-auto max-h-[52px] sm:max-h-[72px] object-contain"
             />
           </Link>
           <p className="text-sm leading-relaxed text-[#c7d5e6] max-w-sm mb-6">
@@ -101,9 +105,6 @@ export function Footer({ data }: { data: FooterSection }) {
           </div>
         </div>
       </div>
-      <p className="text-center text-xs text-[#b9cbe0] px-6 pb-5 max-w-4xl mx-auto leading-relaxed">
-        {content.ui.demoNotice}
-      </p>
       <div className="relative border-t border-white/15 py-5 px-6 min-h-[72px] flex items-center justify-center">
         <div className="flex items-center gap-3 text-xs sm:text-[13px] text-[#c2d4e8]">
           <span className="w-8 h-0.5 bg-gold" />

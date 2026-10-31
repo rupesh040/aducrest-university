@@ -17,7 +17,7 @@ export function BlogDetail({
     .filter((b): b is Blog => Boolean(b) && b?.slug !== blog.slug);
 
   return (
-    <section className="section-padding bg-surface">
+    <section className="section-padding py-8 bg-surface">
       <div className="container grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-8 lg:gap-12 items-start">
         <article className="reveal min-w-0">
           <div className="aspect-[1.8] sm:aspect-[2.2] rounded-xl overflow-hidden mb-5 shadow-sm">

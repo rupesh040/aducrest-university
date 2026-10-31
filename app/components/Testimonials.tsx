@@ -9,7 +9,7 @@ export function Testimonials({ data }: { data: TestimonialsSection }) {
     data.testimonialIds.includes(t.id),
   );
   return (
-    <section className="section-padding bg-[#0c3061] text-[#e7ecf5]">
+    <section className="section-padding py-8 bg-[#0c3061] text-[#e7ecf5]">
       <div className="container">
         {data.heading && (
           <div className="reveal">
@@ -29,7 +29,7 @@ export function Testimonials({ data }: { data: TestimonialsSection }) {
                     className="text-[#ffd04c] mb-2 shrink-0 transition-transform duration-300 hover:scale-110 hover:-rotate-6"
                     fill="currentColor"
                   />
-                  <blockquote className="text-lg sm:text-xl lg:text-[22px] leading-relaxed text-[#e7ecf5] font-normal italic">
+                  <blockquote className="text-sm sm:text-lg lg:text-[20px] leading-relaxed text-[#e7ecf5] font-normal italic">
                     &ldquo;{t.quote}&rdquo;
                   </blockquote>
                 </div>

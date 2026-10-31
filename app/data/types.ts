@@ -42,7 +42,8 @@ export type PageId =
   | "blog"
   | "blog-detail"
   | "faq"
-  | "contact";
+  | "contact"
+  | "apply-now";
 export interface TopbarSection {
   contacts: ContactLink[];
   socials: SocialLink[];
